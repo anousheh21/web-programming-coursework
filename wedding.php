@@ -25,16 +25,16 @@
 
 <div class="venue-container">
   <div class="venue-card">
-    <div class="venue-image">
-        <img src="imageSeaView.png" alt="Sea View Tavern">
-    </div>
+   
+        <img class="venue-image" src="imageSeaView.png" alt="Sea View Tavern">
+    
     <div class="venue-info">
       <h3>Venue Name</h3>
       <p>Location</p>
       <p>Price: £1000 - £3500</p>
       <p>Catering: £10 - £25</p>
       <p>Capacity: 250</p>
-      <a href="#">See More Information</a>
+      <a href="singleVenue.php">See More Information</a>
     </div>
   </div>
 </div>
