@@ -23,30 +23,46 @@
   </nav>
 </header>
 
+<div class="venue-container">
+  <div class="venue-card">
+    <div class="venue-image">
+        <img src="imageSeaView.png" alt="Sea View Tavern">
+    </div>
+    <div class="venue-info">
+      <h3>Venue Name</h3>
+      <p>Location</p>
+      <p>Price: £1000 - £3500</p>
+      <p>Catering: £10 - £25</p>
+      <p>Capacity: 250</p>
+      <a href="#">See More Information</a>
+    </div>
+  </div>
+</div>
+
 <!--TESTING READ IN DATABASE-->
 <?php
-    include "db-config.php";
-    $conn = mysqli_connect($servername, $username, $password, $dbname);
+    // include "db-config.php";
+    // $conn = mysqli_connect($servername, $username, $password, $dbname);
 
-    if (!$conn) {
-        die("Connectien failed: " . mysqli_connect_error());
-    }
+    // if (!$conn) {
+    //     die("Connectien failed: " . mysqli_connect_error());
+    // }
 
-    $sql = "select * from venue";
-    $result = mysqli_query($conn, $sql);
+    // $sql = "select * from venue";
+    // $result = mysqli_query($conn, $sql);
 
-    echo "Number of results: " . mysqli_num_rows($result);
+    // echo "Number of results: " . mysqli_num_rows($result);
 
 
-    $allDatArray = array();
-    $result = mysqli_query($conn, $sql);
-    while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-        $allDataArray[] = $row;
-    }
+    // $allDatArray = array();
+    // $result = mysqli_query($conn, $sql);
+    // while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+    //     $allDataArray[] = $row;
+    // }
 
-    echo json_encode($allDataArray);
+    // echo json_encode($allDataArray);
 
-    mysqli_close($conn);
+    // mysqli_close($conn);
 
     
 ?>

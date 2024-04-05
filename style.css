@@ -89,4 +89,45 @@ li a {
     }
 }
 
+/* VENUE CARD STYLING */
+.venue-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 214px;
+    padding-left: 525px;
+  }
+  
+  .venue-card {
+    width: 30%;
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .venue-image {
+    height: 200px;
+    /* background-size: cover; */
+    background-position: center;
+  }
+  
+  .venue-info {
+    padding: 20px;
+  }
+  
+  .venue-info h3 {
+    margin-top: 0;
+  }
+  
+  .venue-info p {
+    margin: 5px 0;
+  }
+  
+  .venue-info a {
+    display: block;
+    text-align: right;
+    color: #007bff;
+    text-decoration: none;
+  }
 
