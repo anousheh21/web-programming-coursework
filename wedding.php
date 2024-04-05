@@ -23,17 +23,18 @@
   </nav>
 </header>
 
+
+<!-- VENUE CARD TESTING' -->
 <div class="venue-container">
   <div class="venue-card">
-   
         <img class="venue-image" src="imageSeaView.png" alt="Sea View Tavern">
-    
     <div class="venue-info">
       <h3>Venue Name</h3>
-      <p>Location</p>
-      <p>Price: £1000 - £3500</p>
-      <p>Catering: £10 - £25</p>
-      <p>Capacity: 250</p>
+      <div class="overview-details">
+        <p>Price: £1000 - £3500</p>
+        <p>Catering: £10 - £25</p>
+        <p>Capacity: 250</p>
+        </div>
       <a href="singleVenue.php">See More Information</a>
     </div>
   </div>

@@ -96,26 +96,52 @@ li a {
     justify-content: space-between;
     padding-top: 214px;
     padding-left: 525px;
-  }
-  
-  .venue-card {
+}
+
+.venue-card {
     display: flex;
     flex-direction: row;
     width: 1049px;
     height: 295px;
     margin-bottom: 30px;
     border: 1px solid black;
-    border-radius: 5px;
+    border-radius: 15px;
     overflow: hidden;
-  }
-  
-  .venue-image {
-    width: 607px;
-  }
-  
-  .venue-info {
-    width: 442px;
-  }
-  
+}
 
+.venue-image {
+    width: 607px;
+}
+
+.venue-info {
+    width: 442px;
+    padding-left: 36px;
+}
+
+.venue-info h3 {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding-top: 30px;
+}
+    
+.overview-details {
+    font-family: 'Helvetica', 'Arial';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    padding-top: 1px;
+    padding-bottom: 12px;
+}
+
+.venue-info a {
+    font-family: 'Helvetica', 'Arial';
+    font-size: 18px;
+    color: rgb(124, 124, 124);
+    font-style: normal;
+    font-weight: 600;
+    text-decoration: none;
+}
 
