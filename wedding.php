@@ -30,22 +30,22 @@
     <!-- FILTERS -->
     <div class="filter-section">
         <h2 id="filter-heading">Filter Venues</h2>
-        <label for="wedding-date-filter" class="filter-subheading">Wedding Date</label>
-        <input type="date" id="wedding-date-picker" name="wedding-date-filter">
+        <label for="wedding-date-picker" class="filter-subheading">Wedding Date</label>
+        <input type="date" id="wedding-date-picker" name="wedding-date-picker">
 
-       <label for="party-size-filter" class="filter-subheading">Party Size</label>
-       <input type="number" id="party-size-input" name="party-size-filter">
+       <label for="party-size-input" class="filter-subheading">Party Size</label>
+       <input type="number" id="party-size-input" name="party-size-input">
 
         <h5 class="filter-subheading">Catering Grade</h5>
-        <input type="checkbox" class="catering-grade-checkbox" name="grade-1" value=1>
+        <input type="checkbox" class="catering-grade-checkbox" name="grade-1" id="grade-1" value=1>
         <label for="grade-1" class="catering-grade-label">1</label><br>
-        <input type="checkbox" class="catering-grade-checkbox" name="grade-2" value=2>
+        <input type="checkbox" id="grade-2" class="catering-grade-checkbox" name="grade-2" value=2>
         <label for="grade-2" class="catering-grade-label">2</label><br>
-        <input type="checkbox" class="catering-grade-checkbox" name="grade-3" value=3>
+        <input type="checkbox" id="grade-3" class="catering-grade-checkbox" name="grade-3" value=3>
         <label for="grade-3" class="catering-grade-label">3</label><br>
-        <input type="checkbox" class="catering-grade-checkbox" name="grade-4" value=4>
+        <input type="checkbox" id="grade-4" class="catering-grade-checkbox" name="grade-4" value=4>
         <label for="grade-4" class="catering-grade-label">4</label><br>
-        <input type="checkbox" class="catering-grade-checkbox" name="grade-5" value=5>
+        <input type="checkbox" id="grade-5" class="catering-grade-checkbox" name="grade-5" value=5>
         <label for="grade-5" class="catering-grade-label">5</label><br>
 
 

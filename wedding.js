@@ -1,7 +1,9 @@
 $(function() {
+    const venues = $('.venue-card');
     let partySizeInput = $("#party-size-input");
     let dateInput = $("#wedding-date-picker");
-    const venues = $('.venue-card');
+    
+    let grade1Checkbox = $("#grade-1");
 
     // Party Size Filtering
     partySizeInput.on('input', () => {
@@ -40,7 +42,12 @@ $(function() {
     })
 
     // Catering Grade Filtering
-    
+    grade1Checkbox.on('input', () => {
+        const grade1Val = grade1Checkbox.val();
+        const checked = grade1Checkbox.prop("checked");
+
+       
+    })
 
     
 });
