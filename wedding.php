@@ -32,35 +32,22 @@
         die("Connection failed: " . mysqli_connect_error());
     }
 
-    $sql = "select name, weekday_price, weekend_price, capacity from venue;";
+    $sql = "SELECT name, weekday_price, weekend_price, capacity, MIN(cost) as min_cost, MAX(cost) as max_cost FROM venue, catering WHERE venue.venue_id = catering.venue_id GROUP BY name, weekday_price, weekend_price, capacity;";
     $result = mysqli_query($conn, $sql);
 
     echo "<div class='venue-container'>";
-
-    // echo "<h1>HI</h1>";
-    // echo "SQL search string: " . $sql;
-    // echo "<br>";
-    // echo "Number of search results: " . mysqli_num_rows($result);
-    // echo "<br><br>";
-
      if (mysqli_num_rows($result) > 0) {
         while($row = mysqli_fetch_array($result)) {
             echo "<div class='venue-card'>";
-
             echo "<div class='venue-info'>";
             echo "<h3>" . $row["name"] . "</h3>";
-
             echo "<div class='overview-details'>";
             echo "<p>Price: £" .  $row["weekday_price"] . " - £" . $row["weekend_price"] . "</p>";
-            // fix catering
-            echo "<p>Catering</p>";
+            echo "<p>Catering: £" . $row["min_cost"] . " - £" . $row["max_cost"]  . "</p>";
             echo "<p>Capacity: " . $row["capacity"] . "</p>";
-
             echo "</div>";
             echo "<a href='singleVenue.php'>See More Information</a>";
-
             echo "</div>";
-
             echo "</div>";
         }
      }
