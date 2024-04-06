@@ -23,9 +23,56 @@
   </nav>
 </header>
 
+<!-- VENUE CARDS -->
+<?php
+    include "db-config.php";
+    $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+
+    $sql = "select name, weekday_price, weekend_price, capacity from venue;";
+    $result = mysqli_query($conn, $sql);
+
+    echo "<div class='venue-container'>";
+
+    // echo "<h1>HI</h1>";
+    // echo "SQL search string: " . $sql;
+    // echo "<br>";
+    // echo "Number of search results: " . mysqli_num_rows($result);
+    // echo "<br><br>";
+
+     if (mysqli_num_rows($result) > 0) {
+        while($row = mysqli_fetch_array($result)) {
+            echo "<div class='venue-card'>";
+
+            echo "<div class='venue-info'>";
+            echo "<h3>" . $row["name"] . "</h3>";
+
+            echo "<div class='overview-details'>";
+            echo "<p>Price: £" .  $row["weekday_price"] . " - £" . $row["weekend_price"] . "</p>";
+            // fix catering
+            echo "<p>Catering</p>";
+            echo "<p>Capacity: " . $row["capacity"] . "</p>";
+
+            echo "</div>";
+            echo "<a href='singleVenue.php'>See More Information</a>";
+
+            echo "</div>";
+
+            echo "</div>";
+        }
+     }
+
+    echo "</div>";
+
+    mysqli_close($conn);
+?>
+
 
 <!-- VENUE CARD TESTING' -->
-<div class="venue-container">
+<!-- <div class="venue-container">
   <div class="venue-card">
         <img class="venue-image" src="imageSeaView.png" alt="Sea View Tavern">
     <div class="venue-info">
@@ -38,7 +85,7 @@
       <a href="singleVenue.php">See More Information</a>
     </div>
   </div>
-</div>
+</div> -->
 
 <!--TESTING READ IN DATABASE-->
 <?php
