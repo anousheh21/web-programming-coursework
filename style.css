@@ -114,6 +114,21 @@ li a {
     width: 156px;
 }
 
+.filter-subheading {
+    font-family: 'Helvetica', 'Arial';
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    padding-bottom: 30px;
+}
+
+.catering-grade-label {
+    font-family: 'Helvetica', 'Arial';
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+}
+
 /* PAGE TITLES */
 .title {
     font-family: 'Helvetica', 'Arial';

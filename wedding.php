@@ -7,6 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Browse Venues</title>
 </head>
 <body>
@@ -36,15 +38,15 @@
 
         <h5 class="filter-subheading">Catering Grade</h5>
         <input type="checkbox" class="catering-grade-checkbox" name="grade-1" value=1>
-        <label for="grade-1">1</label><br>
+        <label for="grade-1" class="catering-grade-label">1</label><br>
         <input type="checkbox" class="catering-grade-checkbox" name="grade-2" value=2>
-        <label for="grade-2">2</label><br>
+        <label for="grade-2" class="catering-grade-label">2</label><br>
         <input type="checkbox" class="catering-grade-checkbox" name="grade-3" value=3>
-        <label for="grade-3">3</label><br>
+        <label for="grade-3" class="catering-grade-label">3</label><br>
         <input type="checkbox" class="catering-grade-checkbox" name="grade-4" value=4>
-        <label for="grade-4">4</label><br>
+        <label for="grade-4" class="catering-grade-label">4</label><br>
         <input type="checkbox" class="catering-grade-checkbox" name="grade-5" value=5>
-        <label for="grade-5">5</label><br>
+        <label for="grade-5" class="catering-grade-label">5</label><br>
 
 
     </div>
@@ -64,6 +66,11 @@
 
             $sql = "SELECT name, weekday_price, weekend_price, capacity, MIN(cost) as min_cost, MAX(cost) as max_cost FROM venue, catering WHERE venue.venue_id = catering.venue_id GROUP BY name, weekday_price, weekend_price, capacity;";
             $result = mysqli_query($conn, $sql);
+
+            
+           
+
+           
 
             echo "<div class='venue-container'>";
             if (mysqli_num_rows($result) > 0) {
@@ -100,11 +107,12 @@
 
 
                     echo "<div class='venue-info'>";
-                    echo "<h3>" . $row["name"] . "</h3>";
+                    echo "<h3 id='venue-name'>" . $row["name"] . "</h3>";
                     echo "<div class='overview-details'>";
                     echo "<p>Price: £" .  $row["weekday_price"] . " - £" . $row["weekend_price"] . "</p>";
                     echo "<p>Catering: £" . $row["min_cost"] . " - £" . $row["max_cost"]  . "</p>";
-                    echo "<p>Capacity: " . $row["capacity"] . "</p>";
+                    echo "<p>Capacity: <span class='capacity'>" . $row["capacity"] . "</span></p>";
+
                     echo "</div>";
                     echo "<a href='singleVenue.php'>See More Information</a>";
                     echo "</div>";
@@ -121,5 +129,6 @@
     
 </div>
 
+<script src="wedding.js"></script>
 </body>
 </html>
