@@ -89,6 +89,31 @@ li a {
     }
 }
 
+/* WEDDING.PHP PAGE LAYOUT */
+.main-content {
+    display: flex;
+    flex-direction: row;
+}
+
+/* FILTER STYLING */
+.filter-section {
+    border-right: 1px solid black;
+    padding-top: 214px;
+    padding-left: 100px;
+    padding-right: 100px;
+    width: 407px;
+}
+
+#filter-heading {
+    font-family: 'Helvetica', 'Arial';
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    /* padding-right: 50px;  */
+    display: inline-block;
+    width: 156px;
+}
+
 /* PAGE TITLES */
 .title {
     font-family: 'Helvetica', 'Arial';
@@ -108,7 +133,7 @@ li a {
     flex-wrap: wrap;
     justify-content: space-between;
     padding-top: 30px;
-    padding-left: 525px;
+    padding-left: 120px;
 }
 
 .venue-card {
