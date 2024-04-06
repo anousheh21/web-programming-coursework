@@ -89,12 +89,25 @@ li a {
     }
 }
 
+/* PAGE TITLES */
+.title {
+    font-family: 'Helvetica', 'Arial';
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+#title-browse {
+    padding-top: 145px;
+    padding-left: 525px;
+}
+
 /* VENUE CARD STYLING */
 .venue-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding-top: 214px;
+    padding-top: 30px;
     padding-left: 525px;
 }
 
@@ -119,7 +132,7 @@ li a {
 }
 
 .venue-info h3 {
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family:'Helvetica', 'Arial';
     font-size: 24px;
     font-style: normal;
     font-weight: 500;
