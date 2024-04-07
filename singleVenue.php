@@ -23,5 +23,16 @@
   </nav>
 </header>
 
+<?php
+if(isset($_GET['venue'])) {
+    $venueName = $_GET['venue'];
+    echo "<h1 class='title' id='title-single'>Information for $venueName</h1>";
+    
+} else {
+    echo "<h1>Error 404: Page Not Found/h1>";
+}
+?>
+
+
 </body>
 </html>

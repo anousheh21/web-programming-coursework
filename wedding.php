@@ -114,7 +114,9 @@
                     echo "<p>Capacity: <span class='capacity'>" . $row["capacity"] . "</span></p>";
 
                     echo "</div>";
-                    echo "<a href='singleVenue.php'>See More Information</a>";
+                    // echo "<a href='singleVenue.php'>See More Information</a>";
+                    echo "<a href='singleVenue.php?venue=" . urlencode($row["name"]) . "'>See More Information</a>";
+
                     echo "</div>";
                     echo "</div>";
                 }
