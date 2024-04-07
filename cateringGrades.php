@@ -14,7 +14,7 @@
         $cateringGradesArray[] = $row;
     }
 
-    echo json_encode($datesArray);
+    echo json_encode($cateringGradesArray);
 
     mysqli_close($conn);
 ?>
