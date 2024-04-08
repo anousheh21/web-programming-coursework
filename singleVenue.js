@@ -6,30 +6,56 @@ $(function() {
             const venueInfo = resData.filter(item => item.name == venueName);
             const thisVenue = venueInfo[0];
 
+            let phoneNumber;
+            let emailAddress;
+
             // Display correct image corresponding to venue selected
             if (thisVenue.name == "Central Plaza") {
                 $("#singleVenueImage").html("<img class='singleMainImage' src='imageCentralPlaza.png' alt='Central Plaza'>")
+                phoneNumber = '01234 567890';
+                emailAddress = 'centralplaza'
             } else if (thisVenue.name == "Pacific Towers Hotel") {
                 $("#singleVenueImage").html("<img class='singleMainImage' src='imagePacificTowers.png' alt='Pacific Towers Hotel'>")
+                phoneNumber = '02345 678901';
+                emailAddress = 'pacifictowers'
             } else if (thisVenue.name == "Sky Center Complex") {
                 $("#singleVenueImage").html("<img class='singleMainImage' src='imageSkyCenterComplex.png' alt='Sky Center Complex'>")
+                phoneNumber = '03456 789012'
+                emailAddress = 'skycenter'
             } else if (thisVenue.name == "Sea View Tavern") {
                 $("#singleVenueImage").html("<img class='singleMainImage' src='imageSeaView.png' alt='Sea View Tavern'>")
+                phoneNumber = '04567 890123'
+                emailAddress = 'seaview'
             } else if (thisVenue.name == "Ashby Castle") {
                 $("#singleVenueImage").html("<img class='singleMainImage' src='imageAshbyCastle.png' alt='Ashby Castle'>")
+                phoneNumber = '05678 901234'
+                emailAddress = 'ashbycastle'
             } else if (thisVenue.name == "Fawlty Towers") {
                 $("#singleVenueImage").html("<img class='singleMainImage' src='imageFawltyTowers.png' alt='Fawlty Towers'>")
+                phoneNumber = '06789 012345'
+                emailAddress = 'fawltytowers'
             } else if (thisVenue.name == "Hilltop Mansion") {
                 $("#singleVenueImage").html("<img class='singleMainImage' src='imageHilltopMansion.png' alt='Hilltop Mansion'>")
+                phoneNumber = '07890 123456'
+                emailAddress = 'hilltopmansion'
             } else if (thisVenue.name == "Haslegrave Hotel") {
                 $("#singleVenueImage").html("<img class='singleMainImage' src='imageHaslegraveHotel.png' alt='Haslegrave Hotel'>")
+                phoneNumber = '08901 234567'
+                emailAddress = 'haslegrave'
             } else if (thisVenue.name == "Forest Inn") {
                 $("#singleVenueImage").html("<img class='singleMainImage' src='imageForestInn.png' alt='Forest Inn'>")
+                phoneNumber = '09012 345678'
+                emailAddress = 'forestinn'
             } else if (thisVenue.name == "Southwestern Estate") {
                 $("#singleVenueImage").html("<img class='singleMainImage' src='imageSouthwestern.png' alt='Southwestern Estate'>")
+                phoneNumber = '09123 456789'
+                emailAddress = 'southwestern'
             } else {
                 $("#singleVenueImage").html("<p>image error</p>")
             }
+
+            $("#phoneNumber").html("Phone: " + phoneNumber);
+            $("#emailAddress").html("Email: book@" + emailAddress + ".com")
 
             // Put basic information on web page from JSON file
             $("#title-single").html(thisVenue.name);
@@ -45,6 +71,9 @@ $(function() {
             $("#weekendPrice").html("Weekend Price: £" + thisVenue.weekend_price);
 
         })
+
+    
+
 
     // Fetch catering price information
     fetch("cateringGrades.php")
@@ -152,3 +181,4 @@ $(function() {
     }
         
 })
+
