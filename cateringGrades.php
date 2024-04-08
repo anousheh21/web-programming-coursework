@@ -6,7 +6,7 @@
         die("Connection failed: " . mysqli_connect_error());
     }
 
-    $sql = "select name, grade from venue, catering where venue.venue_id = catering.venue_id group by name, grade;";
+    $sql = "select name, grade, cost from venue, catering where venue.venue_id = catering.venue_id group by name, grade, cost;";
 
     $cateringGradesArray = array();
     $result = mysqli_query($conn, $sql);

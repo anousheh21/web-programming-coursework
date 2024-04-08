@@ -29,8 +29,6 @@
 if(isset($_GET['venue'])) {
     $venueName = $_GET['venue'];
     echo "<script> let venueName = '$venueName';</script>";
-  
-
 } else {
     echo "<h1>Error 404: Page Not Found/h1>";
 }
@@ -58,7 +56,12 @@ if(isset($_GET['venue'])) {
       <div id="singleVenueImage"></div>
       <div id="pricingInfo">
         <div id="pricingBox">
-            <p>Pricing Box Placeholder</p>
+            <h3 id="pricingBoxHeading">Pricing</h3>
+            <p id="venuePriceSubheading">Venue Hire<span class="pricingSubheadingItalic"> - (Without Catering)</span></p>
+            <p id="weekdayPrice">Weekday Price: </p>
+            <p id="weekendPrice">Weekend Price: </p>
+            <p id="cateringPriceSubheading">Catering<span class="pricingSubheadingItalic"> - (Per Person)</span></p>
+            <div id="cateringPrices"></div>
         </div>
         <div id="costCalculator">
             <p>Cost Calculator Placeholder</p>

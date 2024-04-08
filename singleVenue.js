@@ -31,6 +31,7 @@ $(function() {
                 $("#singleVenueImage").html("<p>image error</p>")
             }
 
+            // Put basic information on web page from JSON file
             $("#title-single").html(thisVenue.name);
             $("#singleVenueCapacity").html("Capacity: " + thisVenue.capacity);
             if (thisVenue.licensed == 1) {
@@ -38,5 +39,11 @@ $(function() {
             } else if (thisVenue.licensed == 0) {
                 $("#singleVenueLicensed").html("Licensed: No");
             }
+
+            // Put venue hire prices on web page from JSON file
+            $("#weekdayPrice").html("Weekday Price: £" + thisVenue.weekday_price);
+            $("#weekendPrice").html("Weekend Price: £" + thisVenue.weekend_price);
+
+            // Fetch catering price information
         })
 })
