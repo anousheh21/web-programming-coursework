@@ -234,3 +234,12 @@ li a {
     display: flex;
     flex-direction: row;
 }
+
+.singleMainImage {
+    margin-top: 145px;
+    margin-left: 100px;
+    border: 1px solid black;
+    border-radius: 15px;
+    height: 553px;
+    width: 1188px;
+}
