@@ -44,6 +44,16 @@ $(function() {
             $("#weekdayPrice").html("Weekday Price: £" + thisVenue.weekday_price);
             $("#weekendPrice").html("Weekend Price: £" + thisVenue.weekend_price);
 
-            // Fetch catering price information
         })
+
+        // Fetch catering price information
+        fetch("cateringGrades.php")
+            .then(res => res.json())
+            .then(resData => {
+                 const cateringInfo = resData.filter(item => item.name == venueName)
+                 
+                 for (i = 0; i < cateringInfo.length; i++) {
+                    $("#cateringPrices").append("<p id='cateringGradeInfo'>Grade " + cateringInfo[i].grade + ": £" + cateringInfo[i].cost + "</p>");
+                 }
+            })
 })
