@@ -38,10 +38,21 @@ if(isset($_GET['venue'])) {
   <div id="leftContent">
     <div id="overviewInfo">
       <h1 class='title' id='title-single'></h1>
-      <!-- <p id="singleVenueDates">Available Dates Placeholder</p> -->
       <div id="availabilityButtons">
         <button id="availabilityButton">Check Availability</button>
-        <button id="popularityButton">View Popularity</button>
+
+        <button id="popularityButton">View Venue Popularity</button>
+        <div class="modal" id="popularityModal">
+          <div class="modal-header">
+            <div class='modal-title'>Venue Popularity</div>
+            <button class="close-button" id="popularityCloseButton">&times;</button>
+          </div>
+          <div class="modal-body">
+            Put popularity graph in here 
+          </div>
+        </div>
+        <div class="overlay" id="popularityOverlay"></div>
+
       </div>
       <p id="singleVenueCapacity">Capacity: </p>
       <p id="singleVenueLicensed">Licensed: </p>

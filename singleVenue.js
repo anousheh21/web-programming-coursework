@@ -59,15 +59,31 @@ $(function() {
 
     const datesButton = $("#availabilityButton");
     const popularButton = $("#popularityButton");
+    const popularityModal = $("#popularityModal");
+    const closePopularity = $("#popularityCloseButton");
+    const popularityOverlay = $("#popularityOverlay");
 
     // datesButton event listener
     datesButton.on('click', () => {
         console.log('availability button clicked')
     })
 
-    // popularButton event listener
-    popularButton.on('click', () => {
-        console.log('popularity button clicked')
-    })
+    // toggle venue popularity modal
+    popularButton.on('click', () => openModal(popularityModal)) 
+    popularityOverlay.on('click', () => closeModal(popularityModal)) 
+    closePopularity.on('click', () => closeModal(popularityModal)) 
+
+
+    function openModal(modal) {
+        if (modal == null) return
+        modal.addClass('active')
+        popularityOverlay.addClass('active')
+    }
+
+    function closeModal(modal) {
+        if (modal == null) return
+        modal.removeClass('active')
+        popularityOverlay.removeClass('active')
+    }
         
 })
