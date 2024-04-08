@@ -7,6 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Wedding Venue</title>
 </head>
 <body>
@@ -26,13 +28,16 @@
 <?php
 if(isset($_GET['venue'])) {
     $venueName = $_GET['venue'];
-    echo "<h1 class='title' id='title-single'>Information for $venueName</h1>";
-    
+    echo "<h1 class='title' id='title-single'>$venueName</h1>";
+
 } else {
     echo "<h1>Error 404: Page Not Found/h1>";
 }
 ?>
 
+<p id="singleVenueCapacity">Capacity: x</p>
+<p id="singleVenueLicensed">Licensed: hmm</p>
 
+<script src="singleVenue.js"></script>
 </body>
 </html>
