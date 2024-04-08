@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
     <script src="jquery-3.5.1.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Wedding Venue</title>
 </head>
 <body>
@@ -48,7 +49,9 @@ if(isset($_GET['venue'])) {
             <button class="close-button" id="popularityCloseButton">&times;</button>
           </div>
           <div class="modal-body">
-            Put popularity graph in here 
+
+
+            <canvas id="venuePopularityChart"></canvas>
           </div>
         </div>
         <div class="overlay" id="popularityOverlay"></div>

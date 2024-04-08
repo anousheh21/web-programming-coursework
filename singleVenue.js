@@ -57,6 +57,59 @@ $(function() {
                 }
         })
 
+    
+    // fetch wedding dates data
+    fetch("weddingDates.php") 
+        .then(res => res.json())
+        .then(resData => {
+            const dates = resData.filter(item => item.name == venueName);
+
+            // create months dictionary
+            let months = {};
+            dates.forEach((date) => {
+                const month = date.booking_date.substring(5,7)
+                if (months[month] != undefined) {
+                    months[month] = months[month] + 1
+                } else {
+                    months[month] = 1
+                }
+            })
+
+            const labels = Object.keys(months)
+            const data = Object.values(months)
+
+            // console.log(labels)
+
+            const popularChart = $("#venuePopularityChart");
+            
+            // Display venue popularity chart, using chart.js
+            new Chart (popularChart, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        backgroundColor: "purple",
+                        data: data
+                    }]
+                },
+                options: {
+                    legend: {display: false},
+                    title: {
+                        display: false,
+                        text: "Venue Popularity Chart"
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            })
+
+
+        })
+
+
     const datesButton = $("#availabilityButton");
     const popularButton = $("#popularityButton");
     const popularityModal = $("#popularityModal");
