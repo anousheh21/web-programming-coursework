@@ -151,10 +151,7 @@ li a {
     padding-left: 400px;
 }
 
-#title-single  {
-    padding-top: 145px;
-    padding-left: 525px;
-}
+
 
 /* VENUE CARD STYLING */
 .venue-container {
@@ -212,3 +209,28 @@ li a {
     text-decoration: none;
 }
 
+/* SINGLE VENUE PAGE STYLING */
+#title-single  {
+    padding-top: 145px;
+    padding-left: 88px;
+}
+
+#thisVenueBody {
+    display: flex;
+    flex-direction: row;
+}
+
+#leftContent {
+    display: flex;
+    flex-direction: column;
+}
+
+#rightContent {
+    display: flex;
+    flex-direction: column;
+}
+
+#pricingInfo {
+    display: flex;
+    flex-direction: row;
+}

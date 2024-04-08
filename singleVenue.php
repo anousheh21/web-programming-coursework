@@ -36,11 +36,36 @@ if(isset($_GET['venue'])) {
 }
 ?>
 
+<div id="thisVenueBody">
+  <div id="leftContent">
+      <div id="overviewInfo">
+      <h1 class='title' id='title-single'></h1>
+      <p id="singleVenueCapacity">Capacity: </p>
+      <p id="singleVenueLicensed">Licensed: </p>
+      </div>
+      <div id="locationMap">
+          <p>Map Placeholder</p>
+      </div>
+      <div id="ratingDoughnutChart">
+          <p>Rating Chart Placeholder</p>
+      </div>
+  </div>
+  <div id="rightContent">
+      <div id="singleVenueImage"></div>
+      <div id="pricingInfo">
+        <div id="pricingBox">
+            <p>Pricing Box Placeholder</p>
+        </div>
+        <div id="costCalculator">
+            <p>Cost Calculator Placeholder</p>
+        </div>
+      </div>
+  </div>
+</div>
 
-<div id="singleVenueImage"></div>
-<h1 class='title' id='title-single'></h1>
-<p id="singleVenueCapacity">Capacity: </p>
-<p id="singleVenueLicensed">Licensed: </p>
+
+
+
 
 <script src="singleVenue.js"></script>
 </body>
