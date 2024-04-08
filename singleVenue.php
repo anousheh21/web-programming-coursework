@@ -45,7 +45,7 @@ if(isset($_GET['venue'])) {
         <button id="popularityButton">View Venue Popularity</button>
         <div class="modal" id="popularityModal">
           <div class="modal-header">
-            <div class='modal-title'>Venue Popularity</div>
+            <div class='modal-title'>Venue Popularity By Month</div>
             <button class="close-button" id="popularityCloseButton">&times;</button>
           </div>
           <div class="modal-body">

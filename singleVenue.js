@@ -64,21 +64,19 @@ $(function() {
         .then(resData => {
             const dates = resData.filter(item => item.name == venueName);
 
-            // create months dictionary
-            let months = {};
+            // create months map
+            let months = new Map();
             dates.forEach((date) => {
                 const month = date.booking_date.substring(5,7)
-                if (months[month] != undefined) {
-                    months[month] = months[month] + 1
+                if (months.has(month)) {
+                    months.set(month, months.get(month) + 1);
                 } else {
-                    months[month] = 1
+                    months.set(month, 1);
                 }
             })
 
-            const labels = Object.keys(months)
-            const data = Object.values(months)
-
-            // console.log(labels)
+            const labels = Array.from(months.keys());
+            const data = Array.from(months.values());
 
             const popularChart = $("#venuePopularityChart");
             
@@ -88,7 +86,7 @@ $(function() {
                 data: {
                     labels: labels,
                     datasets: [{
-                        backgroundColor: "purple",
+                        backgroundColor: "#786ABD",
                         data: data
                     }]
                 },
@@ -101,6 +99,20 @@ $(function() {
                     plugins: {
                         legend: {
                             display: false
+                        }
+                    },
+                    scales: {
+                        y: {
+                            title: {
+                                display: true,
+                                text: "Number of Bookings"
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: "Month"
+                            }
                         }
                     }
                 }
