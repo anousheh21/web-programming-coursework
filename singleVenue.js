@@ -46,14 +46,28 @@ $(function() {
 
         })
 
-        // Fetch catering price information
-        fetch("cateringGrades.php")
-            .then(res => res.json())
-            .then(resData => {
-                 const cateringInfo = resData.filter(item => item.name == venueName)
-                 
-                 for (i = 0; i < cateringInfo.length; i++) {
-                    $("#cateringPrices").append("<p id='cateringGradeInfo'>Grade " + cateringInfo[i].grade + ": £" + cateringInfo[i].cost + "</p>");
-                 }
-            })
+    // Fetch catering price information
+    fetch("cateringGrades.php")
+        .then(res => res.json())
+        .then(resData => {
+                const cateringInfo = resData.filter(item => item.name == venueName)
+                
+                for (i = 0; i < cateringInfo.length; i++) {
+                $("#cateringPrices").append("<p id='cateringGradeInfo'>Grade " + cateringInfo[i].grade + ": £" + cateringInfo[i].cost + "</p>");
+                }
+        })
+
+    const datesButton = $("#availabilityButton");
+    const popularButton = $("#popularityButton");
+
+    // datesButton event listener
+    datesButton.on('click', () => {
+        console.log('availability button clicked')
+    })
+
+    // popularButton event listener
+    popularButton.on('click', () => {
+        console.log('popularity button clicked')
+    })
+        
 })

@@ -38,7 +38,11 @@ if(isset($_GET['venue'])) {
   <div id="leftContent">
     <div id="overviewInfo">
       <h1 class='title' id='title-single'></h1>
-      <p id="singleVenueDates">Available Dates Placeholder</p>
+      <!-- <p id="singleVenueDates">Available Dates Placeholder</p> -->
+      <div id="availabilityButtons">
+        <button id="availabilityButton">Check Availability</button>
+        <button id="popularityButton">View Popularity</button>
+      </div>
       <p id="singleVenueCapacity">Capacity: </p>
       <p id="singleVenueLicensed">Licensed: </p>
       <p id="bookingSubheading">To Book: </p>

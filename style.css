@@ -242,6 +242,11 @@ li a {
     font-weight: 400;
 }
 
+#availabilityButtons {
+    display: flex;
+    flex-direction: row;
+}
+
 #bookingSubheading {
     font-size: 20px;
     font-style: normal;
