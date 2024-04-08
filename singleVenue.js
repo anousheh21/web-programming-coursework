@@ -1,10 +1,12 @@
 $(function() {
+    // Fetch JSON from venueInfo.php
     fetch("venueInfo.php")
         .then(res => res.json())
         .then(resData => {
             const venueInfo = resData.filter(item => item.name == venueName);
             const thisVenue = venueInfo[0];
 
+            // Display correct image corresponding to venue selected
             if (thisVenue.name == "Central Plaza") {
                 $("#singleVenueImage").html("<img class='singleMainImage' src='imageCentralPlaza.png' alt='Central Plaza'>")
             } else if (thisVenue.name == "Pacific Towers Hotel") {

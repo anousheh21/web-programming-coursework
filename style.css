@@ -210,19 +210,16 @@ li a {
 }
 
 /* SINGLE VENUE PAGE STYLING */
-#title-single  {
-    padding-top: 145px;
-    padding-left: 88px;
-}
-
 #thisVenueBody {
     display: flex;
     flex-direction: row;
+    font-family: 'Helvetica', 'Arial';
 }
 
 #leftContent {
     display: flex;
     flex-direction: column;
+    margin-left: 88px;
 }
 
 #rightContent {
@@ -233,6 +230,26 @@ li a {
 #pricingInfo {
     display: flex;
     flex-direction: row;
+}
+
+#title-single  {
+    padding-top: 145px;
+}
+
+#overviewInfo {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+#bookingSubheading {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 550;
+}
+
+#singleVenueLicensed {
+    margin-bottom: 50px;
 }
 
 .singleMainImage {
