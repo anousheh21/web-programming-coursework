@@ -28,15 +28,19 @@
 <?php
 if(isset($_GET['venue'])) {
     $venueName = $_GET['venue'];
-    echo "<h1 class='title' id='title-single'>$venueName</h1>";
+    echo "<script> let venueName = '$venueName';</script>";
+  
 
 } else {
     echo "<h1>Error 404: Page Not Found/h1>";
 }
 ?>
 
-<p id="singleVenueCapacity">Capacity: x</p>
-<p id="singleVenueLicensed">Licensed: hmm</p>
+
+<div id="singleVenueImage"></div>
+<h1 class='title' id='title-single'></h1>
+<p id="singleVenueCapacity">Capacity: </p>
+<p id="singleVenueLicensed">Licensed: </p>
 
 <script src="singleVenue.js"></script>
 </body>
