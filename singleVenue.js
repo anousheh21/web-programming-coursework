@@ -70,6 +70,29 @@ $(function() {
             $("#weekdayPrice").html("Weekday Price: £" + thisVenue.weekday_price);
             $("#weekendPrice").html("Weekend Price: £" + thisVenue.weekend_price);
 
+            // // Configure map
+            let map;
+           
+            async function initMap() {
+                const position = { lat : parseFloat(thisVenue.latitude), lng: parseFloat(thisVenue.longitude) };
+                const { Map } = await google.maps.importLibrary("maps");
+                const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+
+                map = new google.maps.Map(document.getElementById('locationMap'), {
+                    center: position,
+                    zoom: 9,
+                    mapId: 'b9e42c44faddda84'
+                });
+
+                const marker = new AdvancedMarkerElement({
+                    map: map,
+                    position: position,
+                    title: thisVenue.name
+                });
+            }
+
+            initMap();
+
         })
 
     

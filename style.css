@@ -257,6 +257,10 @@ li a {
     margin-bottom: 50px;
 }
 
+#locationMap {
+    height: 100%;
+}
+
 .singleMainImage {
     margin-top: 145px;
     margin-left: 100px;
@@ -326,6 +330,7 @@ li a {
 .overlay.active {
     opacity: 1;
     pointer-events: all;
+    z-index: 9;
 }
 
 #venuePopularityChart {
