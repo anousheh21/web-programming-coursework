@@ -96,15 +96,38 @@ $(function() {
             if (partySizeCost != "" && dateCost != "" && cateringGradeCost != "") {
                 let partySize = parseInt(partySizeCost)
                 let venueCapacity = parseInt(thisVenue.capacity)
-                let weddingDate = Date.parse(dateCost)
+                // let weddingDate = Date.parse(dateCost)
                 let grade = parseInt(cateringGradeCost)
                 let errorMessage = $("#costInvalidResponse")
 
-                if (partySize > venueCapacity) {
-                    errorMessage.html("Party size exceeds the capacity of the venue. Consider a different venue");
-                } else if (partySize < 0) {
-                    errorMessage.html("Invalid party size");
-                }
+
+                fetch("weddingDates.php")
+                    .then(res => res.json())
+                    .then(resData => {
+                        const dates = resData.filter(item => item.name == venueName);
+
+                        let venueBooked = false;
+                        dates.forEach(date => {
+                            if (date.booking_date == dateCost) {
+                                venueBooked = true;
+                                return;
+                            }
+                        })
+
+                        if ((partySize > venueCapacity) && isEmpty(errorMessage)) {
+                            errorMessage.html("Party size exceeds the capacity of the venue. Consider a different venue");
+                        } else if ((partySize < 0) && isEmpty(errorMessage)) {
+                            errorMessage.html("Invalid party size");
+                        }
+
+                        if ((venueBooked == true) && isEmpty(errorMessage)) {
+                            errorMessage.html("Venue already has a booking on your wedding date. Consider a different date, or a different venue")
+                        }
+                    })
+
+                
+
+                
             }
 
         })
@@ -285,6 +308,10 @@ $(function() {
         if (modal == null) return
         modal.removeClass('active')
         popularityOverlay.removeClass('active')
+    }
+
+    function isEmpty( el ){
+        return !$.trim(el.html())
     }
         
 })
