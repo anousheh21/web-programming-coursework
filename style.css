@@ -261,7 +261,7 @@ li a {
     height: 100%;
 }
 
-#ratingValues {
+.ratingValues {
     display: flex;
     flex-direction: row;
     align-items: baseline;
@@ -269,17 +269,17 @@ li a {
     font-size: 16px;
 }
 
-#starsvg {
+.starsvg {
     height: 16px;
     width: 16px;
 }
 
-#ratingAverage {
+.ratingAverage {
     margin-left: 7px;
     margin-right: 2px;
 }
 
-#numberOfRatings {
+.numberOfRatings {
     color: #968F8F;
 }
 

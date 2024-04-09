@@ -108,6 +108,14 @@
 
                     echo "<div class='venue-info'>";
                     echo "<h3 id='venue-name'>" . $row["name"] . "</h3>";
+
+                    echo "<div class='ratingValues'>";
+                    echo "<img class='starsvg' src='star.svg'>";
+                    echo "<p class='ratingAverage' id='browseRatingAverage'></p>";
+                    echo "<p class='numberOfRatings' id='browseNumberOfRatings'></p>";
+
+                    echo "</div>";
+
                     echo "<div class='overview-details'>";
                     echo "<p>Price: £" .  $row["weekday_price"] . " - £" . $row["weekend_price"] . "</p>";
                     echo "<p>Catering: £" . $row["min_cost"] . " - £" . $row["max_cost"]  . "</p>";

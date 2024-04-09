@@ -111,6 +111,43 @@ $(function() {
    
     partySizeInput.on('input', applyFilters);
     dateInput.on('input', applyFilters);
+
+    // Fetch rating information
+    fetch("reviewScores.php")
+        .then(res => res.json())
+        .then(resData => {
+            venues.each((index, venue) => {
+                const venueName = $(venue).find('#venue-name').text();
+                const reviews = resData.filter(item => item.name == venueName);
+
+                // Create scores dictionary
+                let scores = {};
+                reviews.forEach(review => {
+                    const score = review.score;
+                    if (scores[score] != undefined) {
+                        scores[score] = scores[score] + 1;
+                    } else {
+                        scores[score] = 1;
+                    }
+                })
+
+                numberOfScores = 0;
+                for (const [key, value] of Object.entries(scores)) {
+                    numberOfScores += value;
+                }
+
+                $(venue).find("#browseNumberOfRatings").html("(" + numberOfScores + ")");
+
+                totalScore = 0;
+                for (const [key, value] of Object.entries(scores)) {
+                    totalScore += (key * value);
+                }
+
+                averageScore = (totalScore / numberOfScores).toFixed(2);
+
+                $(venue).find("#browseRatingAverage").html(averageScore);
+            })
+        })
 });
 
 

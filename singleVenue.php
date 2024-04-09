@@ -72,10 +72,10 @@ if(isset($_GET['venue'])) {
     <div id="locationMap"></div>
 
     <div id="venueRatingInformation">
-      <div id="ratingValues">
-        <img id="starsvg" src="star.svg">
-        <p id="ratingAverage"></p>
-        <p id="numberOfRatings"></p>
+      <div id="ratingValues" class="ratingValues" >
+        <img id="starsvg" class="starsvg" src="star.svg">
+        <p id="ratingAverage" class="ratingAverage"></p>
+        <p id="numberOfRatings" class="numberOfRatings"></p>
       </div>
 
       <div id="ratingDoughnutChart">
