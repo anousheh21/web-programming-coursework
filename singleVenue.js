@@ -95,8 +95,48 @@ $(function() {
 
         })
 
-    
+    // Fetch rating information
+    fetch("reviewScores.php")
+        .then(res => res.json())
+        .then(resData => {
+            const reviews = resData.filter(item => item.name == venueName);
+            
+            let scores = {};
+            reviews.forEach(review => {
+                const score = review.score;
+                if (scores[score] != undefined) {
+                    scores[score] = scores[score] + 1;
+                } else {
+                    scores[score] = 1;
+                }
+            })
 
+            const labels = Object.keys(scores)
+            const data = Object.values(scores)
+
+            const ratingChart = $("#venueRatingChart");
+
+            new Chart (ratingChart, {
+                type: "doughnut",
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        data: data
+                    }]
+                },
+                options: {
+                    title: {
+                        display: true,
+                        text: "Ratings"
+                    },
+                    plugins : {
+                        legend: {
+                            position: 'bottom'
+                        }
+                    }
+                }
+            })
+        })
 
     // Fetch catering price information
     fetch("cateringGrades.php")
@@ -110,7 +150,7 @@ $(function() {
         })
 
     
-    // fetch wedding dates data
+    // Fetch wedding dates data
     fetch("weddingDates.php") 
         .then(res => res.json())
         .then(resData => {

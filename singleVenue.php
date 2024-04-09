@@ -57,8 +57,6 @@ if(isset($_GET['venue'])) {
             <button class="close-button" id="popularityCloseButton">&times;</button>
           </div>
           <div class="modal-body">
-
-
             <canvas id="venuePopularityChart"></canvas>
           </div>
         </div>
@@ -73,7 +71,7 @@ if(isset($_GET['venue'])) {
     </div>
     <div id="locationMap"></div>
     <div id="ratingDoughnutChart">
-        <p>Rating Chart Placeholder</p>
+        <canvas id="venueRatingChart"></canvas>
     </div>
   </div>
   <div id="rightContent">
