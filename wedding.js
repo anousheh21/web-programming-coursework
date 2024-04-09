@@ -76,7 +76,7 @@ $(function() {
                             .then(resData => {
                                 const filteredDates = resData.filter(item => item.booking_date === weddingDate);
                                 const filteredVenues = filteredDates.map(item => item.name);
-                                if (!filteredVenues.includes(venueName)) {
+                                if (filteredVenues.includes(venueName)) {
                                     shouldBeVisible = false;
                                 }
                                 
