@@ -160,6 +160,7 @@ function cleanInput($data) {
 
             <!-- other error messages -->
             <p id="costInvalidResponse"></p>
+            <p id="calculatedCost"></p>
 
         </div>
       </div>

@@ -123,6 +123,39 @@ $(function() {
                         if ((venueBooked == true) && isEmpty(errorMessage)) {
                             errorMessage.html("Venue already has a booking on your wedding date. Consider a different date, or a different venue")
                         }
+
+                        // If there are no errors in the user input, calculate the cost of the wedding
+                        if (isEmpty(errorMessage)) {
+                            const d = new Date(dateCost);
+                            const day = d.getDay();
+                            let venueHirePrice;
+
+                            if (day == 6 || day == 0) {
+                                venueHirePrice = parseInt(thisVenue.weekend_price)
+                            } else {
+                                venueHirePrice = parseInt(thisVenue.weekday_price)
+                            }
+
+                            fetch("cateringGrades.php")
+                                .then(res => res.json())
+                                .then(resData => {
+                                    const cateringInfo = resData.filter(item => item.name == venueName)
+                                    
+                                    // get catering price for chosen grade
+                                    let cateringCostSingle;
+                                    cateringInfo.forEach(info => {
+                                        if (parseInt(info.grade) == grade) {
+                                            cateringCostSingle = parseInt(info.cost)
+                                        }
+                                    })
+                                    
+                                    let totalCateringCost = cateringCostSingle * partySize;
+                                    // console.log(venueHirePrice)
+                                    let totalCost = venueHirePrice + totalCateringCost;
+                                    // console.log(totalCost);
+                                    $("#calculatedCost").html("Total Wedding Cost: £" + totalCost);
+                                })
+                        }
                     })
 
                 
