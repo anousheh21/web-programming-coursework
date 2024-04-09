@@ -261,9 +261,26 @@ li a {
     height: 100%;
 }
 
+#ratingValues {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    font-family: 'Helvetica', 'Arial';
+    font-size: 16px;
+}
+
 #starsvg {
-    height: 22px;
-    width: 22px;
+    height: 16px;
+    width: 16px;
+}
+
+#ratingAverage {
+    margin-left: 7px;
+    margin-right: 2px;
+}
+
+#numberOfRatings {
+    color: #968F8F;
 }
 
 .singleMainImage {

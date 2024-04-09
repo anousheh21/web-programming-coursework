@@ -73,7 +73,6 @@ if(isset($_GET['venue'])) {
 
     <div id="venueRatingInformation">
       <div id="ratingValues">
-        <!-- use flexbox to get the values in line-->
         <img id="starsvg" src="star.svg">
         <p id="ratingAverage"></p>
         <p id="numberOfRatings"></p>
