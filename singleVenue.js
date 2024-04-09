@@ -101,6 +101,7 @@ $(function() {
         .then(resData => {
             const reviews = resData.filter(item => item.name == venueName);
             
+            // Create scores dictionary
             let scores = {};
             reviews.forEach(review => {
                 const score = review.score;
@@ -111,11 +112,30 @@ $(function() {
                 }
             })
 
+            // Get number of scores
+            numberOfScores = 0;
+            for (const [key, value] of Object.entries(scores)) {
+                numberOfScores += value;
+            }
+
+            $("#numberOfRatings").html("(" + numberOfScores + ")");
+
+            // Get scores average
+            totalScore = 0;
+            for (const [key, value] of Object.entries(scores)) {
+                totalScore += (key * value);
+            }
+
+            averageScore = (totalScore / numberOfScores).toFixed(2);
+            
+            $("#ratingAverage").html(averageScore);
+           
+
             const labels = Object.keys(scores)
             const data = Object.values(scores)
 
+            // Ratings chart
             const ratingChart = $("#venueRatingChart");
-
             new Chart (ratingChart, {
                 type: "doughnut",
                 data: {

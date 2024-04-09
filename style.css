@@ -261,6 +261,11 @@ li a {
     height: 100%;
 }
 
+#starsvg {
+    height: 22px;
+    width: 22px;
+}
+
 .singleMainImage {
     margin-top: 145px;
     margin-left: 100px;

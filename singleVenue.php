@@ -70,9 +70,20 @@ if(isset($_GET['venue'])) {
       <p class="bookingDetails" id="emailAddress">Email: emailAddressHere</p>
     </div>
     <div id="locationMap"></div>
-    <div id="ratingDoughnutChart">
-        <canvas id="venueRatingChart"></canvas>
+
+    <div id="venueRatingInformation">
+      <div id="ratingValues">
+        <!-- use flexbox to get the values in line-->
+        <img id="starsvg" src="star.svg">
+        <p id="ratingAverage"></p>
+        <p id="numberOfRatings"></p>
+      </div>
+
+      <div id="ratingDoughnutChart">
+          <canvas id="venueRatingChart"></canvas>
+      </div>
     </div>
+
   </div>
   <div id="rightContent">
       <div id="singleVenueImage"></div>
