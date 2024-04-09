@@ -43,6 +43,36 @@ if(isset($_GET['venue'])) {
 }
 ?>
 
+<?php
+// Calculate cost form validation
+$partySizeCostError = $dateCostError = "";
+$partySizeCost = $dateCost = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+  if (empty($_POST["partySizeCost"])) {
+    $partySizeCostError = "Party size is required";
+  } else {
+    $partySizeCost = cleanInput($_POST["partySizeCost"]);
+  }
+
+  if (empty($_POST["dateCost"])) {
+    $dateCostError = "Date is required";
+  } else {
+    $dateCost = cleanInput($_POST["dateCost"]);
+  }
+}
+
+function cleanInput($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+
+
+?>
+
 <div id="thisVenueBody">
   <div id="leftContent">
     <div id="overviewInfo">
@@ -96,7 +126,31 @@ if(isset($_GET['venue'])) {
             <div id="cateringPrices"></div>
         </div>
         <div id="costCalculator">
-            <p>Cost Calculator Placeholder</p>
+            <h3 id="costBoxHeading">Cost Calculator</h3>
+            <form method="post" action='<?php htmlspecialchars($_SERVER["PHP_SELF"]);?>'>
+              <p id="costPartySizeLabel">Party Size</p>
+              <input type="number" name="partySizeCost" id="partySizeCost" value="<?php echo $partySizeCost;?>">
+              <span class="costError">* <?php echo $partySizeCostError;?></span>
+
+              <p id="costDateLabel">Wedding Date</p>
+              <input type="date" name="dateCost" id="dateCost" value="<?php echo $dateCost;?>">
+              <span class="costError">* <?php echo $dateCostError;?></span>
+
+              <p id="costGradeLabel">Catering Grade</p>
+              <!-- sort this out later -->
+
+              <input type="submit" name="submit" id="costSubmit" value="Calculate">
+            </form>
+
+            <?php
+            // form output
+            echo "<p>Party Size</p>";
+            echo $partySizeCost;
+            echo "<p>Wedding Date</p>";
+            echo $dateCost;
+
+            ?>
+
         </div>
       </div>
   </div>
