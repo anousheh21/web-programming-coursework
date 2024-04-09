@@ -151,16 +151,15 @@ function cleanInput($data) {
               <input type="submit" name="submit" id="costSubmit" value="Calculate">
             </form>
 
-            <?php
-            // form output
-            echo "<p>Party Size</p>";
-            echo $partySizeCost;
-            echo "<p>Wedding Date</p>";
-            echo $dateCost;
-            echo "<p>Catering Grade</p>";
-            echo $cateringCostRadio;
+            <script>
+              // Pass form outputs to JavaScript file
+              let partySizeCost = "<?php echo"$partySizeCost"?>";
+              let dateCost = "<?php echo"$dateCost"?>";
+              let cateringGradeCost = "<?php echo"$cateringCostRadio"?>";
+            </script>
 
-            ?>
+            <!-- other error messages -->
+            <p id="costInvalidResponse"></p>
 
         </div>
       </div>

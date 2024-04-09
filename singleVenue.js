@@ -93,6 +93,20 @@ $(function() {
 
             initMap();
 
+            if (partySizeCost != "" && dateCost != "" && cateringGradeCost != "") {
+                let partySize = parseInt(partySizeCost)
+                let venueCapacity = parseInt(thisVenue.capacity)
+                let weddingDate = Date.parse(dateCost)
+                let grade = parseInt(cateringGradeCost)
+                let errorMessage = $("#costInvalidResponse")
+
+                if (partySize > venueCapacity) {
+                    errorMessage.html("Party size exceeds the capacity of the venue. Consider a different venue");
+                } else if (partySize < 0) {
+                    errorMessage.html("Invalid party size");
+                }
+            }
+
         })
 
     // Fetch rating information
