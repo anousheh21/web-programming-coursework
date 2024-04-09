@@ -45,8 +45,8 @@ if(isset($_GET['venue'])) {
 
 <?php
 // Calculate cost form validation
-$partySizeCostError = $dateCostError = "";
-$partySizeCost = $dateCost = "";
+$partySizeCostError = $dateCostError = $cateringCostRadio = "";
+$partySizeCost = $dateCost = $cateringCostError = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -60,6 +60,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $dateCostError = "Date is required";
   } else {
     $dateCost = cleanInput($_POST["dateCost"]);
+  }
+
+  if (empty($_POST["cateringCostRadio"])) {
+    $cateringCostError = "Catering grade is required";
+  } else {
+    $cateringCostRadio = cleanInput($_POST["cateringCostRadio"]);
   }
 }
 
@@ -136,8 +142,11 @@ function cleanInput($data) {
               <input type="date" name="dateCost" id="dateCost" value="<?php echo $dateCost;?>">
               <span class="costError">* <?php echo $dateCostError;?></span>
 
-              <p id="costGradeLabel">Catering Grade</p>
-              <!-- sort this out later -->
+              <p id="cateringCostLabel">Catering Grade</p>
+              <div id="cateringCostSelection">
+              <input type="hidden" id="cateringGrade" name="cateringGrade" value="">
+              </div>
+              <span class="costError">* <?php echo $cateringCostError;?></span>
 
               <input type="submit" name="submit" id="costSubmit" value="Calculate">
             </form>
@@ -148,6 +157,8 @@ function cleanInput($data) {
             echo $partySizeCost;
             echo "<p>Wedding Date</p>";
             echo $dateCost;
+            echo "<p>Catering Grade</p>";
+            echo $cateringCostRadio;
 
             ?>
 

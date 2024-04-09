@@ -165,8 +165,18 @@ $(function() {
                 const cateringInfo = resData.filter(item => item.name == venueName)
                 
                 for (i = 0; i < cateringInfo.length; i++) {
-                $("#cateringPrices").append("<p id='cateringGradeInfo'>Grade " + cateringInfo[i].grade + ": £" + cateringInfo[i].cost + "</p>");
+                    // Put catering information in pricing list
+                    $("#cateringPrices").append("<p id='cateringGradeInfo'>Grade " + cateringInfo[i].grade + ": £" + cateringInfo[i].cost + "</p>");
+
+                    // Cost calculator radio buttons
+                    $("#cateringCostSelection").append(`<input type="radio" name="cateringCostRadio" value="${cateringInfo[i].grade}"><span> ${cateringInfo[i].grade} </span>`);
+                    document.getElementById('cateringGrade').value = cateringInfo[i].grade;
+                    
+
+
                 }
+
+
         })
 
     
