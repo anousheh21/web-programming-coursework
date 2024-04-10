@@ -7,6 +7,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Compare Venues</title>
 </head>
 <body>
@@ -68,6 +71,7 @@
 
 ?>
 
+<p id="compareFormError"></p>
 <div id="compareForm">
   <form method="post" action='<?php htmlspecialchars($_SERVER["PHP_SELF"]);?>'>
     <div id="compareDropdowns">
@@ -95,27 +99,26 @@
 
     </div>
     <div id="compareSubmit">
-          <input type="submit" name="submit" id="compareSubmit">
+          <input type="submit" name="submit" id="compareSubmit" value="Compare">
     </div>
   </form>
 
   <script>
     let dropdownLeft = "<?php echo"$dropdownLeft"?>";
     let dropdownRight = "<?php echo"$dropdownRight"?>";
-
-    console.log(dropdownLeft)
-    console.log(dropdownRight)
   </script>
 
 </div>
 
-<div id="compareGraphInfo">
-  <div id="compareRadio"></div>
-  <div id="compareGraphs">
-    <div id="compareRadar"></div>
-    <div id="compareBar"></div>
+
+<div id="compareGraphs">
+  <div id="compareRadar">
+    <canvas id="ratingRadarChart"></canvas>
   </div>
+  <div id="compareBar"></div>
 </div>
 
+
+<script src="compare.js"></script>
 </body>
 </html>
