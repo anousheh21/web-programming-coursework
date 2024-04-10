@@ -81,25 +81,25 @@
                     echo "<div class='venue-card'>";
 
                     if ($row["name"] == "Central Plaza") {
-                        echo "<img class='venue-image' src='imageCentralPlaza.png' alt='Central Plaza'>";
+                        echo "<a href='singleVenue.php?venue=" . urlencode($row["name"]) . "'><img class='venue-image' src='imageCentralPlaza.png' alt='Central Plaza'></a>";
                     } else if ($row["name"] == "Pacific Towers Hotel") {
-                        echo "<img class='venue-image' src='imagePacificTowers.png' alt='Pacific Towers Hotel'>";
+                        echo "<a href='singleVenue.php?venue=" . urlencode($row["name"]) . "'><img class='venue-image' src='imagePacificTowers.png' alt='Pacific Towers Hotel'></a>";
                     } else if ($row["name"] == "Sky Center Complex") {
-                        echo "<img class='venue-image' src='imageSkyCenterComplex.png' alt='Sky Center Complex'>";
+                        echo "<a href='singleVenue.php?venue=" . urlencode($row["name"]) . "'><img class='venue-image' src='imageSkyCenterComplex.png' alt='Sky Center Complex'></a>";
                     } else if ($row["name"] == "Sea View Tavern") {
-                        echo "<img class='venue-image' src='imageSeaView.png' alt='Sea View Tavern'>";
+                        echo "<a href='singleVenue.php?venue=" . urlencode($row["name"]) . "'><img class='venue-image' src='imageSeaView.png' alt='Sea View Tavern'></a>";
                     } else if ($row["name"] == "Ashby Castle") {
-                        echo "<img class='venue-image' src='imageAshbyCastle.png' alt='Ashby Castle'>";
+                        echo "<a href='singleVenue.php?venue=" . urlencode($row["name"]) . "'><img class='venue-image' src='imageAshbyCastle.png' alt='Ashby Castle'></a>";
                     } else if ($row["name"] == "Fawlty Towers") {
-                        echo "<img class='venue-image' src='imageFawltyTowers.png' alt='Fawlty Towers'>";
+                        echo "<a href='singleVenue.php?venue=" . urlencode($row["name"]) . "'><img class='venue-image' src='imageFawltyTowers.png' alt='Fawlty Towers'></a>";
                     } else if ($row["name"] == "Hilltop Mansion") {
-                        echo "<img class='venue-image' src='imageHilltopMansion.png' alt='Hilltop Mansion'>";
+                        echo "<a href='singleVenue.php?venue=" . urlencode($row["name"]) . "'><img class='venue-image' src='imageHilltopMansion.png' alt='Hilltop Mansion'></a>";
                     } else if ($row["name"] == "Haslegrave Hotel") {
-                        echo "<img class='venue-image' src='imageHaslegraveHotel.png' alt='Haslegrave Hotel'>";
+                        echo "<a href='singleVenue.php?venue=" . urlencode($row["name"]) . "'><img class='venue-image' src='imageHaslegraveHotel.png' alt='Haslegrave Hotel'></a>";
                     } else if ($row["name"] == "Forest Inn") {
-                        echo "<img class='venue-image' src='imageForestInn.png' alt='Forst Inn'>";
+                        echo "<a href='singleVenue.php?venue=" . urlencode($row["name"]) . "'><img class='venue-image' src='imageForestInn.png' alt='Forst Inn'></a>";
                     } else if ($row["name"] == "Southwestern Estate") {
-                        echo "<img class='venue-image' src='imageSouthwestern.png' alt='Southwestern Estate'>";
+                        echo "<a href='singleVenue.php?venue=" . urlencode($row["name"]) . "'><img class='venue-image' src='imageSouthwestern.png' alt='Southwestern Estate'></a>";
                     } else {
                         echo "<p>image error</p>";
                     }
