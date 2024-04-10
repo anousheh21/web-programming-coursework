@@ -71,25 +71,28 @@
 <div id="compareForm">
   <form method="post" action='<?php htmlspecialchars($_SERVER["PHP_SELF"]);?>'>
     <div id="compareDropdowns">
-      <select name="dropdownLeft" id="dropdownLeft">
-        <?php
-          if (mysqli_num_rows($result) > 0) {
-              while($row = mysqli_fetch_array($result)) {
-                  echo "<option value='" . $row['name'] . "'>" . $row['name'] . "</option>";
-              }
+    <select name="dropdownLeft" id="dropdownLeft">
+      <?php
+      if (mysqli_num_rows($result) > 0) {
+          while ($row = mysqli_fetch_array($result)) {
+              $selected = ($row['name'] == $dropdownLeft) ? 'selected' : '';
+              echo "<option value='" . $row['name'] . "' $selected>" . $row['name'] . "</option>";
           }
-        ?>
-      </select>
-      <select name="dropdownRight" id="dropdownRight">
+      }
+      ?>
+  </select>
+  <select name="dropdownRight" id="dropdownRight">
       <?php
       $result = mysqli_query($conn, $sql);
-          if (mysqli_num_rows($result) > 0) {
-              while($row = mysqli_fetch_array($result)) {
-                  echo "<option value='" . $row['name'] . "'>" . $row['name'] . "</option>";
-              }
+      if (mysqli_num_rows($result) > 0) {
+          while ($row = mysqli_fetch_array($result)) {
+              $selected = ($row['name'] == $dropdownRight) ? 'selected' : '';
+              echo "<option value='" . $row['name'] . "' $selected>" . $row['name'] . "</option>";
           }
-        ?>
-      </select>
+      }
+      ?>
+  </select>
+
     </div>
     <div id="compareSubmit">
           <input type="submit" name="submit" id="compareSubmit">
