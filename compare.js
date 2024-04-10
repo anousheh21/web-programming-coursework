@@ -1,6 +1,5 @@
 $(function() {
-    // console.log(dropdownLeft)
-    // console.log(dropdownRight)
+
     if (dropdownLeft != "" && dropdownRight != "") {
         if (dropdownRight == dropdownLeft) {
             $("#compareFormError").html("Please select two different venues");
@@ -94,6 +93,89 @@ $(function() {
 
 
                 })
+                
+            fetch("weddingDates.php")
+                .then(res => res.json())
+                .then(resData => {
+                    const datesLeft = resData.filter(item => item.name == dropdownLeft)
+                    const datesRight = resData.filter(item => item.name == dropdownRight)
+
+                    let monthsLeft = new Map();
+                    datesLeft.forEach(date => {
+                        const month = date.booking_date.substring(5,7)
+                        if (monthsLeft.has(month)) {
+                            monthsLeft.set(month, monthsLeft.get(month) + 1);
+                        } else {
+                            monthsLeft.set(month, 1);
+                        }
+                    })
+
+                    let monthsRight = new Map();
+                    datesRight.forEach(date => {
+                        const month = date.booking_date.substring(5,7)
+                        if (monthsRight.has(month)) {
+                            monthsRight.set(month, monthsRight.get(month) + 1);
+                        } else {
+                            monthsRight.set(month, 1);
+                        }
+                    })
+
+                    const labels = Array.from(monthsLeft.keys());
+                    const datasetLeft = Array.from(monthsLeft.values());
+                    const datasetRight = Array.from(monthsRight.values());
+
+                    const popularLineChart = $("#popularityCompareLine");
+
+                    new Chart(popularLineChart, {
+                        type: "scatter",
+                        data: {
+                            labels: labels,
+                            datasets: [{
+                                type: 'line',
+                                label: dropdownLeft,
+                                data: datasetLeft,
+                                fill: false,
+                                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                                borderColor: 'rgb(255, 99, 132)',
+                                pointBackgroundColor: 'rgb(255, 99, 132)',
+                                pointBorderColor: '#fff',
+                                pointHoverBackgroundColor: '#fff',
+                                pointHoverBorderColor: 'rgb(255, 99, 132)'
+                            }, {
+                                type: 'line',
+                                label: dropdownRight,
+                                data: datasetRight,
+                                fill: false,
+                                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                                borderColor: 'rgb(54, 162, 235)',
+                                pointBackgroundColor: 'rgb(54, 162, 235)',
+                                pointBorderColor: '#fff',
+                                pointHoverBackgroundColor: '#fff',
+                                pointHoverBorderColor: 'rgb(54, 162, 235)'
+                            }]
+                        }, 
+                        options: {
+                            title: {
+                                display: true,
+                                text: "Compare Venue Popularity"
+                            },
+                            plugins: {
+                                legend: {
+                                    position: 'bottom'
+                                }
+                            },
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
+                            }
+                        }
+                    })
+
+                })
+
+
+
         }
     }
 })

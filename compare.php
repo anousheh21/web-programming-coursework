@@ -115,7 +115,9 @@
   <div id="compareRadar">
     <canvas id="ratingRadarChart"></canvas>
   </div>
-  <div id="compareBar"></div>
+  <div id="compareBar">
+    <canvas id="popularityCompareLine"></canvas>
+  </div>
 </div>
 
 
