@@ -11,6 +11,16 @@ $(function() {
 
     let favourites = JSON.parse(sessionStorage.getItem('favourites')) || [];
 
+    venues.each((index, venue) => {
+        const eachVenue = $(venue).find('#venue-name').text();
+        // console.log(eachVenue);
+
+        if (favourites.includes(eachVenue)) {
+           // const heartContainer = $(this).parent(); 
+            $(venue).find('.heart').toggleClass('hidden');
+        }
+    })
+
     // Apply all filters
     let applyFilters = () => {
         const partySize = parseInt(partySizeInput.val());
