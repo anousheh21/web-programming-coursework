@@ -89,4 +89,14 @@ $(function() {
             console.log(favourites)
         });
 
+        // Only show venue cards that are in favourites array in session storage
+        venues.each((index, venue) => {
+            const eachVenue = $(venue).find('#venue-name').text();
+            if (!favourites.includes(eachVenue)) {
+                $(venue).hide();
+            } else {
+                $(venue).show();
+            }
+        })
+
 })
