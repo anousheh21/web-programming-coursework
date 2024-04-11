@@ -9,6 +9,8 @@ $(function() {
     let grade4Checkbox = $("#grade-4");
     let grade5Checkbox = $("#grade-5");
 
+    let favourites = JSON.parse(sessionStorage.getItem('favourites')) || [];
+
     // Apply all filters
     let applyFilters = () => {
         const partySize = parseInt(partySizeInput.val());
@@ -152,13 +154,39 @@ $(function() {
         // Manage favourite locations
         $(document).on('click', '.heartsvg', function() {
             const heartContainer = $(this).parent(); // Get the container of the hearts
+            const venueName = heartContainer.find('#venue-name').text();
+
+            
+
+            
+
+            let index = favourites.indexOf(venueName)
+
+            if(index == -1) {
+                favourites.push(venueName);
+            } else {
+                favourites.splice(index, 1)
+            }
+
+            sessionStorage.setItem('favourites', JSON.stringify(favourites))
+
+            
+
             heartContainer.find('.heart').toggleClass('hidden'); // Toggle the visibility of all hearts within the container
 
             if (heartContainer.find("#heartBorder").hasClass('hidden')) {
-                console.log("favourite venue!");
+                // add to favourites
+                console.log(venueName + " has been added to favourites")
+                //sessionStorage.setItem(venueName, venueName)
+
             } else {
-                console.log("not a favourite");
+               // remove from favourites
+               console.log(venueName + " has been removed from favourites")
+               //sessionStorage.removeItem(venueName)
             }
+
+            //console.log(Object.keys(sessionStorage))
+            console.log(favourites)
         });
 });
 
