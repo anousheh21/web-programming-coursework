@@ -148,6 +148,18 @@ $(function() {
                 $(venue).find("#browseRatingAverage").html(averageScore);
             })
         })
+
+        // Manage favourite locations
+        $(document).on('click', '.heartsvg', function() {
+            const heartContainer = $(this).parent(); // Get the container of the hearts
+            heartContainer.find('.heart').toggleClass('hidden'); // Toggle the visibility of all hearts within the container
+
+            if (heartContainer.find("#heartBorder").hasClass('hidden')) {
+                console.log("favourite venue!");
+            } else {
+                console.log("not a favourite");
+            }
+        });
 });
 
 

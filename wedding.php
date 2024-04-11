@@ -111,8 +111,8 @@
                     echo "<div class='boxHeading'>";
                     echo "<h3 id='venue-name'>" . $row["name"] . "</h3>";
 
-                    echo "<img class='heartsvg' id='heartBorder' src='heartBorder.svg'>";
-                    echo "<img class='heartsvg hidden' id='heartFill' src='heartFill.svg'>";
+                    echo "<img class='heartsvg heart' id='heartBorder' src='heartBorder.svg'>";
+                    echo "<img class='heartsvg hidden heart' id='heartFill' src='heartFill.svg'>";
 
                     echo "</div>";
 
