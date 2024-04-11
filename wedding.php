@@ -107,7 +107,14 @@
 
 
                     echo "<div class='venue-info'>";
+
+                    echo "<div class='boxHeading'>";
                     echo "<h3 id='venue-name'>" . $row["name"] . "</h3>";
+
+                    echo "<img class='heartsvg' id='heartBorder' src='heartBorder.svg'>";
+                    echo "<img class='heartsvg hidden' id='heartFill' src='heartFill.svg'>";
+
+                    echo "</div>";
 
                     echo "<div class='ratingValues'>";
                     echo "<img class='starsvg' src='star.svg'>";
