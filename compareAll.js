@@ -89,7 +89,7 @@ $(function() {
                             y: {
                                 title: {
                                     display: true,
-                                    text: titleText
+                                    text: "Weekday Price (£)"
                                 }
                             },
                             x: {
@@ -131,7 +131,7 @@ $(function() {
                             y: {
                                 title: {
                                     display: true,
-                                    text: titleText
+                                    text: "Weekend Price (£)"
                                 }
                             },
                             x: {

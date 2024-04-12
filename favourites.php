@@ -44,6 +44,8 @@
         <!-- HEADING -->
         <h1 class="title" id="favourite-title-browse">Favourite Venues</h1>
 
+        <h2 id="noFavouritesMessage"></h2>
+
         <!-- VENUE CARDS -->
         <?php
             include "db-config.php";

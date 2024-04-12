@@ -226,9 +226,17 @@ li {
     font-weight: 600;
 }
 
+#browseHeadingDiv {
+    text-align: center;
+    margin: auto;
+}
+
 #title-browse {
     padding-top: 120px;
     padding-left: 400px;
+   
+    text-align: center;
+    
 }
 
 #favourite-title-browse {
@@ -240,6 +248,7 @@ li {
     flex-direction: column;
  
     align-items: center;
+    justify-content: center;
 }
 
 
@@ -260,7 +269,10 @@ li {
     padding-top: 30px;
 }
 
-
+#noFavouritesMessage {
+    font-family: 'Helvetica', 'Arial';
+    font-weight: 500;
+}
 
 .venue-card {
     display: flex;

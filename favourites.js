@@ -90,13 +90,25 @@ $(function() {
         });
 
         // Only show venue cards that are in favourites array in session storage
+        let count = 0;
         venues.each((index, venue) => {
             const eachVenue = $(venue).find('#venue-name').text();
             if (!favourites.includes(eachVenue)) {
                 $(venue).hide();
+                
             } else {
                 $(venue).show();
+                count += 1;
             }
         })
+
+       //  console.log(count)
+
+       if (count == 0) {
+            $("#noFavouritesMessage").html("You have no favourite venues.  Click the heart next to a venue to add it to favourites.")
+       } else {
+            $("#noFavouritesMessage").html("")
+       }
+
 
 })
