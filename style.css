@@ -3,8 +3,82 @@
 }
 
 /* NAV BAR STYLING */
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: #c3bde2;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: 78px;
+    z-index: 1;
+  }
+  
+  nav a {
+    font-family: 'Helvetica', 'Arial';
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    padding: 14px 16px; 
+    text-decoration: none; 
+  }
+  
+  .dropdown {
+    /* float: left; */
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    /* font-size: 16px;   */
+    border: none;
+    outline: none;
+    
+    padding: 30px 16px;
+    background-color: inherit;
+    
+    margin: 0;
+  }
+  
+  /* nav a:hover, .dropdown:hover .dropbtn {
+    background-color:#c3bde2;
+  } */
 
-ul {
+  .navbar-item:hover, .dropdown:hover .dropbtn {
+    background-color: #796ac6;
+    color: white;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+/* ul {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -26,13 +100,13 @@ li {
     font-style: normal;
     font-weight: 500;
     
-}
+} */
 
-li a {
+/* li a {
     color: black;
     text-decoration: none;
     padding-left: 60px;
-}
+} */
 
 .satisfy-regular {
     font-family: "Satisfy", cursive;
@@ -41,7 +115,12 @@ li a {
 }
 
 .navbar-item {
+    position: relative;
     padding-top: 30px;
+    /* padding-left: 30px; */
+    font-family: 'Helvetica', 'Arial';
+    font-size: 18px;
+    text-align: center;
 }
 
 #logo {
@@ -49,6 +128,7 @@ li a {
     font-weight: 800;
     line-height: normal;
     padding-top: 15px;
+    margin-left: 20px;
 }
 
 
