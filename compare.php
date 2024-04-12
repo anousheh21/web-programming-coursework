@@ -82,7 +82,7 @@
   <div id="compareForm">
     <form method="post" action='<?php htmlspecialchars($_SERVER["PHP_SELF"]);?>'>
       <div id="compareDropdowns">
-        <select name="dropdownLeft" id="dropdownLeft">
+        <select class="dropdownCompare" name="dropdownLeft" id="dropdownLeft">
           <?php
           if (mysqli_num_rows($result) > 0) {
               while ($row = mysqli_fetch_array($result)) {
@@ -92,7 +92,7 @@
           }
           ?>
         </select>
-        <select name="dropdownRight" id="dropdownRight">
+        <select class="dropdownCompare" name="dropdownRight" id="dropdownRight">
             <?php
             $result = mysqli_query($conn, $sql);
             if (mysqli_num_rows($result) > 0) {

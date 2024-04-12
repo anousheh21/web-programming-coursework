@@ -686,7 +686,33 @@ li {
 }
 
 
+.dropdownCompare {
+    font-size: 18px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
 
+#dropdownLeft {
+    margin-right: 10px;
+}
+
+#dropdownRight {
+    margin-left: 10px;
+}
+
+#compareSubmit {
+    font-size: 16px;
+    padding: 10px 20px;
+}
+
+#compareFormError {
+    font-family: 'Helvetica', 'Arial';
+    margin-top: -10px;
+    margin-bottom: 5px;
+    color: red;
+    font-size: 16px;
+}
 
 #title-compare {
     margin-top: 120px;
