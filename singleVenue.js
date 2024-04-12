@@ -1,4 +1,5 @@
 $(function() {
+   
     // Fetch JSON from venueInfo.php
     fetch("venueInfo.php")
         .then(res => res.json())
@@ -241,6 +242,17 @@ $(function() {
                     // Cost calculator radio buttons
                     $("#cateringCostSelection").append(`<input type="radio" name="cateringCostRadio" value="${cateringInfo[i].grade}"><span> ${cateringInfo[i].grade} </span>`);
                     document.getElementById('cateringGrade').value = cateringInfo[i].grade;
+
+
+                        //console.log(cateringGradeCost)
+                      if (cateringGradeCost !== "") {
+               
+                $("input[name='cateringCostRadio']").each(function() {
+                    if ($(this).val() === cateringGradeCost) {
+                        $(this).prop("checked", true);
+                    }
+                });
+            }
                     
 
 

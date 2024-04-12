@@ -170,6 +170,8 @@ function cleanInput($data) {
               let partySizeCost = "<?php echo"$partySizeCost"?>";
               let dateCost = "<?php echo"$dateCost"?>";
               let cateringGradeCost = "<?php echo"$cateringCostRadio"?>";
+
+        
             </script>
 
             <!-- other error messages -->
