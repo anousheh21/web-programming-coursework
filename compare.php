@@ -106,7 +106,7 @@
 
       </div>
       <div id="compareSubmit">
-            <input type="submit" name="submit" id="compareSubmit" value="Compare">
+            <input class="buttonStyler" type="submit" name="submit" id="compareSubmit" value="Compare">
       </div>
     </form>
 

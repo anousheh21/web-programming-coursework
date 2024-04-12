@@ -337,7 +337,7 @@ li {
 #leftContent {
     display: flex;
     flex-direction: column;
-    margin-left: 88px;
+    margin-left: 60px;
 }
 
 #rightContent {
@@ -399,6 +399,48 @@ li {
     /* justify-content: space-between; */
     
 }
+
+.buttonStyler {
+    background-color: #786ABD;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 12px;
+    transition-duration: 0.4s;
+
+}
+
+.buttonStyler:hover {
+    background-color: #5748A4;
+}
+
+
+.buttonStyler:active {
+    transform: scale(0.95);
+}
+
+/* #popularityButton {
+    background-color: #786ABD;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 12px;
+    transition-duration: 0.4s;
+}
+
+#popularityButton:hover {
+    background-color: #5748A4;
+}
+
+#popularityButton:active {
+    transform: scale(0.95);
+} */
 
 #partyInputContainer {
     display: flex;
@@ -664,6 +706,14 @@ li {
 #compareAllButtons {
     display: flex;
     flex-direction: row;
+}
+
+#showCapacityCompare {
+    margin-right: 5px;
+}
+
+#showWeekdayPriceCompare {
+    margin-right: 5px;
 }
 
 #compareAllChartDiv {

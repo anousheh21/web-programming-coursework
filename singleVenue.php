@@ -100,7 +100,7 @@ function cleanInput($data) {
       <div id="availabilityButtons">
         <!-- <button id="availabilityButton">Check Availability</button> -->
 
-        <button id="popularityButton">View Venue Popularity</button>
+        <button id="popularityButton" class="buttonStyler">View Venue Popularity</button>
         <div class="modal" id="popularityModal">
           <div class="modal-header">
             <div class='modal-title'>Venue Popularity By Month</div>
@@ -174,7 +174,7 @@ function cleanInput($data) {
         </div>
 
         <div id="submitCostButtonContainer">
-              <input type="submit" name="submit" id="costSubmit" value="Calculate">
+              <input type="submit" name="submit" class="buttonStyler" id="costSubmit" value="Calculate">
         </div>
             </form>
 

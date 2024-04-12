@@ -36,9 +36,9 @@
     <h1 class="title" id="title-compare-all">Select Comparison Metric</h1>
 
     <div id="compareAllButtons">
-        <button id="showCapacityCompare">Compare Capacity</button>
-        <button id="showWeekdayPriceCompare">Compare Weekday Price</button>
-        <button id="showWeekendPriceCompare">Compare Weekend Price</button>
+        <button class="buttonStyler" id="showCapacityCompare">Compare Capacity</button>
+        <button class="buttonStyler" id="showWeekdayPriceCompare">Compare Weekday Price</button>
+        <button class="buttonStyler" id="showWeekendPriceCompare">Compare Weekend Price</button>
     </div>
 
     <div id="compareAllChartDiv">
