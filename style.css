@@ -519,3 +519,9 @@ li {
     display: flex;
     flex-direction: row;
 }
+
+#compareAllChartDiv {
+    margin-top: 50px;
+    width: 90%;
+    height: auto;
+}
