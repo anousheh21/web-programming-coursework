@@ -323,12 +323,61 @@ li {
 #rightContent {
     display: flex;
     flex-direction: column;
+    margin-top: 145px;
+    margin-left: 100px;
 }
 
 #pricingInfo {
     display: flex;
     flex-direction: row;
+    margin-top: 35px;
+    
 }
+
+#pricingBox {
+    border: black 1px solid;
+    padding-left: 80px;
+    padding-top: 30px;
+    padding-right: 200px;
+    padding-bottom: 30px;
+    margin-right: 50px;
+}
+
+#costCalculator {
+    border: black 1px solid;
+    padding-top: 30px;
+    padding-left: 80px;
+    padding-bottom: 30px;
+}
+
+#pricingBoxHeading {
+    font-size: 22px;
+}
+
+#costBoxHeading {
+    font-size: 22px;
+}
+
+#venuePriceSubheading {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#cateringPriceSubheading {
+    font-size: 20px;
+    font-weight: 500;
+ 
+}
+
+#weekendPrice {
+    margin-bottom: 30px;
+}
+
+.pricingSubheadingItalic {
+    font-style: italic;
+    font-weight: 400;
+}
+
 
 #title-single  {
     padding-top: 145px;
@@ -346,7 +395,7 @@ li {
 }
 
 #bookingSubheading {
-    font-size: 20px;
+    font-size: 22px;
     font-style: normal;
     font-weight: 550;
 }
@@ -382,8 +431,8 @@ li {
 }
 
 .singleMainImage {
-    margin-top: 145px;
-    margin-left: 100px;
+    /* margin-top: 145px;
+    margin-left: 100px; */
     border: 1px solid black;
     border-radius: 15px;
     height: 553px;

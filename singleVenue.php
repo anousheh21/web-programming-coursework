@@ -98,7 +98,7 @@ function cleanInput($data) {
     <div id="overviewInfo">
       <h1 class='title' id='title-single'></h1>
       <div id="availabilityButtons">
-        <button id="availabilityButton">Check Availability</button>
+        <!-- <button id="availabilityButton">Check Availability</button> -->
 
         <button id="popularityButton">View Venue Popularity</button>
         <div class="modal" id="popularityModal">
@@ -150,17 +150,17 @@ function cleanInput($data) {
             <form method="post" action='<?php htmlspecialchars($_SERVER["PHP_SELF"]);?>'>
               <p id="costPartySizeLabel">Party Size</p>
               <input type="number" name="partySizeCost" id="partySizeCost" value="<?php echo $partySizeCost;?>">
-              <span class="costError">* <?php echo $partySizeCostError;?></span>
+              <span class="costError"><?php echo $partySizeCostError;?></span>
 
               <p id="costDateLabel">Wedding Date</p>
               <input type="date" name="dateCost" id="dateCost" value="<?php echo $dateCost;?>">
-              <span class="costError">* <?php echo $dateCostError;?></span>
+              <span class="costError"><?php echo $dateCostError;?></span>
 
               <p id="cateringCostLabel">Catering Grade</p>
               <div id="cateringCostSelection">
               <input type="hidden" id="cateringGrade" name="cateringGrade" value="">
               </div>
-              <span class="costError">* <?php echo $cateringCostError;?></span>
+              <span class="costError"><?php echo $cateringCostError;?></span>
 
               <input type="submit" name="submit" id="costSubmit" value="Calculate">
             </form>
