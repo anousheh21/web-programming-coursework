@@ -33,7 +33,7 @@
     </button>
     <div class="dropdown-content" class="navbar-item">
       <a href="compare.php">Compare 2 Venues</a>
-      <a href="#">Compare All Venues</a>
+      <a href="compareAll.php">Compare All Venues</a>
     </div>
   </div> 
 </nav>
