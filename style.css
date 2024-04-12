@@ -504,3 +504,18 @@ li {
     margin-top: 120px;
 }
 
+/* COMPARE ALL VENUES PAGE STYLING */
+#title-compare-all {
+    margin-top: 120px;
+}
+
+#mainBodyCompareAll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#compareAllButtons {
+    display: flex;
+    flex-direction: row;
+}
