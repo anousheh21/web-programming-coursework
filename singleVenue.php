@@ -148,21 +148,31 @@ function cleanInput($data) {
         <div id="costCalculator">
             <h3 id="costBoxHeading">Cost Calculator</h3>
             <form method="post" action='<?php htmlspecialchars($_SERVER["PHP_SELF"]);?>'>
-              <p id="costPartySizeLabel">Party Size</p>
-              <input type="number" name="partySizeCost" id="partySizeCost" value="<?php echo $partySizeCost;?>">
-              <span class="costError"><?php echo $partySizeCostError;?></span>
+            <div id="costCalculatorInput">
+              <div id="partyInputContainter">
+                  <p id="costPartySizeLabel">Party Size</p>
+                  <input type="number" name="partySizeCost" id="partySizeCost" value="<?php echo $partySizeCost;?>">
+                  <span class="costError"><?php echo $partySizeCostError;?></span>
+              </div>
 
-              <p id="costDateLabel">Wedding Date</p>
-              <input type="date" name="dateCost" id="dateCost" value="<?php echo $dateCost;?>">
-              <span class="costError"><?php echo $dateCostError;?></span>
+              <div id="dateInputContainer">
+                  <p id="costDateLabel">Wedding Date</p>
+                  <input type="date" name="dateCost" id="dateCost" value="<?php echo $dateCost;?>">
+                  <span class="costError"><?php echo $dateCostError;?></span>
+              </div>
+        </div>  
 
+        <div id="cateringInputContainer">
               <p id="cateringCostLabel">Catering Grade</p>
               <div id="cateringCostSelection">
               <input type="hidden" id="cateringGrade" name="cateringGrade" value="">
               </div>
               <span class="costError"><?php echo $cateringCostError;?></span>
+        </div>
 
+        <div id="submitCostButtonContainer">
               <input type="submit" name="submit" id="costSubmit" value="Calculate">
+        </div>
             </form>
 
             <script>

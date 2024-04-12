@@ -344,10 +344,44 @@ li {
 }
 
 #costCalculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     border: black 1px solid;
     padding-top: 30px;
     padding-left: 80px;
+    padding-right: 80px;
     padding-bottom: 30px;
+}
+
+#cateringInputContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the container */
+    margin-top: 20px; /* Add margin for spacing */
+}
+
+.catering-grade-label {
+    font-family: 'Helvetica', 'Arial';
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center; /* Center the text */
+}
+
+
+
+#costCalculatorInput {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+#submitCostButtonContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 #pricingBoxHeading {
