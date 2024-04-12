@@ -42,7 +42,7 @@
 
 <div id="browse-section">
         <!-- HEADING -->
-        <h1 class="title" id="title-browse">Favourite Venues</h1>
+        <h1 class="title" id="favourite-title-browse">Favourite Venues</h1>
 
         <!-- VENUE CARDS -->
         <?php
@@ -61,7 +61,7 @@
 
            
 
-            echo "<div class='venue-container'>";
+            echo "<div class='favourite-venue-container'>";
             if (mysqli_num_rows($result) > 0) {
                 while($row = mysqli_fetch_array($result)) {
 

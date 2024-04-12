@@ -122,10 +122,13 @@ function cleanInput($data) {
     <div id="locationMap"></div>
 
     <div id="venueRatingInformation">
+      <div id="venueRatingHeader">
+      <h3 id="venueRatingTitle">Ratings:  </h3>
       <div id="ratingValues" class="ratingValues" >
         <img id="starsvg" class="starsvg" src="star.svg">
         <p id="ratingAverage" class="ratingAverage"></p>
         <p id="numberOfRatings" class="numberOfRatings"></p>
+      </div>
       </div>
 
       <div id="ratingDoughnutChart">

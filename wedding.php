@@ -67,9 +67,12 @@
 
     <div id="browse-section">
         <!-- HEADING -->
+        <div id="browseHeadingDiv">
         <h1 class="title" id="title-browse">Browse Venues</h1>
+        </div>
 
         <!-- VENUE CARDS -->
+        <div id="venue-cards">
         <?php
             include "db-config.php";
             $conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -155,6 +158,7 @@
 
             mysqli_close($conn);
         ?>
+        </div>
     </div>
 
     
