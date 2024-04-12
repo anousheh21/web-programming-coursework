@@ -353,6 +353,7 @@ li {
     padding-left: 80px;
     padding-right: 80px;
     padding-bottom: 30px;
+    max-width: 500px;
 }
 
 #cateringInputContainer {
@@ -375,7 +376,30 @@ li {
 #costCalculatorInput {
     display: flex;
     flex-direction: row;
+    /* justify-content: space-between; */
     
+}
+
+#partyInputContainer {
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+}
+
+#dateInputContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.costError {
+    margin-top: 10px;
+    color: red;
+}
+
+#costInvalidResponse {
+    color: red;
+    /* width: 75%; */
+    text-align: center;
 }
 
 #submitCostButtonContainer {
@@ -402,6 +426,8 @@ li {
     font-weight: 500;
  
 }
+
+
 
 #weekendPrice {
     margin-bottom: 30px;

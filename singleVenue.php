@@ -149,9 +149,9 @@ function cleanInput($data) {
             <h3 id="costBoxHeading">Cost Calculator</h3>
             <form method="post" action='<?php htmlspecialchars($_SERVER["PHP_SELF"]);?>'>
             <div id="costCalculatorInput">
-              <div id="partyInputContainter">
+              <div id="partyInputContainer">
                   <p id="costPartySizeLabel">Party Size</p>
-                  <input type="number" name="partySizeCost" id="partySizeCost" value="<?php echo $partySizeCost;?>">
+                  <input type="number" name="partySizeCost" id="partySizeCost" value="<?php echo $partySizeCost;?>" size="5" maxlength="5">
                   <span class="costError"><?php echo $partySizeCostError;?></span>
               </div>
 
