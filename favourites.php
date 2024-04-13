@@ -31,10 +31,16 @@
 </nav>
 </header>
 
+  
+   
 
 <div id="browse-section">
-        <!-- HEADING -->
-        <h1 class="title" id="favourite-title-browse">Favourite Venues</h1>
+
+      <!-- HEADING -->
+      <div id="favouritesTitleDiv">
+            <h1 class="title" id="favourite-title-browse">Favourite Venues</h1>
+        </div>
+     
 
         <h2 id="noFavouritesMessage"></h2>
 

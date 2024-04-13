@@ -236,7 +236,7 @@ li {
     font-size: 25px;
     font-style: normal;
     font-weight: 500;
-    display: inline-block;
+    /* display: inline-block; */
     width: 156px;
     margin-bottom: 30px;
 }
@@ -296,8 +296,16 @@ li {
     
 } */
 
+#favouritesTitleDiv {
+    display: flex;
+    flex-direction: row;
+    width: 1500px;
+    justify-content: flex-start;
+}
+
 #favourite-title-browse {
-    padding-top: 120px;
+    margin-top: 120px;
+    margin-bottom: -25px;
 }
 
 #browse-section {
