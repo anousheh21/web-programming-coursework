@@ -7,7 +7,9 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    background-color: #c3bde2;
+    /* background-color: #c3bde2; */
+    background-color: #465151;
+    color: white;
     margin: 0;
     padding: 0;
     left: 0;
@@ -21,7 +23,7 @@ nav {
   nav a {
     font-family: 'Helvetica', 'Arial';
     font-size: 18px;
-    color: black;
+    color: whitesmoke;
     text-align: center;
     padding: 14px 16px; 
     text-decoration: none; 
@@ -42,20 +44,25 @@ nav {
     
     margin: 0;
   }
+
+  .dropbtn {
+    color: whitesmoke;
+  }
   
   /* nav a:hover, .dropdown:hover .dropbtn {
     background-color:#c3bde2;
   } */
 
   .navbar-item:hover, .dropdown:hover .dropbtn {
-    background-color: #796ac6;
-    color: white;
+    background-color: whitesmoke;
+    color: #465151;
   }
   
   .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
+   
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
