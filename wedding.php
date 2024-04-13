@@ -36,7 +36,9 @@
 
 <div class="main-content">
 
+<div id="topBrowseCenter">
  <div id="topBrowseSection">
+   
 
     <!-- HEADING -->
     <div id="browseHeadingDiv">
@@ -75,6 +77,7 @@
 
 
     </div>
+</div>
 </div>
    
 

@@ -199,9 +199,17 @@ li {
 #topBrowseSection {
     display: flex;
     flex-direction: row;
+    width: 1500px;
     align-items: flex-start;
     justify-content: space-between;
     margin-top: 100px;
+   
+}
+
+#topBrowseCenter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 
@@ -319,8 +327,8 @@ li {
 .venue-card {
     display: flex;
     flex-direction: row;
-    width: 1049px;
-    height: 295px;
+    width: 1500px;
+    height: 500px;
     margin-bottom: 30px;
     border: 1px solid black;
     border-radius: 15px;
@@ -328,17 +336,19 @@ li {
 }
 
 .venue-image {
-    width: 607px;
+    /* width: 800px; */
+    height: 500px;
 }
 
 .venue-info {
-    width: 442px;
-    padding-left: 36px;
+    width: 700px;
+    margin-left: 70px;
+    margin-top: 50px;
 }
 
 .venue-info h3 {
-    font-family:'Helvetica', 'Arial';
-    font-size: 24px;
+    font-family: 'Georgia', 'Helvetica', 'Arial';
+    font-size: 30px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -347,7 +357,7 @@ li {
 }
     
 .overview-details {
-    font-family: 'Helvetica', 'Arial';
+    font-family: 'Nunito Sans', 'Helvetica', 'Arial';
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
