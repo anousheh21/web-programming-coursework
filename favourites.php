@@ -113,7 +113,7 @@
 
                     echo "</div>";
                     // echo "<a href='singleVenue.php'>See More Information</a>";
-                    echo "<a href='singleVenue.php?venue=" . urlencode($row["name"]) . "'>See More Information</a>";
+                    echo "<button class='buttonStyler'><a href='singleVenue.php?venue=" . urlencode($row["name"]) . "'>See More Information</a></button>";
 
                     echo "</div>";
                     echo "</div>";
