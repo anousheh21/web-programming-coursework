@@ -15,16 +15,8 @@
 
 <!-- NAV BAR -->
 <header>
-  <!-- <nav>
-    <ul>
-      <li id="logo" class="satisfy-regular"><a href="wedding.php">Wedding Venue Finder</a></li>
-      <li class="navbar-item"><a href="wedding.php">Venues</a></li>
-      <li class="navbar-item"><a href="favourites.php">Favourites</a></li>
-      <li class="navbar-item"><a href="compare.php">Compare Venues</a></li>
-    </ul>
-  </nav> -->
   <nav>
-  <a id="logo" class="satisfy-regular" href="wedding.php">Wedding Venue Finder</a>
+  <a id="logo" class="satisfy-regular" href="wedding.php">Wed In Style</a>
   <a class="navbar-item" href="wedding.php">Venues</a>
   <a class="navbar-item" href="favourites.php">Favourites</a>
   <div class="dropdown ">

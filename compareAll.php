@@ -17,7 +17,7 @@
 <!-- NAV BAR -->
 <header>
   <nav>
-  <a id="logo" class="satisfy-regular" href="wedding.php">Wedding Venue Finder</a>
+  <a id="logo" class="satisfy-regular" href="wedding.php">Wed In Style</a>
   <a class="navbar-item" href="wedding.php">Venues</a>
   <a class="navbar-item" href="favourites.php">Favourites</a>
   <div class="dropdown ">
