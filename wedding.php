@@ -13,6 +13,8 @@
 </head>
 <body>
 
+<div id="browseBody">
+
 <!-- NAV BAR -->
 <header>
     <nav>
@@ -34,35 +36,50 @@
 
 <div class="main-content">
 
+ <div id="topBrowseSection">
+
+    <!-- HEADING -->
+    <div id="browseHeadingDiv">
+        <h1 class="title" id="title-browse">Browse Venues</h1>
+    </div>
+
     <!-- FILTERS -->
     <div class="filter-section">
-        <h2 id="filter-heading">Filter Venues</h2>
-        <label for="wedding-date-picker" class="filter-subheading">Wedding Date</label>
-        <input type="date" id="wedding-date-picker" name="wedding-date-picker">
+        <!-- <h2 id="filter-heading">Filter Venues</h2> -->
+        <div id="weddingDateFilterDiv">
+            <label for="wedding-date-picker" class="filter-subheading">Wedding Date</label>
+            <input type="date" id="wedding-date-picker" name="wedding-date-picker">
+        </div>
 
-       <label for="party-size-input" class="filter-subheading">Party Size</label>
-       <input type="number" id="party-size-input" name="party-size-input">
+        <div id="partySizeFilterDiv">
+            <label for="party-size-input" class="filter-subheading">Party Size</label>
+            <input type="number" id="party-size-input" name="party-size-input">
+        </div>
 
-        <h5 class="filter-subheading">Catering Grade</h5>
-        <input type="checkbox" class="catering-grade-checkbox" name="grade-1" id="grade-1" value=1>
-        <label for="grade-1" class="catering-grade-label">1</label><br>
-        <input type="checkbox" id="grade-2" class="catering-grade-checkbox" name="grade-2" value=2>
-        <label for="grade-2" class="catering-grade-label">2</label><br>
-        <input type="checkbox" id="grade-3" class="catering-grade-checkbox" name="grade-3" value=3>
-        <label for="grade-3" class="catering-grade-label">3</label><br>
-        <input type="checkbox" id="grade-4" class="catering-grade-checkbox" name="grade-4" value=4>
-        <label for="grade-4" class="catering-grade-label">4</label><br>
-        <input type="checkbox" id="grade-5" class="catering-grade-checkbox" name="grade-5" value=5>
-        <label for="grade-5" class="catering-grade-label">5</label><br>
+        <div id="cateringGradeFilterDiv">
+            <h5 class="filter-subheading">Catering Grade</h5>
+
+            <div id="cateringGradeFilterCheckboxes">
+                <input type="checkbox" class="catering-grade-checkbox" name="grade-1" id="grade-1" value=1>
+                <label for="grade-1" class="catering-grade-label">1</label><br>
+                <input type="checkbox" id="grade-2" class="catering-grade-checkbox" name="grade-2" value=2>
+                <label for="grade-2" class="catering-grade-label">2</label><br>
+                <input type="checkbox" id="grade-3" class="catering-grade-checkbox" name="grade-3" value=3>
+                <label for="grade-3" class="catering-grade-label">3</label><br>
+                <input type="checkbox" id="grade-4" class="catering-grade-checkbox" name="grade-4" value=4>
+                <label for="grade-4" class="catering-grade-label">4</label><br>
+                <input type="checkbox" id="grade-5" class="catering-grade-checkbox" name="grade-5" value=5>
+                <label for="grade-5" class="catering-grade-label">5</label><br>
+            </div>
+        </div>
 
 
     </div>
+</div>
+   
 
     <div id="browse-section">
-        <!-- HEADING -->
-        <div id="browseHeadingDiv">
-        <h1 class="title" id="title-browse">Browse Venues</h1>
-        </div>
+        
 
         <!-- VENUE CARDS -->
         <div id="venue-cards">
@@ -158,5 +175,6 @@
 </div>
 
 <script src="wedding.js"></script>
+</div>
 </body>
 </html>
