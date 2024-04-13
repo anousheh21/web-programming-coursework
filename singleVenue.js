@@ -208,6 +208,7 @@ $(function() {
                 }
             }
 
+
             const labels = Object.keys(scores)
             const data = Object.values(scores)
 

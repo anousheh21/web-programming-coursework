@@ -11,7 +11,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Browse Venues</title>
 </head>
-<body>
+<body id="bodyWeddingMain">
 
 <div id="browseBody">
 
@@ -160,7 +160,7 @@
 
                     echo "</div>";
                     // echo "<a href='singleVenue.php'>See More Information</a>";
-                    echo "<a href='singleVenue.php?venue=" . urlencode($row["name"]) . "'>See More Information</a>";
+                    echo "<button class='buttonStyler'><a href='singleVenue.php?venue=" . urlencode($row["name"]) . "'>See More Information</a></button>";
 
                     echo "</div>";
                     echo "</div>";
