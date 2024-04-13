@@ -202,17 +202,25 @@ $(function() {
             $("#ratingAverage").html(averageScore);
            
 
+            for (i=0; i<=10; i++) {
+                if(!(i in scores)) {
+                    scores[i] = 0;
+                }
+            }
+
             const labels = Object.keys(scores)
             const data = Object.values(scores)
 
             // Ratings chart
             const ratingChart = $("#venueRatingChart");
             new Chart (ratingChart, {
-                type: "doughnut",
+                type: "bar",
                 data: {
                     labels: labels,
                     datasets: [{
-                        data: data
+                        axis: 'y',
+                        data: data,
+                        
                     }]
                 },
                 options: {
@@ -222,9 +230,10 @@ $(function() {
                     },
                     plugins : {
                         legend: {
-                            position: 'bottom'
+                            display: false
                         }
-                    }
+                    },
+                    indexAxis: 'y',
                 }
             })
         })
