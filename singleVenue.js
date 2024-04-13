@@ -183,6 +183,8 @@ $(function() {
                 }
             })
 
+           
+
             // Get number of scores
             numberOfScores = 0;
             for (const [key, value] of Object.entries(scores)) {
@@ -201,6 +203,7 @@ $(function() {
             
             $("#ratingAverage").html(averageScore);
            
+            
 
             for (i=0; i<=10; i++) {
                 if(!(i in scores)) {
@@ -208,14 +211,55 @@ $(function() {
                 }
             }
 
+            // console.log(scores);
 
-            const labels = Object.keys(scores)
-            const data = Object.values(scores)
+            // // reverse keys
+            // let orderedKeys = Object.keys(scores);
+            // let reversedKeys = orderedKeys.reverse();
+
+            // // reverse values
+            // let orderedValues = Object.values(scores);
+            // let reversedValues = orderedValues.reverse();
+
+            // // put them into a dictionary that is the reverse order of the scores dictionary
+            // var reversedScores = {};
+            // reversedKeys.forEach((reversedKey, i) => reversedScores[reversedKey] = reversedValues[i]);
+            // console.log(reversedScores)
+
+             // Create scores map
+             let scoresMap = new Map();
+             reviews.forEach(review => {
+                 const score = review.score;
+                 if (scoresMap.has(score)) {
+                     scoresMap.set(score, scoresMap.get(score) + 1)
+                 } else {
+                     scoresMap.set(score, 1);
+                 }
+             })
+
+             for (i=0; i<=10; i++) {
+                if (!scoresMap.has(i.toString())) {
+                    scoresMap.set(i, 0)
+                }
+            }
+
+
+             // Sort map by reverse order of its keys
+             scoresMap = new Map([...scoresMap.entries()].sort((a, b) => b[0] - a[0]));
+
+        
+
+
+            const labels = Array.from(scoresMap.keys());
+            const data = Array.from(scoresMap.values());
 
             // Ratings chart
             const ratingChart = $("#venueRatingChart");
             new Chart (ratingChart, {
                 type: "bar",
+                // ticks: {
+                //     reverse: true
+                // },
                 data: {
                     labels: labels,
                     datasets: [{
