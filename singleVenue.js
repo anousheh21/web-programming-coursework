@@ -265,6 +265,7 @@ $(function() {
                     datasets: [{
                         axis: 'y',
                         data: data,
+                        backgroundColor: "#ffbf00"
                         
                     }]
                 },
@@ -279,6 +280,20 @@ $(function() {
                         }
                     },
                     indexAxis: 'y',
+                    scales: {
+                        y: {
+                            title: {
+                                display: true,
+                                text: "Rating"
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: "Number of Ratings"
+                            }
+                        }
+                    }
                 }
             })
         })
