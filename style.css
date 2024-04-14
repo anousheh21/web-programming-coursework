@@ -3,7 +3,8 @@
 }
 
 body {
-    background-color: #f0f0f0;
+    /* background-color: #f0f0f0; */
+    background-color: #F2EFE5;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -15,7 +16,9 @@ nav {
     flex-direction: row;
     justify-content: flex-start;
     /* background-color: #c3bde2; */
-    background-color: #465151;
+    /* background-color: #465151; */
+    /* background-color: #B4B4B8; */
+    background-color: #98989E;
     color: white;
     margin: 0;
     padding: 0;
@@ -243,7 +246,7 @@ li {
 
 /* PAGE TITLES */
 .title {
-    font-family: 'Helvetica', 'Arial';
+    font-family: 'Georgia', 'Helvetica', 'Arial';
     font-size: 32px;
     font-style: normal;
     font-weight: 600;
@@ -307,7 +310,8 @@ li {
 .venue-card {
     display: flex;
     flex-direction: row;
-    background-color: #e2dfda;
+    /* background-color: #e2dfda; */
+    background-color: #E3E1D9;
     width: 1500px;
     height: 500px;
     margin-bottom: 30px;
@@ -459,7 +463,8 @@ li {
 }
 
 #pricingBox {
-    background-color:#e2dfda;
+    /* background-color:#e2dfda; */
+    background-color: #E3E1D9;
     border-radius: 15px;
     padding-left: 50px;
     padding-top: 30px;
@@ -475,7 +480,8 @@ li {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #e2dfda;
+    /* background-color: #e2dfda; */
+    background-color: #E3E1D9;
     border-radius: 15px;
     padding-top: 30px;
     padding-left: 80px;
