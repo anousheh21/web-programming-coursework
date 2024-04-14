@@ -36,7 +36,8 @@
   <a id="logo" class="satisfy-regular" href="wedding.php">Wed In Style</a>
   <a class="navbar-item" href="wedding.php">Venues</a>
   <a class="navbar-item" href="favourites.php">Favourites</a>
-  <div class="dropdown ">
+  <a class="navbar-item" href="compareAll.php">Compare Venues</a>
+  <!-- <div class="dropdown ">
     <button class="dropbtn navbar-item">Compare Venues 
       <i class="fa fa-caret-down"></i>
     </button>
@@ -44,7 +45,7 @@
       <a href="compare.php">Compare 2 Venues</a>
       <a href="compareAll.php">Compare All Venues</a>
     </div>
-  </div> 
+  </div>  -->
 </nav>
 </header>
 

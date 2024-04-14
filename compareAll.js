@@ -34,7 +34,10 @@ $(function() {
                     data: {
                         labels: labels,
                         datasets: [{
-                            data: data
+                            data: data,
+                            borderColor: 'rgba(188, 108, 37, 1)',
+                            backgroundColor: 'rgba(188, 108, 37, 0.5)',
+                            borderWidth: 1
                         }]
                     },
                     options: {
@@ -129,7 +132,10 @@ $(function() {
                     data: {
                         labels: labels,
                         datasets: [{
-                            data: data
+                            data: data,
+                            borderColor: 'rgba(188, 108, 37, 1)',
+                            backgroundColor: 'rgba(188, 108, 37, 0.5)',
+                            borderWidth: 1
                         }]
                     },
                     options: {
