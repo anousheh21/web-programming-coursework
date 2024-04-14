@@ -441,6 +441,14 @@ li {
     margin-top: 100px;
 }
 
+#bookingSubheading {
+    font-family: 'Georgia', 'Helvetica', 'Arial';
+}
+
+#venueRatingTitle {
+    font-family: 'Georgia', 'Helvetica', 'Arial';
+}
+
 #pricingInfo {
     display: flex;
     flex-direction: row;
@@ -450,12 +458,14 @@ li {
 }
 
 #pricingBox {
-    border: black 1px solid;
+    background-color:#e2dfda;
+    border-radius: 15px;
     padding-left: 50px;
     padding-top: 30px;
     padding-right: 80px;
     padding-bottom: 30px;
     margin-right: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 #costCalculator {
@@ -463,12 +473,22 @@ li {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: black 1px solid;
+    background-color: #e2dfda;
+    border-radius: 15px;
     padding-top: 30px;
     padding-left: 80px;
     padding-right: 80px;
     padding-bottom: 30px;
     max-width: 500px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+#pricingBoxHeading {
+    font-family: 'Georgia', 'Helvetica', 'Arial';
+}
+
+#costBoxHeading {
+    font-family: 'Georgia', 'Helvetica', 'Arial';
 }
 
 #ratingDoughnutChart {
@@ -604,6 +624,7 @@ li {
 
 #title-single  {
     padding-top: 30px;
+    font-family: 'Georgia', 'Helvetica', 'Arial';
 }
 
 #overviewInfo {
@@ -640,7 +661,7 @@ li {
 #venueRatingHeader  {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content:flex-start;
     align-items: baseline;
 }
 
