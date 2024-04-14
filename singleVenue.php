@@ -100,10 +100,10 @@ function cleanInput($data) {
       <div id="availabilityButtons">
         <!-- <button id="availabilityButton">Check Availability</button> -->
 
-        <button id="popularityButton" class="buttonStyler">View Venue Popularity</button>
+        <button id="popularityButton" class="buttonStyler">Compare Price Per Head</button>
         <div class="modal" id="popularityModal">
           <div class="modal-header">
-            <div class='modal-title'>Venue Popularity By Month</div>
+            <div class='modal-title'>Price Per Head Comparison</div>
             <button class="close-button" id="popularityCloseButton">&times;</button>
           </div>
           <div class="modal-body">

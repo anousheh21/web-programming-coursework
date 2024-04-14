@@ -721,8 +721,9 @@ li {
     border-radius: 10px;
     z-index: 10;
     background-color: white;
-    width: 700px;
+    width: 800px;
     max-width: 80%;
+    /* min-height: 50%; */
 }
 
 .modal.active {

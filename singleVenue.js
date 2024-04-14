@@ -164,6 +164,95 @@ $(function() {
                 
             }
 
+
+             // Get x axis tick values dynaamically
+             const divisor = thisVenue.capacity / 10
+             let partySizeDivisor = divisor
+             console.log(divisor)
+
+             // Get price per head in terms of venue hire price, excluding catering costs, for each divisor level
+             let venueHirePerHeadWeekday = []
+             let venueHirePerHeadWeekend = []
+             let labels = []
+             for(i=0; i<10; i++) {
+                 venueHirePerHeadWeekday.push((thisVenue.weekday_price / partySizeDivisor).toFixed(2))
+                 venueHirePerHeadWeekend.push((thisVenue.weekend_price / partySizeDivisor).toFixed(2))
+                 labels.push(partySizeDivisor)
+                 partySizeDivisor += divisor
+                 
+                 // console.log(partySizeDivisor)
+             }
+
+            //  console.log(venueHirePerHeadWeekday)
+            //  console.log(venueHirePerHeadWeekend)
+            //  console.log(labels)
+
+            const pricePerHeadChart = $("#venuePopularityChart");
+
+            new Chart (pricePerHeadChart, {
+                type: "line",
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        type: "line",
+                        label: "Weekday Price Per Head",
+                        data: venueHirePerHeadWeekday,
+                        fill: false,
+                        borderColor: "#465151",
+                        backgroundColor: "#465151"
+
+                    }, 
+                    {
+                        type: "line",
+                        label: "Weekend Price Per Head",
+                        data: venueHirePerHeadWeekend,
+                        fill: false,
+                        borderColor: "#af6c5a",
+                        backgroundColor: "#af6c5a"
+                    }
+                ]},
+                options: {
+                    title: {
+                        display: false
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        }
+                    },
+                    scales: {
+                        y: {
+                            title: {
+                                display: true,
+                                text: "Price Per Head (£)"
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: "Party Size"
+                            }
+                        }
+                    }
+                }
+            })
+
+            
+            fetch("cateringGrades.php")
+                .then(res => res.json())
+                .then(resData => {
+                    const cateringInfo = resData.filter(item => item.name == venueName)
+                    // console.log(cateringInfo)
+
+                   
+
+                    // cateringInfo.forEach(thisGradeInfo => {
+                    //     console.log(thisGradeInfo.grade + ": £" + thisGradeInfo.cost)
+                    // })
+
+
+                })
+
         })
 
     // Fetch rating information
@@ -330,69 +419,71 @@ $(function() {
 
         })
 
+
+
     
-    // Fetch wedding dates data
-    fetch("weddingDates.php") 
-        .then(res => res.json())
-        .then(resData => {
-            const dates = resData.filter(item => item.name == venueName);
+    // // Fetch wedding dates data
+    // fetch("weddingDates.php") 
+    //     .then(res => res.json())
+    //     .then(resData => {
+    //         const dates = resData.filter(item => item.name == venueName);
 
-            // create months map
-            let months = new Map();
-            dates.forEach((date) => {
-                const month = date.booking_date.substring(5,7)
-                if (months.has(month)) {
-                    months.set(month, months.get(month) + 1);
-                } else {
-                    months.set(month, 1);
-                }
-            })
+    //         // create months map
+    //         let months = new Map();
+    //         dates.forEach((date) => {
+    //             const month = date.booking_date.substring(5,7)
+    //             if (months.has(month)) {
+    //                 months.set(month, months.get(month) + 1);
+    //             } else {
+    //                 months.set(month, 1);
+    //             }
+    //         })
 
-            const labels = Array.from(months.keys());
-            const data = Array.from(months.values());
+    //         const labels = Array.from(months.keys());
+    //         const data = Array.from(months.values());
 
-            const popularChart = $("#venuePopularityChart");
+    //         const popularChart = $("#venuePopularityChart");
             
-            // Display venue popularity chart, using chart.js
-            new Chart (popularChart, {
-                type: 'bar',
-                data: {
-                    labels: labels,
-                    datasets: [{
-                        backgroundColor: "#786ABD",
-                        data: data
-                    }]
-                },
-                options: {
-                    legend: {display: false},
-                    title: {
-                        display: false,
-                        text: "Venue Popularity Chart"
-                    },
-                    plugins: {
-                        legend: {
-                            display: false
-                        }
-                    },
-                    scales: {
-                        y: {
-                            title: {
-                                display: true,
-                                text: "Number of Bookings"
-                            }
-                        },
-                        x: {
-                            title: {
-                                display: true,
-                                text: "Month"
-                            }
-                        }
-                    }
-                }
-            })
+    //         // Display venue popularity chart, using chart.js
+    //         new Chart (popularChart, {
+    //             type: 'bar',
+    //             data: {
+    //                 labels: labels,
+    //                 datasets: [{
+    //                     backgroundColor: "#786ABD",
+    //                     data: data
+    //                 }]
+    //             },
+    //             options: {
+    //                 legend: {display: false},
+    //                 title: {
+    //                     display: false,
+    //                     text: "Venue Popularity Chart"
+    //                 },
+    //                 plugins: {
+    //                     legend: {
+    //                         display: false
+    //                     }
+    //                 },
+    //                 scales: {
+    //                     y: {
+    //                         title: {
+    //                             display: true,
+    //                             text: "Number of Bookings"
+    //                         }
+    //                     },
+    //                     x: {
+    //                         title: {
+    //                             display: true,
+    //                             text: "Month"
+    //                         }
+    //                     }
+    //                 }
+    //             }
+    //         })
 
 
-        })
+    //     })
 
 
     const datesButton = $("#availabilityButton");
