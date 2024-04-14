@@ -359,6 +359,7 @@ $(function() {
                     }]
                 },
                 options: {
+                    maintainAspectRatio: false,
                     title: {
                         display: true,
                         text: "Ratings"
