@@ -66,30 +66,41 @@ $(function() {
                })
            })
 
-           $("#showWeekdayPriceCompare").on('click', () => {
+           $("#showVenueDayPriceCompare").on('click', () => {
                 labels = Array.from(weekdayPrices.keys());
-                data = Array.from(weekdayPrices.values());
-                titleText = "Weekday Price";
+                dataWeekday = Array.from(weekdayPrices.values());
+                dataWeekend = Array.from(weekendPrices.values());
+                titleText = "Compare Weekend and Weekday Prices";
                 myChart.destroy();
                 myChart = new Chart (compareAllChart, {
                     type: 'bar',
                     data: {
                         labels: labels,
                         datasets: [{
-                            data: data
-                        }]
+                            label: "Weekday Price",
+                            data: dataWeekday,
+                            borderColor: 'rgba(188, 108, 37, 1)',
+                            backgroundColor: 'rgba(188, 108, 37, 0.5)',
+                            borderWidth: 1
+                        }, {
+                            label: "Weekend Price",
+                            data: dataWeekend,
+                            borderColor: 'rgba(147, 152, 124, 1)',
+                            backgroundColor: 'rgba(147, 152, 124, 0.5)',
+                            borderWidth: 1
+                        }
+                    ]
                     },
                     options: {
-                        legend: {display: false},
                         title: {
                             display: true,
-                            text: titleText
+                            text: "Weekday and Weekend Price Comparison"
                         },
                         scales: {
                             y: {
                                 title: {
                                     display: true,
-                                    text: "Weekday Price (£)"
+                                    text: "Price (£)"
                                 }
                             },
                             x: {
@@ -101,7 +112,7 @@ $(function() {
                         },
                         plugins: {
                             legend: {
-                                display: false
+                                position: 'top'
                             }
                         }
                     }

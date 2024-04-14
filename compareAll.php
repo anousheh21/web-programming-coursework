@@ -37,7 +37,7 @@
 
     <div id="compareAllButtons">
         <button class="buttonStyler" id="showCapacityCompare">Compare Capacity</button>
-        <button class="buttonStyler" id="showWeekdayPriceCompare">Compare Weekday Price</button>
+        <button class="buttonStyler" id="showVenueDayPriceCompare">Compare Weekday & Weekend Prices</button>
         <button class="buttonStyler" id="showWeekendPriceCompare">Compare Weekend Price</button>
     </div>
 
