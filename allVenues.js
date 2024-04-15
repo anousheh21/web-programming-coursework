@@ -20,6 +20,7 @@ $(function() {
             fetch("weddingDates.php")
                 .then(res => res.json())
                 .then(resData => {
+                    // Wedding date search
                     const filteredDates = resData.filter(item => item.booking_date === homeSearchDate);
                     const filteredVenues = filteredDates.map(item => item.name);
                     if (!filteredVenues.includes(venueName)) {
@@ -27,11 +28,47 @@ $(function() {
                         $(venue).hide();
                     }
 
-                    // if(shouldBeVisible) {
-                    //     $(venue).show();
-                    // } else {
-                    //     $(venue).hide();
-                    // }
+                    // Location search
+                    let locationVenues = [];
+                    if (homeSearchLocation == "north") {
+                        locationVenues = ["Ashby Castle", "Fawlty Towers", "Hilltop Mansion"]
+                    } else if (homeSearchLocation == "midlands") {
+                        locationVenues = ["Pacific Towers Hotel", "Sky Center Complex", "Sea View Tavern"]
+                    } else if (homeSearchLocation == "london") {
+                        locationVenues = ["Central Plaza", "Southwestern Estate"]
+                    } else if (homeSearchLocation == "south") {
+                        locationVenues = ["Haslegrave Hotel", "Forest Inn"]
+                    } else {
+                        console.log("Location search error")
+                    }
+
+                    if(!locationVenues.includes(venueName)) {
+                        $(venue).hide();
+                    }
+
+                    // Calculate whether date is a weekday or weekend 
+                    const d = new Date(homeSearchDate);
+                    const day = d.getDay();
+
+                    // Price search
+                    fetch("venueInfo.php")
+                        .then(res => res.json())
+                        .then(resData => {
+                            let homeMinPriceInt = parseInt(homeSearchMinPrice);
+                            let homeMaxPriceInt = parseInt(homeSearchMaxPrice);
+                            let venuePrice;
+                            let thisVenue = resData.filter(item => item.name == venueName)
+                            if (day == 6 || day == 0) {
+                                venuePrice = parseInt(thisVenue[0].weekend_price)
+                            } else {
+                                venuePrice = parseInt(thisVenue[0].weekday_price)
+                            }
+
+                            if ((venuePrice < homeMinPriceInt) || (venuePrice > homeMaxPriceInt)) {
+                                $(venue).hide();
+                            }
+                            
+                        })
                 })
 
             
