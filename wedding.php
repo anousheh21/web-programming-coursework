@@ -193,6 +193,7 @@
             <form action="allVenues.php" method="get">
                 <input type="date" id="homeSearchDate" name="homeSearchDate">
                 <select name="homeSearchLocation" id="homeSearchLocation">
+                    <option value="noSelection">Select</option>
                     <option value="north">North England</option>
                     <option value="midlands">Midlands</option>
                     <option value="london">London</option>

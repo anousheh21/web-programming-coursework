@@ -43,6 +43,18 @@
         $homeSearchDate = cleanInput($_GET['homeSearchDate']);
     }
 
+    if(isset($_GET['homeSearchLocation'])) {
+        $homeSearchLocation = cleanInput($_GET['homeSearchLocation']);
+    }
+
+    if(isset($_GET['homeSearchMinPrice'])) {
+        $homeSearchMinPrice = cleanInput($_GET['homeSearchMinPrice']);
+    }
+
+    if(isset($_GET['homeSearchMaxPrice'])) {
+        $homeSearchMaxPrice = cleanInput($_GET['homeSearchMaxPrice']);
+    }
+
     function cleanInput($data) {
         $data = trim($data);
         $data = stripslashes($data);
@@ -54,6 +66,14 @@
 
 <script>
     let homeSearchDate = "<?php echo"$homeSearchDate"?>";
+    let homeSearchLocation = "<?php echo"$homeSearchLocation"?>";
+    let homeSearchMinPrice = "<?php echo"$homeSearchMinPrice"?>";
+    let homeSearchMaxPrice = "<?php echo"$homeSearchMaxPrice"?>";
+
+    console.log(homeSearchDate)
+    console.log(homeSearchLocation)
+    console.log(homeSearchMinPrice)
+    console.log(homeSearchMaxPrice)
 </script>
 
 <div class="main-content">
