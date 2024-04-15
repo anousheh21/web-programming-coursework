@@ -190,7 +190,18 @@
             <h3 id="homeSearchTitle">Search for your perfect venue</h3>
         </div>
         <div id="homeSearchForm">
-
+            <form action="allVenues.php" method="get">
+                <input type="date" id="homeSearchDate" name="homeSearchDate">
+                <select name="homeSearchLocation" id="homeSearchLocation">
+                    <option value="north">North England</option>
+                    <option value="midlands">Midlands</option>
+                    <option value="london">London</option>
+                    <option value="south">South England</option>
+                </select>
+                <input type="number" id="homeSearchMinPrice" name="homeSearchMinPrice">
+                <input type="number" id="homeSearchMaxPrice" name="homeSearchMaxPrice">
+                <input type="submit" name="homeSearchSubmit" value="Go">
+            </form>
         </div>
     </div>
 
