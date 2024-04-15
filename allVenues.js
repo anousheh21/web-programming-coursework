@@ -13,6 +13,8 @@ $(function() {
 
     // Filter results if accessed through form submission from wedding.php
     if (homeSearchDate != "") {
+        $("#wedding-date-picker").val(homeSearchDate);
+
         venues.each((index, venue) => {
             const venueName = $(venue).find("#venue-name").text();
             let shouldBeVisible = true;
