@@ -23,33 +23,10 @@
   <a class="navbar-item" href="favourites.php">Favourites</a>
   <a class="navbar-item" href="compareAll.php">Comparisons</a>
   <a class="navbar-item" href="contact.php">Contact</a>
-  <!-- <div class="dropdown ">
-    <button class="dropbtn navbar-item">Compare Venues 
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content" class="navbar-item">
-      <a href="compare.php">Compare 2 Venues</a>
-      <a href="compareAll.php">Compare All Venues</a>
-    </div>
-  </div>  -->
+ 
 </nav>
 </header>
 
-<div id="mainBodyCompareAll">
-    <h1 class="title" id="title-compare-all">Select Comparison Metric</h1>
-
-    <div id="compareAllButtons">
-        <button class="buttonStyler" id="showCapacityCompare">Compare Capacity</button>
-        <button class="buttonStyler" id="showVenueDayPriceCompare">Compare Weekday & Weekend Prices</button>
-        <!-- <button class="buttonStyler" id="showWeekendPriceCompare">Compare Weekend Price</button> -->
-    </div>
-
-    <div id="compareAllChartDiv">
-        <canvas id="compareAllChart"></canvas>
-    </div>
-
-</div>
-
-<script src="compareAll.js"></script>
+<script src="contact.js"></script>
 </body>
 </html>

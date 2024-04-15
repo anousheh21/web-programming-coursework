@@ -18,9 +18,11 @@
 <header>
   <nav>
   <a id="logo" class="satisfy-regular" href="wedding.php">Wed In Style</a>
+  <a class="navbar-item" href="wedding.php">Home</a>
   <a class="navbar-item" href="allVenues.php">Venues</a>
   <a class="navbar-item" href="favourites.php">Favourites</a>
-  <a class="navbar-item" href="compareAll.php">Compare Venues</a>
+  <a class="navbar-item" href="compareAll.php">Comparisons</a>
+  <a class="navbar-item" href="contact.php">Contact</a>
   <!-- <div class="dropdown ">
     <button class="dropbtn navbar-item">Compare Venues 
       <i class="fa fa-caret-down"></i>
