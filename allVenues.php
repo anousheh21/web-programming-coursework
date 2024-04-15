@@ -9,13 +9,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
     <script src="jquery-3.5.1.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <title>Favourite Venues</title>
+    <title>Browse Venues</title>
 </head>
-<body>
+<body id="bodyWeddingMain">
+
+<div id="browseBody">
 
 <!-- NAV BAR -->
 <header>
-  <nav>
+    <nav>
   <a id="logo" class="satisfy-regular" href="wedding.php">Wed In Style</a>
   <a class="navbar-item" href="allVenues.php">Venues</a>
   <a class="navbar-item" href="favourites.php">Favourites</a>
@@ -30,22 +32,61 @@
     </div>
   </div>  -->
 </nav>
+  <!-- </nav> -->
 </header>
 
-  
+<div class="main-content">
+
+<div id="topBrowseCenter">
+ <div id="topBrowseSection">
    
 
-<div id="browse-section">
+    <!-- HEADING -->
+    <div id="browseHeadingDiv">
+        <h1 class="title" id="title-browse">Browse Venues</h1>
+    </div>
 
-      <!-- HEADING -->
-      <div id="favouritesTitleDiv">
-            <h1 class="title" id="favourite-title-browse">Favourite Venues</h1>
+    <!-- FILTERS -->
+    <div class="filter-section">
+        <!-- <h2 id="filter-heading">Filter Venues</h2> -->
+        <div id="weddingDateFilterDiv">
+            <label for="wedding-date-picker" class="filter-subheading">Wedding Date</label>
+            <input type="date" id="wedding-date-picker" name="wedding-date-picker">
         </div>
-     
 
-        <h2 id="noFavouritesMessage"></h2>
+        <div id="partySizeFilterDiv">
+            <label for="party-size-input" class="filter-subheading">Party Size</label>
+            <input type="number" id="party-size-input" name="party-size-input">
+        </div>
+
+        <div id="cateringGradeFilterDiv">
+            <h5 class="filter-subheading">Catering Grade</h5>
+
+            <div id="cateringGradeFilterCheckboxes">
+                <input type="checkbox" class="catering-grade-checkbox" name="grade-1" id="grade-1" value=1>
+                <label for="grade-1" class="catering-grade-label">1</label><br>
+                <input type="checkbox" id="grade-2" class="catering-grade-checkbox" name="grade-2" value=2>
+                <label for="grade-2" class="catering-grade-label">2</label><br>
+                <input type="checkbox" id="grade-3" class="catering-grade-checkbox" name="grade-3" value=3>
+                <label for="grade-3" class="catering-grade-label">3</label><br>
+                <input type="checkbox" id="grade-4" class="catering-grade-checkbox" name="grade-4" value=4>
+                <label for="grade-4" class="catering-grade-label">4</label><br>
+                <input type="checkbox" id="grade-5" class="catering-grade-checkbox" name="grade-5" value=5>
+                <label for="grade-5" class="catering-grade-label">5</label><br>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+</div>
+   
+
+    <div id="browse-section">
+        
 
         <!-- VENUE CARDS -->
+        <div id="venue-cards">
         <?php
             include "db-config.php";
             $conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -62,7 +103,7 @@
 
            
 
-            echo "<div class='favourite-venue-container'>";
+            echo "<div class='venue-container'>";
             if (mysqli_num_rows($result) > 0) {
                 while($row = mysqli_fetch_array($result)) {
 
@@ -131,8 +172,13 @@
 
             mysqli_close($conn);
         ?>
+        </div>
     </div>
 
-<script src="favourites.js"></script>
+    
+</div>
+
+<script src="allVenues.js"></script>
+</div>
 </body>
 </html>
