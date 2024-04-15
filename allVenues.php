@@ -37,6 +37,25 @@
   <!-- </nav> -->
 </header>
 
+<?php
+    // Get form data from home search in wedding.php
+    if(isset($_GET['homeSearchDate'])) {
+        $homeSearchDate = cleanInput($_GET['homeSearchDate']);
+    }
+
+    function cleanInput($data) {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
+
+?>
+
+<script>
+    let homeSearchDate = "<?php echo"$homeSearchDate"?>";
+</script>
+
 <div class="main-content">
 
 <div id="topBrowseCenter">
