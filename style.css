@@ -154,6 +154,101 @@ li {
 /* WEDDING.PHP PAGE LAYOUT */
 
 
+/* CAROUSEL PAGE LAYOUT */
+
+#homePageContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}
+
+#venueCarousel {
+    display: flex;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; */
+    background-color: #E3E1D9;
+    width: 1500px;
+    height: 500px;
+   
+}
+
+.mySlides {
+    display: none;
+    
+}
+
+.slideContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.carouselImage {
+    height: 500px;
+}
+
+#carouselInformation {
+    width: 700px;
+    margin-left: 70px;
+    margin-top: 50px;
+}
+
+
+#carouselNavButtons {
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    
+}
+
+.prevCarouselButton, .nextCarouselButton {
+    cursor: pointer;
+   
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+
+
+
+.prevCarouselButton:hover, .nextCarouselButton:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+#carouselDots {
+    margin-top: -30px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+
 /* .main-content {
     display: flex;
     flex-direction: row;

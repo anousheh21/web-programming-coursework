@@ -26,8 +26,58 @@
 </nav>
 </header>
 
-<div id="venueCarousel">
+<div id="homePageContainer">
     
+    <div id="venueCarousel">
+
+    <div class="mySlides">
+        <div class="slideContainer">
+            <img class="carouselImage" src="imageCentralPlaza.png" alt="Central Plaza">
+
+            <div class="carouselInformation">
+                <h3 id="carouselTitle">Central Plaza</h3>
+                <p id="carouselDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate facilis, reiciendis error recusandae libero illum?</p>
+                <button class="buttonStyler">See More</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="mySlides">
+        <div class="slideContainer">
+            <img src="imagePacificTowers.png" alt="Pacific Towers" class="carouselImage">
+
+            <div class="carouselInformation">
+                <h3 id="carouselTitle">Pacific Towers</h3>
+                <p id="carouselDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate facilis, reiciendis error recusandae libero illum?</p>
+                <button class="buttonStyler">See More</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="mySlides">
+        <div class="slideContainer">
+             <img src="imageSkyCenterComplex.png" alt="Sky Center Complex" class="carouselImage">
+        </div>
+    </div>
+
+    <div id="carouselNavButtons">
+        <a class="prevCarouselButton" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="nextCarouselButton" onclick="plusSlides(1)">&#10095;</a>
+       
+    </div>
+
+   
+
+    </div>
+
+     <!-- The dots/circles -->
+     <div id="carouselDots">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+
 </div>
 
 <script src="wedding.js"></script>
