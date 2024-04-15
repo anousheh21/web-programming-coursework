@@ -49,7 +49,7 @@
             <img src="imagePacificTowers.png" alt="Pacific Towers" class="carouselImage">
 
             <div class="carouselInformation">
-                <h3 id="carouselTitle">Pacific Towers</h3>
+                <h3 id="carouselTitle">Pacific Towers Hotel</h3>
                 <p id="carouselDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate facilis, reiciendis error recusandae libero illum?</p>
                <?php
                 echo "<button class='buttonStyler'><a href='singleVenue.php?venue=" . urlencode("Pacific Towers Hotel") . "'>See More</a></button>";
@@ -61,16 +61,113 @@
     <div class="mySlides">
         <div class="slideContainer">
              <img src="imageSkyCenterComplex.png" alt="Sky Center Complex" class="carouselImage">
+             <div class="carouselInformation">
+                <h3 id="carouselTitle">Sky Center Complex</h3>
+                <p id="carouselDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate facilis, reiciendis error recusandae libero illum?</p>
+               <?php
+                echo "<button class='buttonStyler'><a href='singleVenue.php?venue=" . urlencode("Sky Center Complex") . "'>See More</a></button>";
+                ?>
+            </div>
         </div>
     </div>
 
-    <!-- <div id="carouselNavButtons">
-        <a class="prevCarouselButton" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="nextCarouselButton" onclick="plusSlides(1)">&#10095;</a>
-       
-    </div> -->
+    <div class="mySlides">
+        <div class="slideContainer">
+            <img src="imageSeaView.png" alt="Sea View Tavern" class="carouselImage">
 
-   
+            <div class="carouselInformation">
+                <h3 id="carouselTitle">Sea View Tavern</h3>
+                <p id="carouselDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate facilis, reiciendis error recusandae libero illum?</p>
+               <?php
+                echo "<button class='buttonStyler'><a href='singleVenue.php?venue=" . urlencode("Sea View Tavern") . "'>See More</a></button>";
+                ?>
+            </div>
+        </div>
+    </div>
+
+    <div class="mySlides">
+        <div class="slideContainer">
+            <img src="imageAshbyCastle.png" alt="Ashby Castle" class="carouselImage">
+
+            <div class="carouselInformation">
+                <h3 id="carouselTitle">Ashby Castle</h3>
+                <p id="carouselDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate facilis, reiciendis error recusandae libero illum?</p>
+               <?php
+                echo "<button class='buttonStyler'><a href='singleVenue.php?venue=" . urlencode("Ashby Castle") . "'>See More</a></button>";
+                ?>
+            </div>
+        </div>
+    </div>
+
+    <div class="mySlides">
+        <div class="slideContainer">
+            <img src="imageFawltyTowers.png" alt="Fawlty Towers" class="carouselImage">
+
+            <div class="carouselInformation">
+                <h3 id="carouselTitle">Fawlty Towers</h3>
+                <p id="carouselDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate facilis, reiciendis error recusandae libero illum?</p>
+               <?php
+                echo "<button class='buttonStyler'><a href='singleVenue.php?venue=" . urlencode("Fawlty Towers") . "'>See More</a></button>";
+                ?>
+            </div>
+        </div>
+    </div>
+
+    <div class="mySlides">
+        <div class="slideContainer">
+            <img src="imageHilltopMansion.png" alt="Hilltop Mansion" class="carouselImage">
+
+            <div class="carouselInformation">
+                <h3 id="carouselTitle">Hilltop Mansion</h3>
+                <p id="carouselDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate facilis, reiciendis error recusandae libero illum?</p>
+               <?php
+                echo "<button class='buttonStyler'><a href='singleVenue.php?venue=" . urlencode("Hilltop Mansion") . "'>See More</a></button>";
+                ?>
+            </div>
+        </div>
+    </div>
+
+    <div class="mySlides">
+        <div class="slideContainer">
+            <img src="imageHaslegraveHotel.png" alt="Haslegrave Hotel" class="carouselImage">
+
+            <div class="carouselInformation">
+                <h3 id="carouselTitle">Haslegrave Hotel</h3>
+                <p id="carouselDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate facilis, reiciendis error recusandae libero illum?</p>
+               <?php
+                echo "<button class='buttonStyler'><a href='singleVenue.php?venue=" . urlencode("Haslegrave Hotel") . "'>See More</a></button>";
+                ?>
+            </div>
+        </div>
+    </div>
+
+    <div class="mySlides">
+        <div class="slideContainer">
+            <img src="imageForestInn.png" alt="Forest Inn" class="carouselImage">
+
+            <div class="carouselInformation">
+                <h3 id="carouselTitle">Forest Inn</h3>
+                <p id="carouselDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate facilis, reiciendis error recusandae libero illum?</p>
+               <?php
+                echo "<button class='buttonStyler'><a href='singleVenue.php?venue=" . urlencode("Forest Inn") . "'>See More</a></button>";
+                ?>
+            </div>
+        </div>
+    </div>
+
+    <div class="mySlides">
+        <div class="slideContainer">
+            <img src="imageSouthwestern.png" alt="Southwestern Estate" class="carouselImage">
+
+            <div class="carouselInformation">
+                <h3 id="carouselTitle">Southwestern Estate</h3>
+                <p id="carouselDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate facilis, reiciendis error recusandae libero illum?</p>
+               <?php
+                echo "<button class='buttonStyler'><a href='singleVenue.php?venue=" . urlencode("Southwestern Estate") . "'>See More</a></button>";
+                ?>
+            </div>
+        </div>
+    </div>
 
     </div>
 
@@ -79,6 +176,22 @@
         <span class="dot" onclick="currentSlide(1)"></span>
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+        <span class="dot" onclick="currentSlide(7)"></span>
+        <span class="dot" onclick="currentSlide(8)"></span>
+        <span class="dot" onclick="currentSlide(9)"></span>
+        <span class="dot" onclick="currentSlide(10)"></span>
+    </div>
+
+    <div id="homeSearch">
+        <div id="homeSearchTitleDiv">
+            <h3 id="homeSearchTitle">Search for your perfect venue</h3>
+        </div>
+        <div id="homeSearchForm">
+
+        </div>
     </div>
 
 
