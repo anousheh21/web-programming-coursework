@@ -37,7 +37,9 @@
             <div class="carouselInformation">
                 <h3 id="carouselTitle">Central Plaza</h3>
                 <p id="carouselDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate facilis, reiciendis error recusandae libero illum?</p>
-                <button class="buttonStyler">See More</button>
+                <?php
+                echo "<button class='buttonStyler'><a href='singleVenue.php?venue=" . urlencode("Central Plaza") . "'>See More</a></button>";
+                ?>
             </div>
         </div>
     </div>
@@ -49,7 +51,9 @@
             <div class="carouselInformation">
                 <h3 id="carouselTitle">Pacific Towers</h3>
                 <p id="carouselDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate facilis, reiciendis error recusandae libero illum?</p>
-                <button class="buttonStyler">See More</button>
+               <?php
+                echo "<button class='buttonStyler'><a href='singleVenue.php?venue=" . urlencode("Pacific Towers Hotel") . "'>See More</a></button>";
+                ?>
             </div>
         </div>
     </div>
@@ -60,11 +64,11 @@
         </div>
     </div>
 
-    <div id="carouselNavButtons">
+    <!-- <div id="carouselNavButtons">
         <a class="prevCarouselButton" onclick="plusSlides(-1)">&#10094;</a>
         <a class="nextCarouselButton" onclick="plusSlides(1)">&#10095;</a>
        
-    </div>
+    </div> -->
 
    
 
