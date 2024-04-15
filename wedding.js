@@ -51,8 +51,27 @@ function showSlides(n) {
     startAutoSlide();
 }
 
-$(function() {
-    // Additional jQuery code can go here if needed
-});
+function validateHomeSearch() {
+    let weddingDateQuery = $("#homeSearchDate").val();
+    let locationQuery = $("#homeSearchLocation").val();
+    let minPriceQuery = $("#homeSearchMinPrice").val();
+    let maxPriceQuery = $("#homeSearchMaxPrice").val();
+    let minPriceInt = parseInt(minPriceQuery);
+    let maxPriceInt = parseInt(maxPriceQuery);
+    let errorMessage = $("#homeSearchErrorMessage");
+
+
+    if ((weddingDateQuery == "") || (locationQuery == "noSelection") || (minPriceQuery == "") || (maxPriceQuery == "")) {
+        errorMessage.html("Please fill in all fields");
+        return false;
+    } else {
+        if (minPriceInt > maxPriceInt) {
+            errorMessage.html("Minimum price must be less than maximum price");
+            return false;
+        } else {
+            return true;
+        }
+    }
+}
 
 

@@ -190,7 +190,7 @@
             <h3 id="homeSearchTitle">Search for your perfect venue</h3>
         </div>
         <div id="homeSearchForm">
-            <form action="allVenues.php" method="get">
+            <form onsubmit="return validateHomeSearch()" action="allVenues.php" method="get">
                 <input type="date" id="homeSearchDate" name="homeSearchDate">
                 <select name="homeSearchLocation" id="homeSearchLocation">
                     <option value="noSelection">Select</option>
@@ -203,6 +203,9 @@
                 <input type="number" id="homeSearchMaxPrice" name="homeSearchMaxPrice">
                 <input type="submit" name="homeSearchSubmit" value="Go">
             </form>
+        </div>
+        <div id="homeSearchErrorMessageDiv">
+            <p id="homeSearchErrorMessage"></p>
         </div>
     </div>
 

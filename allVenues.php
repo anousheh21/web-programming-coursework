@@ -69,11 +69,6 @@
     let homeSearchLocation = "<?php echo"$homeSearchLocation"?>";
     let homeSearchMinPrice = "<?php echo"$homeSearchMinPrice"?>";
     let homeSearchMaxPrice = "<?php echo"$homeSearchMaxPrice"?>";
-
-    console.log(homeSearchDate)
-    console.log(homeSearchLocation)
-    console.log(homeSearchMinPrice)
-    console.log(homeSearchMaxPrice)
 </script>
 
 <div class="main-content">

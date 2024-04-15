@@ -11,6 +11,9 @@ $(function() {
 
     let favourites = JSON.parse(sessionStorage.getItem('favourites')) || [];
 
+    // Filter results if accessed through form submission from wedding.php
+    
+
     venues.each((index, venue) => {
         const eachVenue = $(venue).find('#venue-name').text();
         // console.log(eachVenue);
