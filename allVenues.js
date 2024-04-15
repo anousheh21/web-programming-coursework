@@ -12,7 +12,31 @@ $(function() {
     let favourites = JSON.parse(sessionStorage.getItem('favourites')) || [];
 
     // Filter results if accessed through form submission from wedding.php
-    
+    if (homeSearchDate != "") {
+        venues.each((index, venue) => {
+            const venueName = $(venue).find("#venue-name").text();
+            let shouldBeVisible = true;
+
+            fetch("weddingDates.php")
+                .then(res => res.json())
+                .then(resData => {
+                    const filteredDates = resData.filter(item => item.booking_date === homeSearchDate);
+                    const filteredVenues = filteredDates.map(item => item.name);
+                    if (!filteredVenues.includes(venueName)) {
+                        // shouldBeVisible = false;
+                        $(venue).hide();
+                    }
+
+                    // if(shouldBeVisible) {
+                    //     $(venue).show();
+                    // } else {
+                    //     $(venue).hide();
+                    // }
+                })
+
+            
+        })
+    }
 
     venues.each((index, venue) => {
         const eachVenue = $(venue).find('#venue-name').text();
@@ -91,7 +115,7 @@ $(function() {
                             .then(resData => {
                                 const filteredDates = resData.filter(item => item.booking_date === weddingDate);
                                 const filteredVenues = filteredDates.map(item => item.name);
-                                if (filteredVenues.includes(venueName)) {
+                                if (!filteredVenues.includes(venueName)) {
                                     shouldBeVisible = false;
                                 }
                                 
