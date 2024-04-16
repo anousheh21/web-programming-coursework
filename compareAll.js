@@ -16,6 +16,9 @@ $(function() {
                             $("#comparisonWeekendLeft").html(`Weekend Price: £${venue.weekend_price}`)
                             $("#comparisonLicensedLeft").html(`Licensed: ${venue.licensed == 1 ? "Yes" : "No"}`)
 
+                             // location information
+                             $("#comparisonLocationLeft").html(`Location: ${findLocation(dropdownLeft)}`)
+
                             // put rating here
                             fetch("reviewScores.php")
                             .then(res => res.json())
@@ -51,6 +54,8 @@ $(function() {
 
                             })
 
+                           
+
 
                             $("#comparisonCateringLeft").html("");
                             // put catering information
@@ -81,6 +86,9 @@ $(function() {
                     $("#comparisonWeekdayRight").html(`Weekday Price: £${venue.weekday_price}`)
                     $("#comparisonWeekendRight").html(`Weekend Price: £${venue.weekend_price}`)
                     $("#comparisonLicensedRight").html(`Licensed: ${venue.licensed == 1 ? "Yes" : "No"}`)
+
+                     // location information
+                     $("#comparisonLocationRight").html(`Location: ${findLocation(dropdownRight)}`)
                    
 
                     // put rating here
@@ -336,5 +344,20 @@ const getCorrespondingImage = (venue, imagePlaceholder, imageClass) => {
         $(imagePlaceholder).html(`<img class="${imageClass}" src="imageSouthwestern.png" alt="Southwestern Estate">`);
     } else {
         $(imagePlaceholder).html("<p>image error</p>");
+    }
+}
+
+// Function to calculate location
+const findLocation = (venue) => {
+    if (venue == "Ashby Castle" || venue == "Fawlty Towers" || venue == "Hilltop Mansion") {
+        return "North England"
+    } else if (venue == "Pacific Towers Hotel" || venue == "Sky Center Complex" || venue == "Sea View Tavern") {
+        return "Midlands"
+    } else if (venue == "Central Plaza" || venue == "Southwestern Estate") {
+        return "London"
+    } else if (venue == "Haslegrave Hotel" || venue == "Forst Inn") {
+        return "South England"
+    } else {
+        return "Error Finding Location"
     }
 }
