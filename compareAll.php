@@ -74,33 +74,37 @@
 
     <!-- <p id="compareFormError"></p> -->
     <div id="compareForm">
-    <!-- <form method="post" action='<?php htmlspecialchars($_SERVER["PHP_SELF"]);?>'> -->
         <div id="compareDropdowns">
-        <select class="dropdownCompare" name="dropdownLeft" id="dropdownLeft">
-            <option value="noSelectionLeft" selected>Select</option>
-            <?php
-            if (mysqli_num_rows($result) > 0) {
-                while ($row = mysqli_fetch_array($result)) {
-                    // $selected = ($row['name'] == $dropdownLeft) ? 'selected' : '';
-                    echo "<option value='" . $row['name'] . "'>" . $row['name'] . "</option>";
-                }
-            }
-            ?>
-        </select>
-        <select class="dropdownCompare" name="dropdownRight" id="dropdownRight">
-            <option value="noSelectionRight" selected>Select</option>
-            <?php
-            $result = mysqli_query($conn, $sql);
-            if (mysqli_num_rows($result) > 0) {
-                while ($row = mysqli_fetch_array($result)) {
-                    // $selected = ($row['name'] == $dropdownRight) ? 'selected' : '';
-                    echo "<option value='" . $row['name'] . "'>" . $row['name'] . "</option>";
-                }
-            }
-            ?>
-        </select>
+            <div id="leftCompareColumn">
+                <select class="dropdownCompare" name="dropdownLeft" id="dropdownLeft">
+                    <option value="noSelectionLeft" selected>Select</option>
+                    <?php
+                    if (mysqli_num_rows($result) > 0) {
+                        while ($row = mysqli_fetch_array($result)) {
+                            // $selected = ($row['name'] == $dropdownLeft) ? 'selected' : '';
+                            echo "<option value='" . $row['name'] . "'>" . $row['name'] . "</option>";
+                        }
+                    }
+                    ?>
+                </select>
+            </div>
 
-        </div>
+            <div id="rightCompareColumn">
+                <select class="dropdownCompare" name="dropdownRight" id="dropdownRight">
+                    <option value="noSelectionRight" selected>Select</option>
+                    <?php
+                    $result = mysqli_query($conn, $sql);
+                    if (mysqli_num_rows($result) > 0) {
+                        while ($row = mysqli_fetch_array($result)) {
+                            // $selected = ($row['name'] == $dropdownRight) ? 'selected' : '';
+                            echo "<option value='" . $row['name'] . "'>" . $row['name'] . "</option>";
+                        }
+                    }
+                    ?>
+                </select>
+            </div>
+
+        <!-- </div> -->
        
 
     </div>

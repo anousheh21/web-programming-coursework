@@ -3,17 +3,33 @@ $(function() {
         .then(res => res.json())
         .then(resData => {
             // COMPARE 2 VENUES
+            
             $("#dropdownLeft").on('change', function() {
                 let dropdownLeft = $(this).val();
-                console.log(dropdownLeft);
+
+                if ((dropdownLeft != "") && (dropdownLeft != "noSelectionLeft")) {
+                    resData.forEach(venue => {
+                        if (dropdownLeft == venue.name) {
+                            console.log(venue.name)
+                        }
+                    })
+                }
+               
             });
 
             $("#dropdownRight").on('change', function() {
                 let dropdownRight = $(this).val();
-                console.log(dropdownRight);
+
+                if ((dropdownRight != "") && (dropdownRight != "noSelectionRight")) {
+                    console.log(dropdownRight)
+                }
+                
             });
         
-         
+            // if ((dropdownLeft != "noSelectionLeft") && (dropdownLeft != "") && (dropdownRight != "noSelectionRight") && (dropdownRight !="")) {
+            //     console.log(dropdownLeft)
+            //     console.log(dropdownRight)
+            // }
 
             // ALL VENUE GRAPHS
             // Set capacities map

@@ -927,12 +927,14 @@ li {
     margin-bottom: 20px;
 }
 
-#dropdownLeft {
-    margin-right: 10px;
+#compareForm {
+    width: 40%;
 }
 
-#dropdownRight {
-    margin-left: 10px;
+#compareDropdowns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 #compareSubmit {
