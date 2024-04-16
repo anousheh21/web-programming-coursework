@@ -10,6 +10,7 @@ $(function() {
                 if ((dropdownLeft != "") && (dropdownLeft != "noSelectionLeft")) {
                     resData.forEach(venue => {
                         if (dropdownLeft == venue.name) {
+                            $("#compareAllGraphStats").removeClass("compareGraphMargin")
                             getCorrespondingImage(dropdownLeft, "#compareImgPlaceholderLeft", "compareImg")
                             $("#comparisonCapacityLeft").html(`Capacity: ${venue.capacity}`)
                             $("#comparisonWeekdayLeft").html(`Weekday Price: £${venue.weekday_price}`)
@@ -86,6 +87,7 @@ $(function() {
                 if ((dropdownRight != "") && (dropdownRight != "noSelectionRight")) {
                     resData.forEach(venue => {
                         if (dropdownRight == venue.name) {
+                            $("#compareAllGraphStats").removeClass("compareGraphMargin")
                             getCorrespondingImage(dropdownRight, "#compareImgPlaceholderRight", "compareImg")
                     $("#comparisonCapacityRight").html(`Capacity: ${venue.capacity}`)
                     $("#comparisonWeekdayRight").html(`Weekday Price: £${venue.weekday_price}`)

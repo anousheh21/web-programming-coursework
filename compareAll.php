@@ -132,6 +132,18 @@
        
 
     </div>
+
+    <div id="compareAllGraphStats" class="compareGraphMargin">
+    <div id="compareAllButtons">
+        <button class="buttonStyler" id="showCapacityCompare">Compare Capacity</button>
+        <button class="buttonStyler" id="showVenueDayPriceCompare">Compare Weekday & Weekend Prices</button>
+    </div>
+
+    <div id="compareAllChartDiv">
+        <canvas id="compareAllChart"></canvas>
+    </div>
+                </div>
+
 </div>
 
 
