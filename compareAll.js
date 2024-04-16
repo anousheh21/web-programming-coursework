@@ -3,8 +3,17 @@ $(function() {
         .then(res => res.json())
         .then(resData => {
             // COMPARE 2 VENUES
-            console.log(dropdownLeft);
-            console.log(dropdownRight);
+            $("#dropdownLeft").on('change', function() {
+                let dropdownLeft = $(this).val();
+                console.log(dropdownLeft);
+            });
+
+            $("#dropdownRight").on('change', function() {
+                let dropdownRight = $(this).val();
+                console.log(dropdownRight);
+            });
+        
+         
 
             // ALL VENUE GRAPHS
             // Set capacities map
