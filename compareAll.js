@@ -10,8 +10,16 @@ $(function() {
                 if ((dropdownLeft != "") && (dropdownLeft != "noSelectionLeft")) {
                     resData.forEach(venue => {
                         if (dropdownLeft == venue.name) {
-                            console.log(venue.name)
                             getCorrespondingImage(dropdownLeft, "#compareImgPlaceholderLeft", "compareImg")
+                            $("#comparisonCapacityLeft").html(`Capacity: ${venue.capacity}`)
+                            $("#comparisonWeekdayLeft").html(`Weekday Price: £${venue.weekday_price}`)
+                            $("#comparisonWeekendLeft").html(`Weekend Price: £${venue.weekend_price}`)
+
+                            // put catering information
+
+                            $("#comparisonLicensedLeft").html(`Licensed: ${venue.licensed == 1 ? "Yes" : "No"}`)
+
+                            // put rating here
                         }
                     })
                 }
@@ -22,8 +30,21 @@ $(function() {
                 let dropdownRight = $(this).val();
 
                 if ((dropdownRight != "") && (dropdownRight != "noSelectionRight")) {
-                    console.log(dropdownRight)
-                    getCorrespondingImage(dropdownRight, "#compareImgPlaceholderRight", "compareImg")
+                    resData.forEach(venue => {
+                        if (dropdownRight == venue.name) {
+                            getCorrespondingImage(dropdownRight, "#compareImgPlaceholderRight", "compareImg")
+                    $("#comparisonCapacityRight").html(`Capacity: ${venue.capacity}`)
+                    $("#comparisonWeekdayRight").html(`Weekday Price: £${venue.weekday_price}`)
+                    $("#comparisonWeekendRight").html(`Weekend Price: £${venue.weekend_price}`)
+
+                    // put catering information
+
+                    $("#comparisonLicensedRight").html(`Licensed: ${venue.licensed == 1 ? "Yes" : "No"}`)
+                   
+
+                    // put rating here
+                        }
+                    })
                 }
                 
             });

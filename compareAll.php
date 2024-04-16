@@ -89,6 +89,15 @@
                 </select>
                 <div class="comparisonInformation">
                     <div id="compareImgPlaceholderLeft"></div>
+                    <div id="comparisonDetailsLeft">
+                        <p id="comparisonCapacityLeft"></p>
+                        <p id="comparisonWeekdayLeft"></p>
+                        <p id="comparisonWeekendLeft"></p>
+                        <p id="comparisonCateringLeft"></p>
+                        <p id="comparisonLicensedLeft"></p>
+                        <p id="comparisonLocationLeft"></p>
+                        <p id="comparisonRatingLeft"></p>
+                    </div>
                 </div>
             </div>
 
@@ -107,6 +116,15 @@
                 </select>
                 <div class="comparisonInformation">
                     <div id="compareImgPlaceholderRight"></div>
+                    <div id="comparisonDetailsRight">
+                    <p id="comparisonCapacityRight"></p>
+                        <p id="comparisonWeekdayRight"></p>
+                        <p id="comparisonWeekendRight"></p>
+                        <p id="comparisonCateringRight"></p>
+                        <p id="comparisonLicensedRight"></p>
+                        <p id="comparisonLocationRight"></p>
+                        <p id="comparisonRatingRight"></p>
+                    </div>
                 </div>
             </div>
 
