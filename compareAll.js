@@ -14,12 +14,22 @@ $(function() {
                             $("#comparisonCapacityLeft").html(`Capacity: ${venue.capacity}`)
                             $("#comparisonWeekdayLeft").html(`Weekday Price: £${venue.weekday_price}`)
                             $("#comparisonWeekendLeft").html(`Weekend Price: £${venue.weekend_price}`)
-
-                            // put catering information
-
                             $("#comparisonLicensedLeft").html(`Licensed: ${venue.licensed == 1 ? "Yes" : "No"}`)
 
                             // put rating here
+
+                            $("#comparisonCateringLeft").html("");
+                            // put catering information
+                            fetch("cateringGrades.php")
+                                .then(res => res.json())
+                                .then(resData => {
+                                    const cateringInfo = resData.filter(item => item.name == dropdownLeft)
+                                    
+
+                                    for (i = 0; i < cateringInfo.length; i++) {
+                                        $("#comparisonCateringLeft").append("<p class='compCaterInfo'>Grade " + cateringInfo[i].grade + ": £" + cateringInfo[i].cost + "</p>");
+                                    }
+                                })
                         }
                     })
                 }
@@ -36,13 +46,23 @@ $(function() {
                     $("#comparisonCapacityRight").html(`Capacity: ${venue.capacity}`)
                     $("#comparisonWeekdayRight").html(`Weekday Price: £${venue.weekday_price}`)
                     $("#comparisonWeekendRight").html(`Weekend Price: £${venue.weekend_price}`)
-
-                    // put catering information
-
                     $("#comparisonLicensedRight").html(`Licensed: ${venue.licensed == 1 ? "Yes" : "No"}`)
                    
 
                     // put rating here
+
+                    $("#comparisonCateringRight").html("");
+                    // put catering information
+                    fetch("cateringGrades.php")
+                        .then(res => res.json())
+                        .then(resData => {
+                            const cateringInfo = resData.filter(item => item.name == dropdownRight)
+                            
+
+                            for (i = 0; i < cateringInfo.length; i++) {
+                                $("#comparisonCateringRight").append("<p class='compCaterInfo'>Grade " + cateringInfo[i].grade + ": £" + cateringInfo[i].cost + "</p>");
+                            }
+                        })
                         }
                     })
                 }

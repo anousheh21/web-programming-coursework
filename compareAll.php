@@ -93,10 +93,10 @@
                         <p id="comparisonCapacityLeft"></p>
                         <p id="comparisonWeekdayLeft"></p>
                         <p id="comparisonWeekendLeft"></p>
-                        <p id="comparisonCateringLeft"></p>
                         <p id="comparisonLicensedLeft"></p>
                         <p id="comparisonLocationLeft"></p>
                         <p id="comparisonRatingLeft"></p>
+                        <p id="comparisonCateringLeft"></p>
                     </div>
                 </div>
             </div>
@@ -120,10 +120,10 @@
                     <p id="comparisonCapacityRight"></p>
                         <p id="comparisonWeekdayRight"></p>
                         <p id="comparisonWeekendRight"></p>
-                        <p id="comparisonCateringRight"></p>
                         <p id="comparisonLicensedRight"></p>
                         <p id="comparisonLocationRight"></p>
                         <p id="comparisonRatingRight"></p>
+                        <p id="comparisonCateringRight"></p>
                     </div>
                 </div>
             </div>
