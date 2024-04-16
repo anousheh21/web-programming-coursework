@@ -2,7 +2,11 @@ $(function() {
     fetch("venueInfo.php")
         .then(res => res.json())
         .then(resData => {
+            // COMPARE 2 VENUES
+            console.log(dropdownLeft);
+            console.log(dropdownRight);
 
+            // ALL VENUE GRAPHS
             // Set capacities map
             let capacities = new Map();
             resData.forEach(venue => {

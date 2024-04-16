@@ -23,32 +23,111 @@
   <a class="navbar-item" href="favourites.php">Favourites</a>
   <a class="navbar-item" href="compareAll.php">Comparisons</a>
   <a class="navbar-item" href="contact.php">Contact</a>
-  <!-- <div class="dropdown ">
-    <button class="dropbtn navbar-item">Compare Venues 
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content" class="navbar-item">
-      <a href="compare.php">Compare 2 Venues</a>
-      <a href="compareAll.php">Compare All Venues</a>
-    </div>
-  </div>  -->
 </nav>
 </header>
 
 <div id="mainBodyCompareAll">
+    <h1 class="title" id="title-compare">Select Venues to Compare</h1>
+
+    <?php
+    // Dropdown menu form validation
+    $dropdownLeftError = $dropdownRightError = "";
+    $dropdownLeft = $dropdownRight = "";
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+        if (empty($_POST["dropdownLeft"])) {
+        $dropdownLeftError = "Dropdown value is required";
+        } else {
+        $dropdownLeft = cleanInput($_POST["dropdownLeft"]);
+        }
+
+        if (empty($_POST["dropdownRight"])) {
+        $dropdownRightError = "Dropdown value is required";
+        } else {
+        $dropdownRight = cleanInput($_POST["dropdownRight"]);
+        }
+
+    }
+
+    function cleanInput($data) {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
+    ?>
+
+    <?php
+    // Read venue names from database
+    include "db-config.php";
+    $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+
+    $sql = "select name from venue;";
+    $result = mysqli_query($conn, $sql);
+
+    ?>
+
+    <p id="compareFormError"></p>
+    <div id="compareForm">
+    <form method="post" action='<?php htmlspecialchars($_SERVER["PHP_SELF"]);?>'>
+        <div id="compareDropdowns">
+        <select class="dropdownCompare" name="dropdownLeft" id="dropdownLeft">
+            <?php
+            if (mysqli_num_rows($result) > 0) {
+                while ($row = mysqli_fetch_array($result)) {
+                    $selected = ($row['name'] == $dropdownLeft) ? 'selected' : '';
+                    echo "<option value='" . $row['name'] . "' $selected>" . $row['name'] . "</option>";
+                }
+            }
+            ?>
+        </select>
+        <select class="dropdownCompare" name="dropdownRight" id="dropdownRight">
+            <?php
+            $result = mysqli_query($conn, $sql);
+            if (mysqli_num_rows($result) > 0) {
+                while ($row = mysqli_fetch_array($result)) {
+                    $selected = ($row['name'] == $dropdownRight) ? 'selected' : '';
+                    echo "<option value='" . $row['name'] . "' $selected>" . $row['name'] . "</option>";
+                }
+            }
+            ?>
+        </select>
+
+        </div>
+        <div id="compareSubmit">
+            <input class="buttonStyler" type="submit" name="submit" id="compareSubmit" value="Compare">
+        </div>
+    </form>
+
+    <script>
+        let dropdownLeft = "<?php echo"$dropdownLeft"?>";
+        let dropdownRight = "<?php echo"$dropdownRight"?>";
+    </script>
+
+    </div>
+</div>
+
+
+<!-- COMMENT THESE BUTTONS BACK IN -->
+
+<!-- <div id="mainBodyCompareAll">
     <h1 class="title" id="title-compare-all">Select Comparison Metric</h1>
 
     <div id="compareAllButtons">
         <button class="buttonStyler" id="showCapacityCompare">Compare Capacity</button>
         <button class="buttonStyler" id="showVenueDayPriceCompare">Compare Weekday & Weekend Prices</button>
-        <!-- <button class="buttonStyler" id="showWeekendPriceCompare">Compare Weekend Price</button> -->
     </div>
 
     <div id="compareAllChartDiv">
         <canvas id="compareAllChart"></canvas>
     </div>
 
-</div>
+</div> -->
 
 <script src="compareAll.js"></script>
 </body>
