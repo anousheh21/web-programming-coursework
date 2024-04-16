@@ -17,6 +17,40 @@ $(function() {
                             $("#comparisonLicensedLeft").html(`Licensed: ${venue.licensed == 1 ? "Yes" : "No"}`)
 
                             // put rating here
+                            fetch("reviewScores.php")
+                            .then(res => res.json())
+                            .then(resData => {
+                                const reviews = resData.filter(item => item.name == dropdownLeft)
+
+                                // Create scores dictionary
+                                let scores = {};
+                                reviews.forEach(review => {
+                                    const score = review.score;
+                                    if (scores[score] != undefined) {
+                                        scores[score] = scores[score] + 1;
+                                    } else {
+                                        scores[score] = 1;
+                                    }
+                                })
+
+                                numberOfScores = 0;
+                                for (const [key, value] of Object.entries(scores)) {
+                                    numberOfScores += value;
+                                }
+
+                                // $(venue).find("#browseNumberOfRatings").html("(" + numberOfScores + ")");
+
+                                totalScore = 0;
+                                for (const [key, value] of Object.entries(scores)) {
+                                    totalScore += (key * value);
+                                }
+
+                                averageScore = (totalScore / numberOfScores).toFixed(2);
+
+                                $("#comparisonRatingLeft").html(`Rating: ${averageScore}/10`);
+
+                            })
+
 
                             $("#comparisonCateringLeft").html("");
                             // put catering information
@@ -50,6 +84,39 @@ $(function() {
                    
 
                     // put rating here
+                    fetch("reviewScores.php")
+                            .then(res => res.json())
+                            .then(resData => {
+                                const reviews = resData.filter(item => item.name == dropdownRight)
+
+                                // Create scores dictionary
+                                let scores = {};
+                                reviews.forEach(review => {
+                                    const score = review.score;
+                                    if (scores[score] != undefined) {
+                                        scores[score] = scores[score] + 1;
+                                    } else {
+                                        scores[score] = 1;
+                                    }
+                                })
+
+                                numberOfScores = 0;
+                                for (const [key, value] of Object.entries(scores)) {
+                                    numberOfScores += value;
+                                }
+
+                                // $(venue).find("#browseNumberOfRatings").html("(" + numberOfScores + ")");
+
+                                totalScore = 0;
+                                for (const [key, value] of Object.entries(scores)) {
+                                    totalScore += (key * value);
+                                }
+
+                                averageScore = (totalScore / numberOfScores).toFixed(2);
+
+                                $("#comparisonRatingRight").html(`Rating: ${averageScore}/10`);
+
+                            })
 
                     $("#comparisonCateringRight").html("");
                     // put catering information

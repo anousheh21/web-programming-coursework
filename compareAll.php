@@ -91,11 +91,11 @@
                     <div id="compareImgPlaceholderLeft"></div>
                     <div id="comparisonDetailsLeft">
                         <p id="comparisonCapacityLeft"></p>
-                        <p id="comparisonWeekdayLeft"></p>
-                        <p id="comparisonWeekendLeft"></p>
-                        <p id="comparisonLicensedLeft"></p>
                         <p id="comparisonLocationLeft"></p>
                         <p id="comparisonRatingLeft"></p>
+                        <p id="comparisonLicensedLeft"></p>
+                        <p id="comparisonWeekdayLeft"></p>
+                        <p id="comparisonWeekendLeft"></p>
                         <p id="comparisonCateringLeft"></p>
                     </div>
                 </div>
@@ -117,12 +117,12 @@
                 <div class="comparisonInformation">
                     <div id="compareImgPlaceholderRight"></div>
                     <div id="comparisonDetailsRight">
-                    <p id="comparisonCapacityRight"></p>
-                        <p id="comparisonWeekdayRight"></p>
-                        <p id="comparisonWeekendRight"></p>
-                        <p id="comparisonLicensedRight"></p>
+                        <p id="comparisonCapacityRight"></p>
                         <p id="comparisonLocationRight"></p>
                         <p id="comparisonRatingRight"></p>
+                        <p id="comparisonLicensedRight"></p>
+                        <p id="comparisonWeekdayRight"></p>
+                        <p id="comparisonWeekendRight"></p>
                         <p id="comparisonCateringRight"></p>
                     </div>
                 </div>
