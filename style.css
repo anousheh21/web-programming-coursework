@@ -925,20 +925,38 @@ li {
     padding: 10px 20px;
     margin-top: 10px;
     margin-bottom: 20px;
+    
 }
 
 .compareImg {
-    max-height: 300px;
+    max-width: 450px;
 }
 
 #compareForm {
-    width: 40%;
+    width: 60%;
 }
 
 #compareDropdowns {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#leftCompareColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 450px;
+    margin-right: 40px;
+}
+
+#rightCompareColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 450px;
+    margin-left: 40px;
 }
 
 #compareSubmit {
