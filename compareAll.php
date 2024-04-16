@@ -87,6 +87,9 @@
                     }
                     ?>
                 </select>
+                <div class="comparisonInformation">
+                    <div id="compareImgPlaceholderLeft"></div>
+                </div>
             </div>
 
             <div id="rightCompareColumn">
@@ -102,6 +105,9 @@
                     }
                     ?>
                 </select>
+                <div class="comparisonInformation">
+                    <div id="compareImgPlaceholderRight"></div>
+                </div>
             </div>
 
         <!-- </div> -->

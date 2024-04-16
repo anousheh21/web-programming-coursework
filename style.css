@@ -927,6 +927,10 @@ li {
     margin-bottom: 20px;
 }
 
+.compareImg {
+    max-height: 300px;
+}
+
 #compareForm {
     width: 40%;
 }

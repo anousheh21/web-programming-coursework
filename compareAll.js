@@ -11,6 +11,7 @@ $(function() {
                     resData.forEach(venue => {
                         if (dropdownLeft == venue.name) {
                             console.log(venue.name)
+                            getCorrespondingImage(dropdownLeft, "#compareImgPlaceholderLeft", "compareImg")
                         }
                     })
                 }
@@ -22,9 +23,12 @@ $(function() {
 
                 if ((dropdownRight != "") && (dropdownRight != "noSelectionRight")) {
                     console.log(dropdownRight)
+                    getCorrespondingImage(dropdownRight, "#compareImgPlaceholderRight", "compareImg")
                 }
                 
             });
+
+            
         
             // if ((dropdownLeft != "noSelectionLeft") && (dropdownLeft != "") && (dropdownRight != "noSelectionRight") && (dropdownRight !="")) {
             //     console.log(dropdownLeft)
@@ -198,3 +202,31 @@ $(function() {
 
         })
 })
+
+// Function to get correct image
+const getCorrespondingImage = (venue, imagePlaceholder, imageClass) => {
+    if (venue == "Central Plaza") {
+        $(imagePlaceholder).html(`<img class="${imageClass}" src="imageCentralPlaza.png" alt="Central Plaza">`);
+        console.log(`<img class="${imageClass}" src="imageCentralPlaza.png" alt="Central Plaza">`)
+    } else if (venue == "Pacific Towers Hotel") {
+        $(imagePlaceholder).html(`<img class="${imageClass}" src="imagePacificTowers.png" alt="Pacific Towers Hotel">`);
+    } else if (venue == "Sky Center Complex") {
+        $(imagePlaceholder).html(`<img class="${imageClass}" src="imageSkyCenterComplex.png" alt="Sky Center Complex">`);
+    } else if (venue == "Sea View Tavern") {
+        $(imagePlaceholder).html(`<img class="${imageClass}" src="imageSeaView.png" alt="Sea View Tavern">`);
+    } else if (venue == "Ashby Castle") {
+        $(imagePlaceholder).html(`<img class="${imageClass}" src="imageAshbyCastle.png" alt="Ashby Castle">`);
+    } else if (venue == "Fawlty Towers") {
+        $(imagePlaceholder).html(`<img class="${imageClass}" src="imageFawltyTowers.png" alt="Fawlty Towers">`);
+    } else if (venue == "Hilltop Mansion") {
+        $(imagePlaceholder).html(`<img class="${imageClass}" src="imageHilltopMansion.png" alt="Hilltop Mansion">`);
+    } else if (venue == "Haslegrave Hotel") {
+        $(imagePlaceholder).html(`<img class="${imageClass}" src="imageHaslegraveHotel.png" alt="Haslegrave Hotel">`);
+    } else if (venue == "Forest Inn") {
+        $(imagePlaceholder).html(`<img class="${imageClass}" src="imageForestInn.png" alt="Forest Inn">`);
+    } else if (venue == "Southwestern Estate") {
+        $(imagePlaceholder).html(`<img class="${imageClass}" src="imageSouthwestern.png" alt="Southwestern Estate">`);
+    } else {
+        $(imagePlaceholder).html("<p>image error</p>");
+    }
+}
