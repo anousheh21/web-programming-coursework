@@ -65,8 +65,13 @@ $(function() {
                                     const cateringInfo = resData.filter(item => item.name == dropdownLeft)
                                     
 
-                                    for (i = 0; i < cateringInfo.length; i++) {
-                                        $("#comparisonCateringLeft").append("<p class='compCaterInfo'>Grade " + cateringInfo[i].grade + ": £" + cateringInfo[i].cost + "</p>");
+                                    for (let grade = 1; grade <= 5; grade++) {
+                                        const cateringItem = cateringInfo.find(item => item.grade === grade.toString());
+                                        if (cateringItem) {
+                                            $("#comparisonCateringLeft").append("<p class='compCaterInfo'>Grade " + cateringItem.grade + ": £" + cateringItem.cost + "</p>");
+                                        } else {
+                                            $("#comparisonCateringLeft").append("<p class='compNullCaterInfo'>-</p>");
+                                        }
                                     }
                                 })
                         }
@@ -134,9 +139,35 @@ $(function() {
                             const cateringInfo = resData.filter(item => item.name == dropdownRight)
                             
 
-                            for (i = 0; i < cateringInfo.length; i++) {
-                                $("#comparisonCateringRight").append("<p class='compCaterInfo'>Grade " + cateringInfo[i].grade + ": £" + cateringInfo[i].cost + "</p>");
+                            // for (i = 0; i < cateringInfo.length; i++) {
+
+                            //     for (let i = 1; i <= 5; i++) {
+                            //         if (cateringInfo.some(item => item.grade === i.toString())) {
+                            //             $("#comparisonCateringRight").append("<p class='compCaterInfo'>Grade " + cateringInfo[i].grade + ": £" + cateringInfo[i].cost + "</p>");
+                            //         } else {
+                            //             $("#comparisonCateringRight").append("<p class='compNullCaterInfo'>-</p>")
+                            //         }
+                            //     }
+                              
+                            // }
+
+                            for (let grade = 1; grade <= 5; grade++) {
+                                const cateringItem = cateringInfo.find(item => item.grade === grade.toString());
+                                if (cateringItem) {
+                                    $("#comparisonCateringRight").append("<p class='compCaterInfo'>Grade " + cateringItem.grade + ": £" + cateringItem.cost + "</p>");
+                                } else {
+                                    $("#comparisonCateringRight").append("<p class='compNullCaterInfo'>-</p>");
+                                }
                             }
+                    
+
+                            // for (let i = 1; i <= 5; i++) {
+                            //     if (cateringInfo.some(item => item.grade === i.toString())) {
+                            //         console.log(i + " is a catering grade");
+                            //     } else {
+                            //         console.log(i + ' is not a catering grade');
+                            //     }
+                            // }
                         })
                         }
                     })
