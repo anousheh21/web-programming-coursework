@@ -27,6 +27,45 @@
 </nav>
 </header>
 
+<div id="contactPageBody">
+    <div id="contactFormHeadingDiv">
+        <h1 class="title" id="contactFormHeading">Contact Us</h1>
+    </div>
+
+    <div id="contactForm">
+        <form method="post" action='<?php htmlspecialchars($_SERVER["PHP_SELF"]);?>'>
+
+            <div id="contactFormFirstNameDiv">
+                <label for="contactFormFirstName" class="contactFormInput">First Name</label>
+                <input type="text" id="contactFormFirstName" name="contactFormFirstName">
+            </div>
+
+            <div id="contactFormSurnameDiv">
+                <label for="contactFormSurname" class="contactFormInput">Surname</label>
+                <input type="text" name="contactFormSurname" id="contactFormSurname">
+            </div>
+
+            <div id="contactFormDateDiv">
+                <label for="contactFormDate" class="contactFormInput">Wedding Date</label>
+                <input type="date" id="contactFormDate" name="contactFormDate">
+            </div>
+
+            <div id="contactFormPartySizeDiv">
+                <label for="contactFormPartySize" class="contactFormInput">Party Size</label>
+                <input type="number" name="contactFormPartySize" id="contactFormPartySize">
+            </div>
+
+            <div id="contactFormQueryDiv">
+                <label for="contactFormQuery" class="contactFormInput">Query</label>
+                <textarea name="contactFormQuery" id="contactFormQuery" cols="30" rows="10"></textarea>
+            </div>
+               
+            <input type="submit" name="contactFormSubmit" class="buttonStyler" id="contactFormSubmit" value="Submit">
+
+        </form>
+    </div>
+</div>
+
 <script src="contact.js"></script>
 </body>
 </html>
