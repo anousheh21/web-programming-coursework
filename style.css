@@ -286,9 +286,37 @@ li {
     transition: background-color 0.6s ease;
   }
   
-  .active, .dot:hover {
+.active, .dot:hover {
     background-color: #717171;
-  }
+}
+
+/* WEDDING.PHP SEARCH STYLING */
+#homeSearch {
+    margin-top: 20px;
+}
+
+#homeSearchTitle {
+    font-family: 'Georgia', 'Helvetica', 'Arial';
+    font-size: 30px;
+}
+
+.homeSearchInput {
+    font-family: 'Nunito Sans', 'Helvetica', 'Arial';
+    font-size: 18px;
+    border-radius: 15px;
+    padding: 12px 20px;
+    margin: 0px 10px;
+}
+
+#homeSearchDate {
+    width: 230px;
+}
+
+#homeSearchSubmit {
+    font-size: 18px;
+    padding: 12px 20px;
+    margin: 0px 10px;
+}
 
 /* .main-content {
     display: flex;

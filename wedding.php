@@ -191,21 +191,21 @@
 
     <div id="homeSearch">
         <div id="homeSearchTitleDiv">
-            <h3 id="homeSearchTitle">Search for your perfect venue</h3>
+            <h3 id="homeSearchTitle">Search For Your Perfect Venue</h3>
         </div>
         <div id="homeSearchForm">
             <form onsubmit="return validateHomeSearch()" action="allVenues.php" method="get">
-                <input type="date" id="homeSearchDate" name="homeSearchDate">
-                <select name="homeSearchLocation" id="homeSearchLocation">
-                    <option value="noSelection">Select</option>
+                <input class="homeSearchInput" placeholder="Wedding Date" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="homeSearchDate" name="homeSearchDate">
+                <select class="homeSearchInput" name="homeSearchLocation" id="homeSearchLocation">
+                    <option value="noSelection">Select Location</option>
                     <option value="north">North England</option>
                     <option value="midlands">Midlands</option>
                     <option value="london">London</option>
                     <option value="south">South England</option>
                 </select>
-                <input type="number" id="homeSearchMinPrice" name="homeSearchMinPrice">
-                <input type="number" id="homeSearchMaxPrice" name="homeSearchMaxPrice">
-                <input type="submit" name="homeSearchSubmit" value="Go">
+                <input class="homeSearchInput" placeholder="Minimum Cost (£)" type="number" id="homeSearchMinPrice" name="homeSearchMinPrice">
+                <input class="homeSearchInput" placeholder="Maximum Cost (£)" type="number" id="homeSearchMaxPrice" name="homeSearchMaxPrice">
+                <input type="submit" class="buttonStyler" id="homeSearchSubmit"  name="homeSearchSubmit" value="Go">
             </form>
         </div>
         <div id="homeSearchErrorMessageDiv">
