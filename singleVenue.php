@@ -182,13 +182,20 @@ function cleanInput($data) {
   </div>
 </div> -->
 
-<div id="thisVenueBody">
 
-      <h1 class='title' id='title-single'></h1>
+  <div id="thisVenueBody">
+
+      <div id="singleImageDiv">
+        <h1 class='title' id='title-single'></h1>
+      </div>
+
+
       <div id="singleVenueImage"></div>
 
-      <h3 id="singleVenueDescriptionTitle">Description</h3>
-      <p id="singleVenueDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga vitae aut voluptas et quibusdam eveniet rerum cum eius placeat soluta. Beatae inventore fugit laboriosam possimus.</p>
+      <div id="singleVenueDescriptionDiv">
+        <h3 id="singleVenueDescriptionTitle">Description</h3>
+        <p id="singleVenueDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga vitae aut voluptas et quibusdam eveniet rerum cum eius placeat soluta. Beatae inventore fugit laboriosam possimus.</p>
+      </div>
 
       <!-- Maybe but this in a box like pricing and cost calculator are -->
       <h3 id="singleVenueDetails">Details</h3>
@@ -284,7 +291,8 @@ function cleanInput($data) {
       <p id="bookingSubheading">To Book: </p>
       <p class="bookingDetails" id="phoneNumber">Phone: phoneNumberHere</p>
       <p class="bookingDetails" id="emailAddress">Email: emailAddressHere</p>
-</div>
+  </div>
+
 
 
 </body>
