@@ -65,6 +65,9 @@ $(function() {
                     } else if (bookedVenue == true) {
                         $("#dateError").html("Date unavailable");
                         errorPresent();
+                    } else {
+                        // Submit Form
+                        $("#contactFormSubmissionResponse").html(`Thank you for your query, ${firstName}. ${venue} will be in contact with you within the next few days to arrange your booking!`)
                     }
 
                 })

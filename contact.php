@@ -110,7 +110,6 @@
                 <span class="contactError"><?php echo $surnameError?></span>
             </div>
 
-            <!-- CHANGE THIS TO A DROPDOWN -->
             <div id="contactFormVenueDiv" class="contactFormDiv">
                 <label for="contactFormVenue" class="contactFormInput">Venue</label>
                
