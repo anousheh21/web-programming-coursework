@@ -27,6 +27,10 @@
 </header>
 
 <div id="homePageContainer">
+
+    <div id="homeTitleDiv">
+        <h1 class="title" id="home-title">Welcome to Wed In Style</h1>
+    </div>
     
     <div id="venueCarousel">
 
