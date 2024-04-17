@@ -192,28 +192,32 @@ function cleanInput($data) {
 
       <div id="singleVenueImage"></div>
 
-      <div id="singleVenueDescriptionDiv">
-        <h3 id="singleVenueDescriptionTitle">Description</h3>
-        <p id="singleVenueDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga vitae aut voluptas et quibusdam eveniet rerum cum eius placeat soluta. Beatae inventore fugit laboriosam possimus.</p>
-      </div>
 
-      <!-- Maybe but this in a box like pricing and cost calculator are -->
-      <h3 id="singleVenueDetails">Details</h3>
-      <div id="availabilityButtons">
-        <button id="popularityButton" class="buttonStyler">Compare Price Per Head</button>
-        <div class="modal" id="popularityModal">
-          <div class="modal-header">
-            <div class='modal-title'>Price Per Head Comparison</div>
-            <button class="close-button" id="popularityCloseButton">&times;</button>
-          </div>
-          <div class="modal-body">
-            <canvas id="venuePopularityChart"></canvas>
-          </div>
+      <div id="singleVenueDescriptionContainer">
+        <div id="singleVenueDescriptionDiv">
+          <h3 id="singleVenueDescriptionTitle">Description</h3>
+          <p id="singleVenueDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga vitae aut voluptas et quibusdam eveniet rerum cum eius placeat soluta. Beatae inventore fugit laboriosam possimus.</p>
         </div>
-        <div class="overlay" id="popularityOverlay"></div>
+
+        <div id="singleVenueDetailsDiv">
+          <h3 id="singleVenueDetails">Details</h3>
+          <div id="availabilityButtons">
+            <button id="popularityButton" class="buttonStyler">Compare Price Per Head</button>
+            <div class="modal" id="popularityModal">
+              <div class="modal-header">
+                <div class='modal-title'>Price Per Head Comparison</div>
+                <button class="close-button" id="popularityCloseButton">&times;</button>
+              </div>
+              <div class="modal-body">
+                <canvas id="venuePopularityChart"></canvas>
+              </div>
+            </div>
+            <div class="overlay" id="popularityOverlay"></div>
+          </div>
+          <p id="singleVenueCapacity">Capacity: </p>
+          <p id="singleVenueLicensed">Licensed: </p>
+        </div>
       </div>
-      <p id="singleVenueCapacity">Capacity: </p>
-      <p id="singleVenueLicensed">Licensed: </p>
 
       <div id="pricingInfo">
         <div id="pricingBox">
