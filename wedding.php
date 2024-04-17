@@ -195,7 +195,12 @@
         </div>
         <div id="homeSearchForm">
             <form onsubmit="return validateHomeSearch()" action="allVenues.php" method="get">
-                <input class="homeSearchInput" placeholder="Wedding Date" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="homeSearchDate" name="homeSearchDate">
+                <!-- <input class="homeSearchInput" placeholder="Wedding Date" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="homeSearchDate" name="homeSearchDate"> -->
+
+                <input class="homeSearchInput homeSearchDate" placeholder="Wedding Date" type="text" id="textInput" name="homeSearchDatePlaceholder">
+                <input class="homeSearchInput homeSearchDate" type="date" id="dateInput" name="homeSearchDate" style="display:none;">
+
+
                 <select class="homeSearchInput" name="homeSearchLocation" id="homeSearchLocation">
                     <option value="noSelection">Select Location</option>
                     <option value="north">North England</option>

@@ -52,7 +52,7 @@ function showSlides(n) {
 }
 
 function validateHomeSearch() {
-    let weddingDateQuery = $("#homeSearchDate").val();
+    let weddingDateQuery = $("#dateInput").val();
     let locationQuery = $("#homeSearchLocation").val();
     let minPriceQuery = $("#homeSearchMinPrice").val();
     let maxPriceQuery = $("#homeSearchMaxPrice").val();
@@ -75,3 +75,18 @@ function validateHomeSearch() {
 }
 
 
+
+
+$(document).ready(function() {
+    $('#textInput').focus(function() {
+        $(this).hide();
+        $('#dateInput').show().focus();
+    });
+
+    $('#dateInput').blur(function() {
+        if (!$(this).val()) {
+            $(this).hide();
+            $('#textInput').show();
+        }
+    });
+});
