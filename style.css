@@ -551,7 +551,36 @@ li {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
+#singleLocationDiv {
+    background-color: #E3E1D9;
+    flex-grow: 1;
+    border-radius: 15px;
+    padding: 20px;
+    margin-right: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
 
+#locationMap {
+    height: 100%;
+    min-width: 300px;
+    /* max-width: 600px; */
+    min-height: 300px;
+    max-height: 300px;
+}
+
+#singleVenueRatingDiv {
+    background-color: #E3E1D9;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+#singleLocationRatingContainer {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
 
 #bookingSubheading {
     font-family: 'Georgia', 'Helvetica', 'Arial';
@@ -564,6 +593,13 @@ li {
     font-family: 'Georgia', 'Helvetica', 'Arial';
 }
 
+#pricingInfo {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    width: 100%;
+}
+
 #pricingBox {
     background-color: #E3E1D9;
     border-radius: 15px;
@@ -571,10 +607,13 @@ li {
     padding-top: 30px;
     padding-right: 80px;
     padding-bottom: 30px;
+    margin-right: 10px;
+    flex-grow: 1;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 #costCalculator {
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -706,12 +745,7 @@ li {
     font-weight: 400;
 }
 
-#locationMap {
-    height: 100%;
-    min-width: 300px;
-    max-width: 400px;
-    min-height: 300px;
-}
+
 
 #venueRatingHeader  {
     display: flex;

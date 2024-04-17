@@ -275,26 +275,32 @@ function cleanInput($data) {
         </div>
       </div>
 
-      <div id="locationMap"></div>
+      <div id="singleLocationRatingContainer">
+        <div id="singleLocationDiv">
+          <h3 id="singleLocationTitle">Location</h3>
+          <div id="locationMap"></div>
+        </div>
 
-      <div id="venueRatingInformation">
-        <div id="venueRatingHeader">
-          <h3 id="venueRatingTitle">Ratings:  </h3>
-          <div id="ratingValues" class="ratingValues" >
-            <img id="starsvg" class="starsvg" src="star.svg">
-            <p id="ratingAverage" class="ratingAverage"></p>
-            <p id="numberOfRatings" class="numberOfRatings"></p>
+        <div id="singleVenueRatingDiv">
+          <div id="venueRatingInformation">
+            <div id="venueRatingHeader">
+              <h3 id="venueRatingTitle">Ratings:  </h3>
+              <div id="ratingValues" class="ratingValues" >
+                <img id="starsvg" class="starsvg" src="star.svg">
+                <p id="ratingAverage" class="ratingAverage"></p>
+                <p id="numberOfRatings" class="numberOfRatings"></p>
+              </div>
+            </div>
+            <div id="ratingDoughnutChart">
+              <canvas id="venueRatingChart"></canvas>
+            </div>
           </div>
         </div>
-
-        <div id="ratingDoughnutChart">
-          <canvas id="venueRatingChart"></canvas>
-        </div>
       </div>
-
+<!-- 
       <p id="bookingSubheading">To Book: </p>
       <p class="bookingDetails" id="phoneNumber">Phone: phoneNumberHere</p>
-      <p class="bookingDetails" id="emailAddress">Email: emailAddressHere</p>
+      <p class="bookingDetails" id="emailAddress">Email: emailAddressHere</p> -->
   </div>
 
 
