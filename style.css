@@ -1054,6 +1054,24 @@ li {
     margin-top: 120px;
 }
 
+#contactPageBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Nunito Sans', 'Helvetica', 'Arial';
+    font-size: 14px;
+}
+
+.contactFormDiv {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.contactError {
+    color: red;
+}
+
 @media screen and (max-width: 1640px) {
     #pricingInfo {
         margin-top: 75px;
