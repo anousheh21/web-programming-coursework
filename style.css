@@ -484,92 +484,29 @@ li {
 }
 
 /* SINGLE VENUE PAGE STYLING */
-#thisVenueBody {
-    display: flex;
-    flex-direction: row;
-    font-family: 'Helvetica', 'Arial';
-}
-
-#leftContent {
-    display: flex;
-    flex-direction: column;
-    margin-left: 60px;
-}
-/* 
-#rightContent {
-    display: flex;
-    flex-direction: column;
-    justify-content : flex-end;
-    margin-left: 10px;
-}
-
-.singleMainImage {
-    width: 70%;
-    margin-top: 70px;
-    margin-left: -70px;
-    right: 0;
-    margin-right: 0;
-    padding-right: 0;
-    text-align: right;
-} */
-
-#rightContent {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    width: 100%; /* Ensure the container takes up the full width */
-    margin-left: 10px;
-    margin-right: 0px;
-    padding-right: 0px;
-    right: 0;
-    top: 0;
-    
-}
-
-.singleMainImage {
-    flex-grow: 1; /* Allow the image to grow and fill the available space */
-    width: 100%;
-    /* margin-top: 70px; */
-    margin-top: 0px;
-    padding-top: 0px;
-    text-align: right;
-    transform-origin: top right;
-}
-
-/* @media screen and (min-width: 1635px) and (max-width: 1350px) {
-
-} */
-
 #title-single {
     margin-top: 100px;
+    font-family: 'Georgia', 'Helvetica', 'Arial';
 }
 
 #bookingSubheading {
     font-family: 'Georgia', 'Helvetica', 'Arial';
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 550;
 }
 
 #venueRatingTitle {
     font-family: 'Georgia', 'Helvetica', 'Arial';
 }
 
-#pricingInfo {
-    display: flex;
-    flex-direction: row;
-    margin-top: 50px;
-    margin-right: 10px;
-    
-}
-
 #pricingBox {
-    /* background-color:#e2dfda; */
     background-color: #E3E1D9;
     border-radius: 15px;
     padding-left: 50px;
     padding-top: 30px;
     padding-right: 80px;
     padding-bottom: 30px;
-    margin-right: 10px;
-    min-width: 410px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
@@ -578,14 +515,12 @@ li {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* background-color: #e2dfda; */
     background-color: #E3E1D9;
     border-radius: 15px;
     padding-top: 30px;
     padding-left: 80px;
     padding-right: 80px;
     padding-bottom: 30px;
-    max-width: 500px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
@@ -598,19 +533,16 @@ li {
 }
 
 #ratingDoughnutChart {
-    /* height: 220px; */
     width: 600px;
     height: 300px;
-    margin-left: -50px;
+    /* margin-left: -50px; */
 }
-
-
 
 #cateringInputContainer {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center the container */
-    margin-top: 20px; /* Add margin for spacing */
+    align-items: center;
+    margin-top: 20px; 
 }
 
 .catering-grade-label {
@@ -618,16 +550,12 @@ li {
     font-size: 17px;
     font-style: normal;
     font-weight: 400;
-    text-align: center; /* Center the text */
+    text-align: center; 
 }
-
-
 
 #costCalculatorInput {
     display: flex;
     flex-direction: row;
-    /* justify-content: space-between; */
-    
 }
 
 .buttonStyler {
@@ -651,26 +579,6 @@ li {
 .buttonStyler:active {
     transform: scale(0.95);
 }
-
-/* #popularityButton {
-    background-color: #786ABD;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 12px;
-    transition-duration: 0.4s;
-}
-
-#popularityButton:hover {
-    background-color: #5748A4;
-}
-
-#popularityButton:active {
-    transform: scale(0.95);
-} */
 
 #partyInputContainer {
     display: flex;
@@ -719,8 +627,6 @@ li {
  
 }
 
-
-
 #weekendPrice {
     margin-bottom: 30px;
 }
@@ -730,31 +636,10 @@ li {
     font-weight: 400;
 }
 
-
-#title-single  {
-    padding-top: 30px;
-    font-family: 'Georgia', 'Helvetica', 'Arial';
-}
-
 #overviewInfo {
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
-}
-
-#availabilityButtons {
-    display: flex;
-    flex-direction: row;
-}
-
-#bookingSubheading {
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 550;
-}
-
-#singleVenueLicensed {
-    margin-bottom: 50px;
 }
 
 #locationMap {
@@ -762,10 +647,6 @@ li {
     max-width: 400px;
     min-height: 300px;
 }
-
-/* #venueRatingInformation {
-    border: 1px solid black;
-} */
 
 #venueRatingHeader  {
     display: flex;
@@ -775,7 +656,6 @@ li {
 }
 
 #venueRatingTitle {
-   
     margin-bottom: -5px;
     margin-right: 10px;
 }
@@ -801,15 +681,6 @@ li {
 .numberOfRatings {
     color: #968F8F;
 }
-
-
-
-
-
-/* 
-#singleVenueImage {
-    
-} */
 
 /* MODAL STYLING */
 .modal {
@@ -1072,89 +943,13 @@ li {
     color: red;
 }
 
-@media screen and (max-width: 1640px) {
-    #pricingInfo {
-        margin-top: 75px;
-    }
-}
 
-@media screen and (max-width: 1590px) {
-    #pricingInfo {
-        margin-top: 100px;
-    }
-}
 
-@media screen and (min-width: 1500px) {
-    #ratingDoughnutChart {
-        width: 600px;
-    }
-}
 
-@media screen and (max-width: 1500px) {
-    #ratingDoughnutChart {
-        width: 500px;
-    
-    }
-}
 
-@media screen and (max-width: 1550px) {
-    #costCalculator {
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-}
 
-@media screen and (max-width: 1450px) {
-    #pricingInfo {
-        margin-bottom: 200px;
-    }
-    
-}
 
-@media screen and (max-width: 1370px) {
-    #pricingBox {
-        padding-left: 30px;
-        padding-right: 50px;
-    }
 
-    #ratingDoughnutChart  {
-        width: 400px;
-    }
-}
-
-@media screen and (max-width: 1270px) {
-    #pricingBox {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    #costCalculator {
-        padding-left: 20px;
-        padding-right: 20px;
-        
-    }
-
-    
-}
-
-@media screen and (max-width: 1220px) {
-    #pricingBox {
-        min-width: 350px;
-    }
-}
-
-@media screen and (max-width: 1170px) {
-    #pricingBox {
-        min-width: 300px;
-        padding-left: 10px;
-        padding-right: 10px
-    }
-
-    #costCalculator {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-}
 
 @media screen and (max-width: 850px) {
     ul {

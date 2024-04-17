@@ -24,14 +24,6 @@
 
 <!-- NAV BAR -->
 <header>
-  <!-- <nav>
-    <ul>
-      <li id="logo" class="satisfy-regular"><a href="wedding.php">Wed In Style</a></li>
-      <li class="navbar-item"><a href="wedding.php">Venues</a></li>
-      <li class="navbar-item"><a href="favourites.php">Favourites</a></li>
-      <li class="navbar-item"><a href="compare.php">Compare Venues</a></li>
-    </ul>
-  </nav> -->
   <nav>
   <a id="logo" class="satisfy-regular" href="wedding.php">Wed In Style</a>
   <a class="navbar-item" href="wedding.php">Home</a>
@@ -39,15 +31,6 @@
   <a class="navbar-item" href="favourites.php">Favourites</a>
   <a class="navbar-item" href="compareAll.php">Comparisons</a>
   <a class="navbar-item" href="contact.php">Contact</a>
-  <!-- <div class="dropdown ">
-    <button class="dropbtn navbar-item">Compare Venues 
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content" class="navbar-item">
-      <a href="compare.php">Compare 2 Venues</a>
-      <a href="compareAll.php">Compare All Venues</a>
-    </div>
-  </div>  -->
 </nav>
 </header>
 
@@ -96,13 +79,11 @@ function cleanInput($data) {
 
 ?>
 
-<div id="thisVenueBody">
+<!-- <div id="thisVenueBody">
   <div id="leftContent">
     <div id="overviewInfo">
       <h1 class='title' id='title-single'></h1>
       <div id="availabilityButtons">
-        <!-- <button id="availabilityButton">Check Availability</button> -->
-
         <button id="popularityButton" class="buttonStyler">Compare Price Per Head</button>
         <div class="modal" id="popularityModal">
           <div class="modal-header">
@@ -190,15 +171,119 @@ function cleanInput($data) {
         
             </script>
 
-            <!-- other error messages -->
+          
             <p id="costInvalidResponse"></p>
 
-            <!-- output calculated cost -->
+           
             <p id="calculatedCost"></p>
 
         </div>
       </div>
   </div>
+</div> -->
+
+<div id="thisVenueBody">
+
+      <h1 class='title' id='title-single'></h1>
+      <div id="singleVenueImage"></div>
+
+      <h3 id="singleVenueDescriptionTitle">Description</h3>
+      <p id="singleVenueDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga vitae aut voluptas et quibusdam eveniet rerum cum eius placeat soluta. Beatae inventore fugit laboriosam possimus.</p>
+
+      <!-- Maybe but this in a box like pricing and cost calculator are -->
+      <h3 id="singleVenueDetails">Details</h3>
+      <div id="availabilityButtons">
+        <button id="popularityButton" class="buttonStyler">Compare Price Per Head</button>
+        <div class="modal" id="popularityModal">
+          <div class="modal-header">
+            <div class='modal-title'>Price Per Head Comparison</div>
+            <button class="close-button" id="popularityCloseButton">&times;</button>
+          </div>
+          <div class="modal-body">
+            <canvas id="venuePopularityChart"></canvas>
+          </div>
+        </div>
+        <div class="overlay" id="popularityOverlay"></div>
+      </div>
+      <p id="singleVenueCapacity">Capacity: </p>
+      <p id="singleVenueLicensed">Licensed: </p>
+
+      <div id="pricingInfo">
+        <div id="pricingBox">
+          <h3 id="pricingBoxHeading">Pricing</h3>
+          <p id="venuePriceSubheading">Venue Hire<span class="pricingSubheadingItalic"> - (Without Catering)</span></p>
+          <p id="weekdayPrice">Weekday Price: </p>
+          <p id="weekendPrice">Weekend Price: </p>
+          <p id="cateringPriceSubheading">Catering<span class="pricingSubheadingItalic"> - (Per Person)</span></p>
+          <div id="cateringPrices"></div>
+        </div>
+
+        <div id="costCalculator">
+          <h3 id="costBoxHeading">Cost Calculator</h3>
+          <form method="post" action='<?php htmlspecialchars($_SERVER["PHP_SELF"]);?>'>
+            <div id="costCalculatorInput">
+              <div id="partyInputContainer">
+                <p id="costPartySizeLabel">Party Size</p>
+                <input type="number" name="partySizeCost" id="partySizeCost" value="<?php echo $partySizeCost;?>" size="5" maxlength="5">
+                <span class="costError"><?php echo $partySizeCostError;?></span>
+              </div>
+
+              <div id="dateInputContainer">
+                <p id="costDateLabel">Wedding Date</p>
+                <input type="date" name="dateCost" id="dateCost" value="<?php echo $dateCost;?>">
+                <span class="costError"><?php echo $dateCostError;?></span>
+              </div>
+            </div>  
+
+            <div id="cateringInputContainer">
+                <p id="cateringCostLabel">Catering Grade</p>
+                <div id="cateringCostSelection">
+                  <input type="hidden" id="cateringGrade" name="cateringGrade" value="">
+                </div>
+                <span class="costError"><?php echo $cateringCostError;?></span>
+            </div>
+
+            <div id="submitCostButtonContainer">
+                  <input type="submit" name="submit" class="buttonStyler" id="costSubmit" value="Calculate">
+            </div>
+          </form>
+
+          <script>
+            // Pass form outputs to JavaScript file
+            let partySizeCost = "<?php echo"$partySizeCost"?>";
+            let dateCost = "<?php echo"$dateCost"?>";
+            let cateringGradeCost = "<?php echo"$cateringCostRadio"?>";
+          </script>
+
+          <!-- other error messages -->
+          <p id="costInvalidResponse"></p>
+
+          <!-- output calculated cost -->
+          <p id="calculatedCost"></p>
+
+        </div>
+      </div>
+
+      <div id="locationMap"></div>
+
+      <div id="venueRatingInformation">
+        <div id="venueRatingHeader">
+          <h3 id="venueRatingTitle">Ratings:  </h3>
+          <div id="ratingValues" class="ratingValues" >
+            <img id="starsvg" class="starsvg" src="star.svg">
+            <p id="ratingAverage" class="ratingAverage"></p>
+            <p id="numberOfRatings" class="numberOfRatings"></p>
+          </div>
+        </div>
+
+        <div id="ratingDoughnutChart">
+          <canvas id="venueRatingChart"></canvas>
+        </div>
+      </div>
+
+      <p id="bookingSubheading">To Book: </p>
+      <p class="bookingDetails" id="phoneNumber">Phone: phoneNumberHere</p>
+      <p class="bookingDetails" id="emailAddress">Email: emailAddressHere</p>
 </div>
 
 
