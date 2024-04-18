@@ -78,16 +78,16 @@ function validateHomeSearch() {
 
 
 
-$(document).ready(function() {
-    $('#textInput').focus(function() {
-        $(this).hide();
-        $('#dateInput').show().focus();
-    });
+// $(document).ready(function() {
+//     $('#textInput').focus(function() {
+//         $(this).hide();
+//         $('#dateInput').show().focus();
+//     });
 
-    $('#dateInput').blur(function() {
-        if (!$(this).val()) {
-            $(this).hide();
-            $('#textInput').show();
-        }
-    });
-});
+//     $('#dateInput').blur(function() {
+//         if (!$(this).val()) {
+//             $(this).hide();
+//             $('#textInput').show();
+//         }
+//     });
+// });
