@@ -857,10 +857,10 @@ li {
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
     transition: 200ms ease-in-out;
-    border: 1px solid black;
-    border-radius: 10px;
+    border: 3px solid #d7d3c4;
+    border-radius: 15px; 
     z-index: 10;
-    background-color: white;
+    background-color:  #F2EFE5;
     width: 800px;
     max-width: 80%;
     /* min-height: 50%; */
@@ -875,10 +875,20 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid black;
+   
+}
+
+.modal-title {
+    font-family: 'Nunito Sans', 'Helvetica', 'Arial';
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0 auto;
+    margin-bottom: -10px;
+    text-align: center;
 }
 
 .modal-header .title {
+   
     font-size: 1.25rem;
     font-weight: bold;
 }

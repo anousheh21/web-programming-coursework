@@ -212,8 +212,10 @@ $(function() {
                     }
                 ]},
                 options: {
+                    maintainAspectRatio: false,
                     title: {
-                        display: false
+                        display: true,
+                        text: "Price Per Head Graph"
                     },
                     plugins: {
                         legend: {
