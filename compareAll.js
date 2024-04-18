@@ -399,7 +399,7 @@ const findLocation = (venue) => {
         return "Midlands"
     } else if (venue == "Central Plaza" || venue == "Southwestern Estate") {
         return "London"
-    } else if (venue == "Haslegrave Hotel" || venue == "Forst Inn") {
+    } else if (venue == "Haslegrave Hotel" || venue == "Forest Inn") {
         return "South England"
     } else {
         return "Error Finding Location"
