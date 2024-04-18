@@ -92,6 +92,9 @@
                     <div id="comparisonDetailsLeft">
 
                         <div id="comparisonOverviewLeft" class="comparisonOverview comparisonBox comparisonBoxLeft">
+                            <div class="comparisonOverviewTitleDiv hideComparisonTitle comparisonTitleDivLeft">
+                                <h4 class="comparisonOverviewTitle">Details</h4>
+                            </div>
                             <p id="comparisonCapacityLeft"></p>
                             <p id="comparisonLocationLeft"></p>
                             <p id="comparisonRatingLeft"></p>
@@ -99,11 +102,17 @@
                         </div>
 
                         <div id="comparisonPricingLeft" class="comparisonPricing comparisonBoxLeft comparisonBox">
+                             <div class="comparisonPricingTitleDiv hideComparisonTitle comparisonTitleDivLeft">
+                                <h4 class="comparisonPricingTitle">Pricing</h4>
+                            </div>
                             <p id="comparisonWeekdayLeft"></p>
                             <p id="comparisonWeekendLeft"></p>
                         </div>
 
                         <div id="comparisonCateringDivLeft" class="comparisonCateringDiv comparisonBoxLeft comparisonBox">
+                            <div class="comparisonCateringTitleDiv hideComparisonTitle comparisonTitleDivLeft">
+                                <h4 class="comparisonCateringTitle">Catering</h4>
+                            </div>
                             <p id="comparisonCateringLeft"></p>
                         </div>
 
@@ -129,6 +138,9 @@
                     <div id="comparisonDetailsRight">
 
                         <div id="comparisonOverviewRight" class="comparisonOverview comparisonBoxRight comparisonBox">
+                            <div class="comparisonOverviewTitleDiv hideComparisonTitle comparisonTitleDivRight">
+                                <h4 class="comparisonOverviewTitle">Details</h4>
+                            </div>
                             <p id="comparisonCapacityRight"></p>
                             <p id="comparisonLocationRight"></p>
                             <p id="comparisonRatingRight"></p>
@@ -136,11 +148,17 @@
                         </div>
 
                         <div id="comparisonPricingRight" class="comparisonPricing comparisonBoxRight comparisonBox">
+                            <div class="comparisonPricingTitleDiv hideComparisonTitle comparisonTitleDivRight">
+                                <h4 class="comparisonPricingTitle">Pricing</h4>
+                            </div>
                             <p id="comparisonWeekdayRight"></p>
                             <p id="comparisonWeekendRight"></p>
                         </div>
 
                         <div id="comparisonCateringDivRight" class="comparisonCateringDiv comparisonBoxRight comparisonBox">
+                            <div class="comparisonCateringTitleDiv hideComparisonTitle comparisonTitleDivRight">
+                                <h4 class="comparisonCateringTitle">Catering</h4>
+                            </div>
                             <p id="comparisonCateringRight"></p>
                         </div>
 

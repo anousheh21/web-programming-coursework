@@ -10,6 +10,7 @@ $(function() {
                 if ((dropdownLeft != "") && (dropdownLeft != "noSelectionLeft")) {
                     $(".compareGraphMargin").addClass("compareWithColumn")
                     $(".comparisonBoxLeft").addClass("comparisonBoxCard")
+                    $(".comparisonTitleDivLeft").removeClass("hideComparisonTitle")
                     resData.forEach(venue => {
                         if (dropdownLeft == venue.name) {
                             $("#compareAllGraphStats").removeClass("compareGraphMargin")
@@ -89,6 +90,7 @@ $(function() {
                 if ((dropdownRight != "") && (dropdownRight != "noSelectionRight")) {
                     $(".compareGraphMargin").addClass("compareWithColumn")
                     $(".comparisonBoxRight").addClass("comparisonBoxCard")
+                    $(".comparisonTitleDivRight").removeClass("hideComparisonTitle")
                     resData.forEach(venue => {
                         if (dropdownRight == venue.name) {
                             $("#compareAllGraphStats").removeClass("compareGraphMargin")
