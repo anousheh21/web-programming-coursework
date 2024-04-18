@@ -1081,14 +1081,17 @@ li {
 #compareAllButtons {
     display: flex;
     flex-direction: row;
+    margin-top: -120px;
 }
 
 #showCapacityCompare {
     margin-right: 5px;
+    font-size: 16px;
 }
 
 #showVenueDayPriceCompare {
     margin-right: 5px;
+    font-size: 16px;
 }
 
 #compareAllChartDiv {
