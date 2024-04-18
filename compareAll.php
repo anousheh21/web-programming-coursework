@@ -137,7 +137,11 @@
     <div id="compareAllButtons">
         <button class="buttonStyler" id="showCapacityCompare">Compare Capacity</button>
         <button class="buttonStyler" id="showVenueDayPriceCompare">Compare Weekday & Weekend Prices</button>
+
+       
     </div>
+
+    <h3 id="compareChartTitle"></h3>
 
     <div id="compareAllChartDiv">
         <canvas id="compareAllChart"></canvas>

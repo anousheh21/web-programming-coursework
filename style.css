@@ -1026,6 +1026,7 @@ li {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 80px;
 }
 
 #comparisonDetailsLeft {
@@ -1038,6 +1039,7 @@ li {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 80px;
 }
 
 #compareSubmit {
@@ -1096,8 +1098,8 @@ li {
 
 #compareAllChartDiv {
     margin-top: 50px;
-    width: 90%;
-    height: auto;
+    height: 500px;
+    width: 110%;
 }
 
 /* CONTACT FORM STYLING */

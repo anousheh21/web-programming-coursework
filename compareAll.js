@@ -207,6 +207,7 @@ $(function() {
            let labels, data, titleText;
            let myChart = new Chart();
            $("#showCapacityCompare").on('click', () => {
+                $("#compareChartTitle").html("Venue Capacity Comparison")
                 labels = Array.from(capacities.keys());
                 data = Array.from(capacities.values());
                 titleText = "Capacity";
@@ -224,6 +225,7 @@ $(function() {
                     },
                     options: {
                         legend: {display: false},
+                        maintainAspectRatio: false,
                         title: {
                             display: true,
                             text: titleText
@@ -252,6 +254,7 @@ $(function() {
            })
 
            $("#showVenueDayPriceCompare").on('click', () => {
+                $("#compareChartTitle").html("Weekday & Weekend Price Comparison")
                 labels = Array.from(weekdayPrices.keys());
                 dataWeekday = Array.from(weekdayPrices.values());
                 dataWeekend = Array.from(weekendPrices.values());
@@ -277,6 +280,7 @@ $(function() {
                     ]
                     },
                     options: {
+                        maintainAspectRatio: false,
                         title: {
                             display: true,
                             text: "Weekday and Weekend Price Comparison"
@@ -321,6 +325,7 @@ $(function() {
                         }]
                     },
                     options: {
+                        maintainAspectRatio: false,
                         legend: {display: false},
                         title: {
                             display: true,
