@@ -69,6 +69,7 @@ function validateHomeSearch() {
             errorMessage.html("Minimum price must be less than maximum price");
             return false;
         } else {
+            // sessionStorage.setitem("dateWedding", )
             return true;
         }
     }

@@ -14,6 +14,8 @@ $(function() {
     // Filter results if accessed through form submission from wedding.php
     if (homeSearchDate != "") {
         $("#wedding-date-picker").val(homeSearchDate);
+        
+        sessionStorage.setItem("dateWedding", homeSearchDate)
 
         venues.each((index, venue) => {
             const venueName = $(venue).find("#venue-name").text();
@@ -91,6 +93,10 @@ $(function() {
     let applyFilters = () => {
         const partySize = parseInt(partySizeInput.val());
         const weddingDate = dateInput.val();
+
+        if (weddingDate != "") {
+            sessionStorage.setItem("dateWedding", weddingDate)
+        }
         
         // Fetch catering grades data
         fetch("cateringGrades.php")
@@ -157,6 +163,8 @@ $(function() {
                                 if (filteredVenues.includes(venueName)) {
                                     shouldBeVisible = false;
                                 }
+
+                                
                                 
                                 // Toggle visibility based on combined filters
                                 if (shouldBeVisible) {

@@ -23,6 +23,16 @@ $(function() {
         }
     }
 
+    $(document).ready(function() {
+        let prefilledDate = sessionStorage.getItem("dateWedding");
+        console.log(prefilledDate)
+        if (prefilledDate != null && date == "") {
+            console.log("there is a date")
+            console.log(prefilledDate)
+            //new Date datePrefilled = Date.parse(prefilledDate)
+            dateInput.val(prefilledDate);
+    }})
+
     if (firstName == "" || surname == "" || date == "" || partySize == "" || venue == "" || venue == "noSelection") {
         errorPresent()
     } else {
@@ -75,4 +85,3 @@ $(function() {
 
     }
 })
-
