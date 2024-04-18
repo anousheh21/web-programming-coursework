@@ -352,7 +352,9 @@ li {
     justify-content: center;
 }
 
-
+.hiddenBrowseVenuesMessage {
+    display: none;
+}
 
 /* .filter-section {
     padding-top: 100px;

@@ -78,6 +78,9 @@ $(function() {
 
                             if (count == 11) {
                                 console.log("no venues to display")
+                                $("#noBrowseVenuesMessage").removeClass("hiddenBrowseVenuesMessage")
+                            } else {
+                                $("#noBrowseVenuesMessage").addClass("hiddenBrowseVenuesMessage")
                             }
                             
                         })
@@ -185,6 +188,9 @@ $(function() {
 
                                 if (count == 10) {
                                     console.log("2 no venues")
+                                    $("#noBrowseVenuesMessage").removeClass("hiddenBrowseVenuesMessage")
+                                } else {
+                                    $("#noBrowseVenuesMessage").addClass("hiddenBrowseVenuesMessage")
                                 }
 
 
@@ -201,6 +207,9 @@ $(function() {
                      
                         if (count == 10) {
                             console.log("3 no venues")
+                            $("#noBrowseVenuesMessage").removeClass("hiddenBrowseVenuesMessage")
+                        } else {
+                            $("#noBrowseVenuesMessage").addClass("hiddenBrowseVenuesMessage")
                         }
                     }
                 });
