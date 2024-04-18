@@ -17,10 +17,10 @@ $(function() {
         
         sessionStorage.setItem("dateWedding", homeSearchDate)
 
-        let count = 0;
+        let countx = 0;
         venues.each((index, venue) => {
             const venueName = $(venue).find("#venue-name").text();
-            let shouldBeVisible = true;
+            let shouldBeVisiblex = true;
 
             fetch("weddingDates.php")
                 .then(res => res.json())
@@ -30,8 +30,9 @@ $(function() {
                     const filteredVenues = filteredDates.map(item => item.name);
                     if (filteredVenues.includes(venueName)) {
                         // shouldBeVisible = false;
-                        count =+ 1;
-                        $(venue).hide();
+                        
+                        // $(venue).hide();
+                        shouldBeVisiblex = false;
                     }
 
                     // Location search
@@ -49,8 +50,9 @@ $(function() {
                     }
 
                     if(!locationVenues.includes(venueName)) {
-                        count += 1;
-                        $(venue).hide();
+                        
+                        // $(venue).hide();
+                        shouldBeVisiblex = false;
                     }
 
                     // Calculate whether date is a weekday or weekend 
@@ -72,15 +74,24 @@ $(function() {
                             }
 
                             if ((venuePrice < homeMinPriceInt) || (venuePrice > homeMaxPriceInt)) {
-                                count += 1;
-                                $(venue).hide();
+                                // countx += 1;
+                                // $(venue).hide();
+                                shouldBeVisiblex = false;
                             }
 
-                            if (count == 11) {
-                                console.log("no venues to display")
-                                $("#noBrowseVenuesMessage").removeClass("hiddenBrowseVenuesMessage")
+                            if (shouldBeVisiblex == false) {
+                                $(venue).hide()
+                                countx += 1
                             } else {
-                                $("#noBrowseVenuesMessage").addClass("hiddenBrowseVenuesMessage")
+                                $(venue).show()
+                            }
+
+                            console.log(countx)
+                            if (countx == 10) {
+                                console.log("no venues to display")
+                                $(".noBrowseVenuesMessage").removeClass("hiddenBrowseVenuesMessage")
+                            } else {
+                                $(".noBrowseVenuesMessage").addClass("hiddenBrowseVenuesMessage")
                             }
                             
                         })
@@ -188,9 +199,9 @@ $(function() {
 
                                 if (count == 10) {
                                     console.log("2 no venues")
-                                    $("#noBrowseVenuesMessage").removeClass("hiddenBrowseVenuesMessage")
+                                    $(".noBrowseVenuesMessage").removeClass("hiddenBrowseVenuesMessage")
                                 } else {
-                                    $("#noBrowseVenuesMessage").addClass("hiddenBrowseVenuesMessage")
+                                    $(".noBrowseVenuesMessage").addClass("hiddenBrowseVenuesMessage")
                                 }
 
 
@@ -207,9 +218,9 @@ $(function() {
                      
                         if (count == 10) {
                             console.log("3 no venues")
-                            $("#noBrowseVenuesMessage").removeClass("hiddenBrowseVenuesMessage")
+                            $(".noBrowseVenuesMessage").removeClass("hiddenBrowseVenuesMessage")
                         } else {
-                            $("#noBrowseVenuesMessage").addClass("hiddenBrowseVenuesMessage")
+                            $(".noBrowseVenuesMessage").addClass("hiddenBrowseVenuesMessage")
                         }
                     }
                 });

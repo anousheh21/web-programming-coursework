@@ -356,6 +356,27 @@ li {
     display: none;
 }
 
+.noBrowseVenuesMessage {
+    color: #808080;
+    font-size: 22px;
+    font-family: 'Nunito Sans', 'Helvetica', 'Arial';
+    font-weight: 500;
+}
+
+#noBrowseDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+#noBrowseLineTwo {
+    margin-top: -5px;
+}
+
 /* .filter-section {
     padding-top: 100px;
 } */
@@ -472,8 +493,10 @@ li {
 }
 
 #noFavouritesMessage {
-    font-family: 'Helvetica', 'Arial';
+    font-family: 'Nunito Sans', 'Helvetica', 'Arial';
     font-weight: 500;
+    font-size: 22px;
+    color: #808080;
 }
 
 .venue-card {

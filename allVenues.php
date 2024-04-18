@@ -80,7 +80,11 @@
     <!-- HEADING -->
     <div id="browseHeadingDiv">
         <h1 class="title" id="title-browse">Browse Venues</h1>
-        <h3 id="noBrowseVenuesMessage" class="hiddenBrowseVenuesMessage">There are no venues to display. Consider changing your search, or browse through all our venues.</h3>
+        <div id="noBrowseDiv">
+             <h3 class="hiddenBrowseVenuesMessage noBrowseVenuesMessage">There are no venues to display.</h3>
+             <h3 id="noBrowseLineTwo" class="hiddenBrowseVenuesMessage noBrowseVenuesMessage">Consider changing your search, or browse through all our venues.</h3>
+        </div>
+        
     </div>
 
     <!-- FILTERS -->
