@@ -1009,6 +1009,18 @@ li {
     width: 450px;
 }
 
+.comparisonOverview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.comparisonPricing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .comparisonInformation {
     font-family: 'Nunito Sans', 'Helvetica', 'Arial';
     font-size: 18px;
