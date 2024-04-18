@@ -106,6 +106,7 @@ $(function() {
             sessionStorage.setItem("dateWedding", weddingDate)
         }
         
+        let count = 0;
         // Fetch catering grades data
         fetch("cateringGrades.php")
             .then(res => res.json())
@@ -178,15 +179,28 @@ $(function() {
                                 if (shouldBeVisible) {
                                     $(venue).show();
                                 } else {
+                                    count += 1;
                                     $(venue).hide();
                                 }
+
+                                if (count == 10) {
+                                    console.log("2 no venues")
+                                }
+
+
                             });
                     } else {
                         // Toggle visibility based on combined filters
                         if (shouldBeVisible) {
                             $(venue).show();
                         } else {
+                            count += 1;
                             $(venue).hide();
+                        }
+
+                     
+                        if (count == 10) {
+                            console.log("3 no venues")
                         }
                     }
                 });
