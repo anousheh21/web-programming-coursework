@@ -67,7 +67,7 @@
         die("Connection failed: " . mysqli_connect_error());
     }
 
-    $sql = "select name from venue;";
+    $sql = "select name from venue order by name asc;";
     $result = mysqli_query($conn, $sql);
 
     ?>
