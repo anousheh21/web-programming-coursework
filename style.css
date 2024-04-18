@@ -1107,8 +1107,77 @@ li {
     margin-bottom: 10px;
 }
 
+#contactForm form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+}
+
+.contactFormInput {
+    font-family: 'Nunito Sans', 'Helvetica', 'Arial';
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.contactFormInputEl {
+    font-family: 'Nunito Sans', 'Helvetica', 'Arial';
+    font-size: 18px;
+    border-radius: 15px;
+    padding: 12px 20px;
+}
+
+#contactFormSubmit {
+    font-size: 18px;
+    padding: 12px 20px;
+}
+
+#contactFormNameContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#contactFormOtherInfoContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#contactFormFirstName {
+    width: 245px;
+}
+
+#contactFormSurname  {
+    width: 245px;
+}
+
+#contactFormQueryDiv {
+    width: 100%;
+}
+
+#contactFormVenue {
+    padding-right: 5px;
+}
+
+#contactFormDate {
+    width: 175px;
+}
+
+#contactFormPartySize {
+    width: 105px;
+}
+
+#contactFormQuery {
+    width: 100%;
+}
+
 .contactError {
     color: red;
+    font-family: 'Nunito Sans', 'Helvetica', 'Arial';
+    font-size: 16px;
 }
 
 
