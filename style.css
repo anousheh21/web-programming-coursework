@@ -1059,6 +1059,13 @@ li {
     margin-top: -120px;
 }
 
+#compareChartTitle {
+    font-family: 'Georgia', 'Helvetica', 'Arial';
+    font-size: 20px;
+    margin-top: 25px;
+    margin-bottom: -10px;
+}
+
 #compareAllGraphStats {
     display: flex;
     flex-direction: column;
