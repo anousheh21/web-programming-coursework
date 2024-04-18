@@ -17,6 +17,7 @@ $(function() {
         
         sessionStorage.setItem("dateWedding", homeSearchDate)
 
+        let count = 0;
         venues.each((index, venue) => {
             const venueName = $(venue).find("#venue-name").text();
             let shouldBeVisible = true;
@@ -29,6 +30,7 @@ $(function() {
                     const filteredVenues = filteredDates.map(item => item.name);
                     if (filteredVenues.includes(venueName)) {
                         // shouldBeVisible = false;
+                        count =+ 1;
                         $(venue).hide();
                     }
 
@@ -47,6 +49,7 @@ $(function() {
                     }
 
                     if(!locationVenues.includes(venueName)) {
+                        count += 1;
                         $(venue).hide();
                     }
 
@@ -69,7 +72,12 @@ $(function() {
                             }
 
                             if ((venuePrice < homeMinPriceInt) || (venuePrice > homeMaxPriceInt)) {
+                                count += 1;
                                 $(venue).hide();
+                            }
+
+                            if (count == 11) {
+                                console.log("no venues to display")
                             }
                             
                         })
