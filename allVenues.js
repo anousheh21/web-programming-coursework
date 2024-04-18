@@ -99,7 +99,7 @@ $(function() {
 
             
         })
-    }
+    } 
 
     venues.each((index, venue) => {
         const eachVenue = $(venue).find('#venue-name').text();
@@ -240,7 +240,11 @@ $(function() {
     partySizeInput.on('input', applyFilters);
     dateInput.on('input', applyFilters);
 
-   window.addEventListener('load', applyFilters)
+    if (homeSearchDate == "") {
+        window.addEventListener('load', applyFilters)
+    }
+
+//    window.addEventListener('load', applyFilters)
 
     // Fetch rating information
     fetch("reviewScores.php")
