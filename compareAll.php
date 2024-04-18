@@ -91,19 +91,19 @@
                     <div id="compareImgPlaceholderLeft"></div>
                     <div id="comparisonDetailsLeft">
 
-                        <div id="comparisonOverviewLeft" class="comparisonOverview comparisonBox">
+                        <div id="comparisonOverviewLeft" class="comparisonOverview comparisonBox comparisonBoxLeft">
                             <p id="comparisonCapacityLeft"></p>
                             <p id="comparisonLocationLeft"></p>
                             <p id="comparisonRatingLeft"></p>
                             <p id="comparisonLicensedLeft"></p>
                         </div>
 
-                        <div id="comparisonPricingLeft" class="comparisonPricing comparisonBox">
+                        <div id="comparisonPricingLeft" class="comparisonPricing comparisonBoxLeft comparisonBox">
                             <p id="comparisonWeekdayLeft"></p>
                             <p id="comparisonWeekendLeft"></p>
                         </div>
 
-                        <div id="comparisonCateringDivLeft" class="comparisonCateringDiv comparisonBox">
+                        <div id="comparisonCateringDivLeft" class="comparisonCateringDiv comparisonBoxLeft comparisonBox">
                             <p id="comparisonCateringLeft"></p>
                         </div>
 
@@ -128,19 +128,19 @@
                     <div id="compareImgPlaceholderRight"></div>
                     <div id="comparisonDetailsRight">
 
-                        <div id="comparisonOverviewRight" class="comparisonOverview comparisonBox">
+                        <div id="comparisonOverviewRight" class="comparisonOverview comparisonBoxRight comparisonBox">
                             <p id="comparisonCapacityRight"></p>
                             <p id="comparisonLocationRight"></p>
                             <p id="comparisonRatingRight"></p>
                             <p id="comparisonLicensedRight"></p>
                         </div>
 
-                        <div id="comparisonPricingRight" class="comparisonPricing comparisonBox">
+                        <div id="comparisonPricingRight" class="comparisonPricing comparisonBoxRight comparisonBox">
                             <p id="comparisonWeekdayRight"></p>
                             <p id="comparisonWeekendRight"></p>
                         </div>
 
-                        <div id="comparisonCateringDivRight" class="comparisonCateringDiv comparisonBox">
+                        <div id="comparisonCateringDivRight" class="comparisonCateringDiv comparisonBoxRight comparisonBox">
                             <p id="comparisonCateringRight"></p>
                         </div>
 
