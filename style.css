@@ -981,6 +981,18 @@ li {
     max-width: 450px;
 }
 
+#compareImgPlaceholderLeft {
+    margin-bottom: 15px;
+}
+
+#compareImgPlaceholderRight {
+    margin-bottom: 15px;
+}
+
+.comparisonBox {
+    margin-bottom: 15px;
+}
+
 #compareForm {
     width: 60%;
 }
@@ -1004,9 +1016,32 @@ li {
     background-color: #E3E1D9;
     border-radius: 15px;
     padding: 10px 20px;
+    padding-bottom: 20px;
     margin-left: 10px;
     width: 90%;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.comparisonCateringDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.comparisonCateringTitleDiv {
+    margin-bottom:  -50px;
+}
+
+.comparisonTitleDivLeft {
+    margin-bottom: -35px;
+    font-family: 'Georgia', 'Helvetica', 'Arial';
+    font-size: 22px;
+}
+
+.comparisonTitleDivRight {
+    margin-bottom: -35px;
+    font-family: 'Georgia', 'Helvetica', 'Arial';
+    font-size: 22px;
 }
 
 .hideComparisonTitle {
