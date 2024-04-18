@@ -240,6 +240,8 @@ $(function() {
     partySizeInput.on('input', applyFilters);
     dateInput.on('input', applyFilters);
 
+   window.addEventListener('load', applyFilters)
+
     // Fetch rating information
     fetch("reviewScores.php")
         .then(res => res.json())
