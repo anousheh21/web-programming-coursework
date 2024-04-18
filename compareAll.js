@@ -8,6 +8,7 @@ $(function() {
                 let dropdownLeft = $(this).val();
 
                 if ((dropdownLeft != "") && (dropdownLeft != "noSelectionLeft")) {
+                    $(".compareGraphMargin").addClass("compareWithColumn")
                     resData.forEach(venue => {
                         if (dropdownLeft == venue.name) {
                             $("#compareAllGraphStats").removeClass("compareGraphMargin")
@@ -85,6 +86,7 @@ $(function() {
                 let dropdownRight = $(this).val();
 
                 if ((dropdownRight != "") && (dropdownRight != "noSelectionRight")) {
+                    $(".compareGraphMargin").addClass("compareWithColumn")
                     resData.forEach(venue => {
                         if (dropdownRight == venue.name) {
                             $("#compareAllGraphStats").removeClass("compareGraphMargin")
