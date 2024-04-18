@@ -192,6 +192,7 @@
     <div id="homeSearch">
         <div id="homeSearchTitleDiv">
             <h3 id="homeSearchTitle">Search For Your Perfect Venue</h3>
+            <p id="homeSearchErrorMessage"></p>
         </div>
         <div id="homeSearchForm">
             <form onsubmit="return validateHomeSearch()" action="allVenues.php" method="get">
@@ -213,9 +214,9 @@
                 <input type="submit" class="buttonStyler" id="homeSearchSubmit"  name="homeSearchSubmit" value="Go">
             </form>
         </div>
-        <div id="homeSearchErrorMessageDiv">
+        <!-- <div id="homeSearchErrorMessageDiv">
             <p id="homeSearchErrorMessage"></p>
-        </div>
+        </div> -->
     </div>
 
 

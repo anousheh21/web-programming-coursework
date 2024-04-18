@@ -298,6 +298,18 @@ li {
 #homeSearchTitle {
     font-family: 'Georgia', 'Helvetica', 'Arial';
     font-size: 30px;
+    margin-right: 20px;
+}
+
+#homeSearchTitleDiv {
+    display: flex;
+    align-items: baseline;
+}
+
+#homeSearchErrorMessage {
+    color: red;
+    font-family: 'Nunito Sans', 'Helvetica', 'Arial';
+    font-size: 20px;
 }
 
 .homeSearchInput {
