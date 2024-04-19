@@ -268,6 +268,7 @@ function cleanInput($data) {
 
           <!-- other error messages -->
           <p class="singleVenueParaStyle" id="costInvalidResponse"></p>
+          <p class="singleVenueParaStyle" id="costInvalidResponse2"></p>
 
           <!-- output calculated cost -->
           <p class="singleVenueParaStyle" id="calculatedCost"></p>

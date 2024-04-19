@@ -100,6 +100,7 @@ $(function() {
                 // let weddingDate = Date.parse(dateCost)
                 let grade = parseInt(cateringGradeCost)
                 let errorMessage = $("#costInvalidResponse")
+                let errorMessage2 = $("#costInvalidResponse2")
 
 
                 fetch("weddingDates.php")
@@ -116,13 +117,15 @@ $(function() {
                         })
 
                         if ((partySize > venueCapacity) && isEmpty(errorMessage)) {
-                            errorMessage.html("Party size exceeds the capacity of the venue. Consider a different venue");
+                            errorMessage.html("Party size exceeds the capacity of the venue.");
+                            errorMessage2.html("Consider a different venue.")
                         } else if ((partySize < 0) && isEmpty(errorMessage)) {
                             errorMessage.html("Invalid party size");
                         }
 
                         if ((venueBooked == true) && isEmpty(errorMessage)) {
-                            errorMessage.html("Venue already has a booking on your wedding date. Consider a different date, or a different venue")
+                            errorMessage.html("Venue already has a booking on your wedding date.")
+                            errorMessage2.html("Consider a different date or venue.")
                         }
 
                         // If there are no errors in the user input, calculate the cost of the wedding
