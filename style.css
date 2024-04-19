@@ -1658,3 +1658,50 @@ li {
         min-width: 180px;
     }
 }
+
+/* COMPARISON MEDIA QUERIES */
+@media screen and (max-width: 965px) {
+    .compareImg {
+        max-width: 400px;
+    }
+}
+
+@media screen and (max-width: 865px) {
+    .compareImg {
+        max-width: 350px;
+    }
+
+    #leftCompareColumn {
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 745px) {
+    .compareImg {
+        max-width: 300px
+    }
+
+    #leftCompareColumn {
+        margin-right: 5px;
+    }
+}
+
+@media screen and (max-width: 625px) {
+    .compareImg {
+        max-width: 250px;
+    }
+
+    #comparisonLocationLeft {
+        font-size: 13px;
+    }
+
+    #comparisonLocationRight {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .compareImg {
+        max-width: 235px;
+    }
+}
