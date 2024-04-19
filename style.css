@@ -609,6 +609,15 @@ li {
     font-family: 'Nunito Sans', 'Helvetica', 'Arial';
 }
 
+.singleVenueH3Style {
+    font-family: 'Georgia', 'Helvetica', 'Arial';
+    font-size: 24px;
+}
+
+.singleVenueParaStyle {
+    font-family: 'Nunito Sans', 'Helvetica', 'Arial';
+}
+
 #singleImageDiv {
     display: flex;
     justify-content: flex-start;
@@ -1388,6 +1397,11 @@ li {
     #topBrowseSection {
         width: 1000px;
     }
+
+    #noBrowseDiv {
+        width: 160%;
+        margin-left: 20px;
+    }
 }
 
 @media screen and (max-width: 1010px) {
@@ -1431,6 +1445,28 @@ li {
 
     .venue-info a {
         font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    #noBrowseDiv {
+        margin-left: 50px;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    #noBrowseDiv {
+        margin-left: 75px;
+    }
+
+    .noBrowseVenuesMessage {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 746px) {
+    #noBrowseDiv {
+        margin-left: 100px;
     }
 }
 

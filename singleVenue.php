@@ -195,8 +195,8 @@ function cleanInput($data) {
 
       <div id="singleVenueDescriptionContainer">
         <div id="singleVenueDescriptionDiv">
-          <h3 id="singleVenueDescriptionTitle">Description</h3>
-          <p id="singleVenueDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga vitae aut voluptas et quibusdam eveniet rerum cum eius placeat soluta. Beatae inventore fugit laboriosam possimus.</p>
+          <h3 class="singleVenueH3Style" id="singleVenueDescriptionTitle">Description</h3>
+          <p class="singleVenueParaStyle" id="singleVenueDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga vitae aut voluptas et quibusdam eveniet rerum cum eius placeat soluta. Beatae inventore fugit laboriosam possimus.</p>
         </div>
 
         <div id="singleVenueDetailsDiv">
@@ -214,19 +214,19 @@ function cleanInput($data) {
             </div>
             <div class="overlay" id="popularityOverlay"></div>
           </div>
-          <p id="singleVenueCapacity">Capacity: </p>
-          <p id="singleVenueLicensed">Licensed: </p>
+          <p class="singleVenueParaStyle" id="singleVenueCapacity">Capacity: </p>
+          <p class="singleVenueParaStyle" id="singleVenueLicensed">Licensed: </p>
         </div>
       </div>
 
       <div id="pricingInfo">
         <div id="pricingBox">
           <h3 id="pricingBoxHeading">Pricing</h3>
-          <p id="venuePriceSubheading">Venue Hire<span class="pricingSubheadingItalic"> - (Without Catering)</span></p>
-          <p id="weekdayPrice">Weekday Price: </p>
-          <p id="weekendPrice">Weekend Price: </p>
-          <p id="cateringPriceSubheading">Catering<span class="pricingSubheadingItalic"> - (Per Person)</span></p>
-          <div id="cateringPrices"></div>
+          <p class="singleVenueParaStyle" id="venuePriceSubheading">Venue Hire<span class="pricingSubheadingItalic"> - (Without Catering)</span></p>
+          <p class="singleVenueParaStyle" id="weekdayPrice">Weekday Price: </p>
+          <p class="singleVenueParaStyle" id="weekendPrice">Weekend Price: </p>
+          <p class="singleVenueParaStyle" id="cateringPriceSubheading">Catering<span class="pricingSubheadingItalic"> - (Per Person)</span></p>
+          <div class="singleVenueParaStyle" id="cateringPrices"></div>
         </div>
 
         <div id="costCalculator">
@@ -234,24 +234,24 @@ function cleanInput($data) {
           <form method="post" action='<?php htmlspecialchars($_SERVER["PHP_SELF"]);?>'>
             <div id="costCalculatorInput">
               <div id="partyInputContainer">
-                <p id="costPartySizeLabel">Party Size</p>
+                <p class="singleVenueParaStyle" id="costPartySizeLabel">Party Size</p>
                 <input type="number" name="partySizeCost" id="partySizeCost" value="<?php echo $partySizeCost;?>" size="5" maxlength="5">
-                <span class="costError"><?php echo $partySizeCostError;?></span>
+                <span class="singleVenueParaStyle" class="costError"><?php echo $partySizeCostError;?></span>
               </div>
 
               <div id="dateInputContainer">
-                <p id="costDateLabel">Wedding Date</p>
+                <p class="singleVenueParaStyle" id="costDateLabel">Wedding Date</p>
                 <input type="date" name="dateCost" id="dateCost" value="<?php echo $dateCost;?>">
-                <span class="costError"><?php echo $dateCostError;?></span>
+                <span class="singleVenueParaStyle" class="costError"><?php echo $dateCostError;?></span>
               </div>
             </div>  
 
             <div id="cateringInputContainer">
-                <p id="cateringCostLabel">Catering Grade</p>
-                <div id="cateringCostSelection">
+                <p class="singleVenueParaStyle" id="cateringCostLabel">Catering Grade</p>
+                <div class="singleVenueParaStyle" id="cateringCostSelection">
                   <input type="hidden" id="cateringGrade" name="cateringGrade" value="">
                 </div>
-                <span class="costError"><?php echo $cateringCostError;?></span>
+                <span class="singleVenueParaStyle" class="costError"><?php echo $cateringCostError;?></span>
             </div>
 
             <div id="submitCostButtonContainer">
@@ -267,10 +267,10 @@ function cleanInput($data) {
           </script>
 
           <!-- other error messages -->
-          <p id="costInvalidResponse"></p>
+          <p class="singleVenueParaStyle" id="costInvalidResponse"></p>
 
           <!-- output calculated cost -->
-          <p id="calculatedCost"></p>
+          <p class="singleVenueParaStyle" id="calculatedCost"></p>
 
         </div>
       </div>
