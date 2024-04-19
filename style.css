@@ -1351,13 +1351,20 @@ li {
     }
 }
 
-@media screen and (max-width: 540px) {
-    #logo {
-        margin-left: -2px;
+@media screen and (max-width: 555px) {
+    nav a {
+        padding: 14px 10px;
     }
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 540px) {
+    #logo {
+        margin-left: -2px;
+        margin-top: 10px;
+    }
+}
+
+/* @media screen and (max-width: 520px) {
     #logo {
         margin-left: -7px;
     }
@@ -1374,7 +1381,7 @@ li {
         margin-right: -10px;
         margin-left: -10px;
     }
-}
+} */
 
 /* BROWSE VENUES MEDIA QUERIES */
 @media screen and (max-width: 1520px) {
@@ -1613,5 +1620,41 @@ li {
 @media screen and (max-width: 550px) {
     #ratingDoughnutChart {
         width: 350px;
+    }
+}
+
+@media screen and (max-width: 870px) {
+    .singleMainImage {
+        margin-top: -50px;
+    }
+
+    #singleVenueDescriptionContainer {
+        margin-top: -100px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .singleMainImage {
+        margin-top: -100px;
+    }
+
+    #singleVenueDescriptionContainer {
+        margin-top:  -200px;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .singleMainImage {
+        margin-top: -150px;
+    }
+
+    #singleVenueDescriptionContainer {
+        margin-top: -250px;
+    }
+}
+
+@media screen and (max-width: 645px) {
+    #singleVenueDetailsDiv {
+        min-width: 180px;
     }
 }
