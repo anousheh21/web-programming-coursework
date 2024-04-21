@@ -40,7 +40,7 @@
 
             <div class="carouselInformation">
                 <h3 id="carouselTitle">Central Plaza</h3>
-                <p id="carouselDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate facilis, reiciendis error recusandae libero illum?</p>
+                <p id="carouselDescription"> The Central Plaza Hotel in London is the epitome of both elegance and luxury in the heart of the city of London.</p>
                 <?php
                 echo "<button class='buttonStyler'><a href='singleVenue.php?venue=" . urlencode("Central Plaza") . "'>See More</a></button>";
                 ?>
@@ -54,7 +54,7 @@
 
             <div class="carouselInformation">
                 <h3 id="carouselTitle">Pacific Towers Hotel</h3>
-                <p id="carouselDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate facilis, reiciendis error recusandae libero illum?</p>
+                <p id="carouselDescription">The Pacific Towers Hotel in Birmingham is a modern hotel set amidst the vibrant cityscape.</p>
                <?php
                 echo "<button class='buttonStyler'><a href='singleVenue.php?venue=" . urlencode("Pacific Towers Hotel") . "'>See More</a></button>";
                 ?>
@@ -67,7 +67,7 @@
              <img src="imageSkyCenterComplex.png" alt="Sky Center Complex" class="carouselImage">
              <div class="carouselInformation">
                 <h3 id="carouselTitle">Sky Center Complex</h3>
-                <p id="carouselDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate facilis, reiciendis error recusandae libero illum?</p>
+                <p id="carouselDescription">The Sky Centre Complex in Loughborough stands tall in the heart of the town.</p>
                <?php
                 echo "<button class='buttonStyler'><a href='singleVenue.php?venue=" . urlencode("Sky Center Complex") . "'>See More</a></button>";
                 ?>
@@ -81,7 +81,7 @@
 
             <div class="carouselInformation">
                 <h3 id="carouselTitle">Sea View Tavern</h3>
-                <p id="carouselDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate facilis, reiciendis error recusandae libero illum?</p>
+                <p id="carouselDescription">The Sea View Tavern in Nottingham is a charming retreat nestled in the heart of the city.</p>
                <?php
                 echo "<button class='buttonStyler'><a href='singleVenue.php?venue=" . urlencode("Sea View Tavern") . "'>See More</a></button>";
                 ?>
@@ -95,7 +95,7 @@
 
             <div class="carouselInformation">
                 <h3 id="carouselTitle">Ashby Castle</h3>
-                <p id="carouselDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate facilis, reiciendis error recusandae libero illum?</p>
+                <p id="carouselDescription">Ashby Castle is a historic hotel situated in the heart of Manchester, steeped in centuries of rich history and architectural grandeur.</p>
                <?php
                 echo "<button class='buttonStyler'><a href='singleVenue.php?venue=" . urlencode("Ashby Castle") . "'>See More</a></button>";
                 ?>
@@ -109,7 +109,7 @@
 
             <div class="carouselInformation">
                 <h3 id="carouselTitle">Fawlty Towers</h3>
-                <p id="carouselDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate facilis, reiciendis error recusandae libero illum?</p>
+                <p id="carouselDescription">Fawlty Towers in York is a delightful homage to the iconic British institution. It offers guests a unique and whimsical experience inspired by the historical show.</p>
                <?php
                 echo "<button class='buttonStyler'><a href='singleVenue.php?venue=" . urlencode("Fawlty Towers") . "'>See More</a></button>";
                 ?>
@@ -123,7 +123,7 @@
 
             <div class="carouselInformation">
                 <h3 id="carouselTitle">Hilltop Mansion</h3>
-                <p id="carouselDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate facilis, reiciendis error recusandae libero illum?</p>
+                <p id="carouselDescription">Hilltop Mansion in Liverpool stands as a beacon of opulence and refinement, overlooking the cityscape with timeless elegance. </p>
                <?php
                 echo "<button class='buttonStyler'><a href='singleVenue.php?venue=" . urlencode("Hilltop Mansion") . "'>See More</a></button>";
                 ?>
@@ -137,7 +137,7 @@
 
             <div class="carouselInformation">
                 <h3 id="carouselTitle">Haslegrave Hotel</h3>
-                <p id="carouselDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate facilis, reiciendis error recusandae libero illum?</p>
+                <p id="carouselDescription">Nestled in the heart of Bristol's rich cultural tapestry, Haslegrave Hotel stands as a beacon of hospitality and community warmth.</p>
                <?php
                 echo "<button class='buttonStyler'><a href='singleVenue.php?venue=" . urlencode("Haslegrave Hotel") . "'>See More</a></button>";
                 ?>
@@ -151,7 +151,7 @@
 
             <div class="carouselInformation">
                 <h3 id="carouselTitle">Forest Inn</h3>
-                <p id="carouselDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate facilis, reiciendis error recusandae libero illum?</p>
+                <p id="carouselDescription">The Forrest Inn in Brighton is a cozy and welcoming gastropub nestled within the picturesque seaside city. With its rustic charm and relaxed ambiance, it serves as a beloved gathering spot for locals and visitors alike. </p>
                <?php
                 echo "<button class='buttonStyler'><a href='singleVenue.php?venue=" . urlencode("Forest Inn") . "'>See More</a></button>";
                 ?>
@@ -165,7 +165,7 @@
 
             <div class="carouselInformation">
                 <h3 id="carouselTitle">Southwestern Estate</h3>
-                <p id="carouselDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate facilis, reiciendis error recusandae libero illum?</p>
+                <p id="carouselDescription">The Southwestern Estate in Marylebone is a prestigious enclave nestled in one of London's most sought-after neighborhoods.</p>
                <?php
                 echo "<button class='buttonStyler'><a href='singleVenue.php?venue=" . urlencode("Southwestern Estate") . "'>See More</a></button>";
                 ?>
