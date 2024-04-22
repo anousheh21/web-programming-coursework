@@ -196,7 +196,7 @@ function cleanInput($data) {
       <div id="singleVenueDescriptionContainer">
         <div id="singleVenueDescriptionDiv">
           <h3 class="singleVenueH3Style" id="singleVenueDescriptionTitle">Description</h3>
-          <p class="singleVenueParaStyle" id="singleVenueDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga vitae aut voluptas et quibusdam eveniet rerum cum eius placeat soluta. Beatae inventore fugit laboriosam possimus.</p>
+          <p class="singleVenueParaStyle" id="singleVenueDescription"></p>
         </div>
 
         <div id="singleVenueDetailsDiv">

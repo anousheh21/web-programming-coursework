@@ -137,7 +137,7 @@
 
             <div class="carouselInformation">
                 <h3 id="carouselTitle">Haslegrave Hotel</h3>
-                <p id="carouselDescription">Nestled in the heart of Bristol's rich cultural tapestry, Haslegrave Hotel stands as a beacon of hospitality and community warmth.</p>
+                <p id="carouselDescription">Nestled in the heart of Bristol's enchanting cultural landscape, Haslegrave Hotel emerges as a quintessential destination for unforgettable wedding celebrations.</p>
                <?php
                 echo "<button class='buttonStyler'><a href='singleVenue.php?venue=" . urlencode("Haslegrave Hotel") . "'>See More</a></button>";
                 ?>

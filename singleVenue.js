@@ -9,54 +9,66 @@ $(function() {
 
             let phoneNumber;
             let emailAddress;
+            let venueDescription;
 
             // Display correct image corresponding to venue selected
             if (thisVenue.name == "Central Plaza") {
                 $("#singleVenueImage").html("<img class='singleMainImage' src='imageCentralPlaza.png' alt='Central Plaza'>")
                 phoneNumber = '01234 567890';
                 emailAddress = 'centralplaza'
+                venueDescription = "The Central Plaza Hotel in London is the epitome of both elegance and luxury in the heart of the city of London. With both iconic architecture along with a rich history, this hotel stands as a symbol of sophistication and charm. It boasts lavish accommodation for party guests, exquisite dining options, and impeccable service, offering guests an unforgettable experience. Conveniently located near major London attractions and transportation hubs, the Central Plaza Hotel is the perfect retreat for both leisure and business travelers seeking comfort and refinement in the bustling metropolis of London."
             } else if (thisVenue.name == "Pacific Towers Hotel") {
                 $("#singleVenueImage").html("<img class='singleMainImage' src='imagePacificTowers.png' alt='Pacific Towers Hotel'>")
                 phoneNumber = '02345 678901';
                 emailAddress = 'pacifictowers'
+                venueDescription = "The Pacific Towers Hotel in Birmingham is a modern hotel set amidst the vibrant cityscape. Offering a mix of contemporary design and welcoming hospitality, this hotel promises a memorable stay for every guest. It's sleek and spacious accommodations, state-of-the-art facilities, and personalized service caters to the needs of brides and groomns to be. It is situated in a prime location, the Pacific Towers Hotel provides easy access to Birmingham's many  attractions, shopping destinations, and cultural hotspots. It'a large function rooms can accomodate different wedding parties with flexible decor variations and lighting."
             } else if (thisVenue.name == "Sky Center Complex") {
                 $("#singleVenueImage").html("<img class='singleMainImage' src='imageSkyCenterComplex.png' alt='Sky Center Complex'>")
                 phoneNumber = '03456 789012'
                 emailAddress = 'skycenter'
+                venueDescription = "The Sky Centre Complex in Loughborough stands tall in the heart of the town. Its sleek architectural design and cutting-edge facilities offer a dynamic hub for business, leisure, and community activities. Boasting a mix of retail spaces, office suites, entertainment venues, and wedding dining and reception options, it caters to the diverse needs of residents and visitors alike. Situated in a strategic location, the Sky Centre Complex serves as a focal point for wedding gatherings, cultural events, and commercial activities."
             } else if (thisVenue.name == "Sea View Tavern") {
                 $("#singleVenueImage").html("<img class='singleMainImage' src='imageSeaView.png' alt='Sea View Tavern'>")
                 phoneNumber = '04567 890123'
                 emailAddress = 'seaview'
+                venueDescription = "The Sea View Tavern in Nottingham is a charming retreat nestled in the heart of the city. Evoking the ambiance of a seaside escape, this cozy tavern offers a warm and welcoming atmosphere for patrons to unwind and indulge. With its nautical-themed decor, friendly staff, and laid-back vibe, it's the perfect spot to enjoy a refreshing pint or a hearty meal with friends and family or can cater for those special events like an intimate wedding reception. From classic fish and chips to flavorful seafood dishes, the menu boasts a variety of culinary delights to satisfy every palate. "
             } else if (thisVenue.name == "Ashby Castle") {
                 $("#singleVenueImage").html("<img class='singleMainImage' src='imageAshbyCastle.png' alt='Ashby Castle'>")
                 phoneNumber = '05678 901234'
                 emailAddress = 'ashbycastle'
+                venueDescription = "Ashby Castle is a historic hotel situated in the heart of Manchester, steeped in centuries of rich history and architectural grandeur. Originally constructed in the 15th century, the castle served as a strategic stronghold during periods of conflict and as a lavish residence for nobility. Today, its majestic ruins stand as a testament to its former glory, offering visitors a captivating glimpse into the past. With its imposing stone walls, towering turrets, and picturesque surroundings, Ashby Castle exudes a sense of timeless elegance and intrigue for your special day. Ashby Castle offers a captivating journey through Manchester's storied past."
             } else if (thisVenue.name == "Fawlty Towers") {
                 $("#singleVenueImage").html("<img class='singleMainImage' src='imageFawltyTowers.png' alt='Fawlty Towers'>")
                 phoneNumber = '06789 012345'
                 emailAddress = 'fawltytowers'
+                venueDescription = "Fawlty Towers in York is a delightful homage to the iconic British institution. It offers guests a unique and whimsical experience inspired by the historical show. With its quirky decor, eccentric charm, and impeccable attention to detail, the hotel captures the spirit of the original Fawlty Towers with humor and warmth. From the moment you step through the door, you'll be greeted by the familiar antics of Basil, Sybil, and Manuel, brought to life by the dedicated staff who embody the essence of hospitality with a comedic twist. Each room is tastefully decorated with nods to memorable moments from the series, ensuring a truly immersive stay for fans and newcomers alike. Nestled in the heart of York, Fawlty Towers invites guests to embrace the nostalgia of classic British comedy while enjoying the comforts of modern accommodation and genuine hospitality."
             } else if (thisVenue.name == "Hilltop Mansion") {
                 $("#singleVenueImage").html("<img class='singleMainImage' src='imageHilltopMansion.png' alt='Hilltop Mansion'>")
                 phoneNumber = '07890 123456'
                 emailAddress = 'hilltopmansion'
+                venueDescription = "Hilltop Mansion in Liverpool stands as a beacon of opulence and refinement, overlooking the cityscape with timeless elegance. This grand estate, nestled atop a picturesque hill, offers a majestic retreat for those seeking luxury and tranquility. With its sprawling grounds, manicured gardens, and panoramic views, it exudes a sense of exclusivity and prestige. The mansion itself boasts stunning architecture, blending classic and contemporary elements to create a truly impressive residence. Inside, lavish interiors adorned with exquisite furnishings and ornate details evoke a sense of grandeur and sophistication. Whether hosting lavish events or enjoying quiet moments of relaxation, guests at Hilltop Mansion are enveloped in luxury at every turn. With its prime location in Liverpool, this prestigious estate offers a sanctuary of unparalleled beauty and indulgence in the heart of the city."
             } else if (thisVenue.name == "Haslegrave Hotel") {
                 $("#singleVenueImage").html("<img class='singleMainImage' src='imageHaslegraveHotel.png' alt='Haslegrave Hotel'>")
                 phoneNumber = '08901 234567'
                 emailAddress = 'haslegrave'
+                venueDescription = "Nestled in the heart of Bristol's enchanting cultural landscape, Haslegrave Hotel emerges as a quintessential destination for unforgettable wedding celebrations. Beyond its grand façade lies a sanctuary of romance and elegance, where dreams take shape and love stories unfold amidst timeless splendor. Haslegrave Hotel beckons couples to embark on a journey of lifelong love in an atmosphere of refined charm and impeccable service. From the moment you step through its doors, you're enveloped in an aura of enchantment, where every detail is meticulously crafted to exceed your wildest expectations.";
             } else if (thisVenue.name == "Forest Inn") {
                 $("#singleVenueImage").html("<img class='singleMainImage' src='imageForestInn.png' alt='Forest Inn'>")
                 phoneNumber = '09012 345678'
                 emailAddress = 'forestinn'
+                venueDescription = "The Forrest Inn in Brighton is a cozy and welcoming gastropub nestled within the picturesque seaside city. With its rustic charm and relaxed ambiance, it serves as a beloved gathering spot for locals and visitors alike. The inn exudes warmth and character, with exposed wooden beams, crackling fireplaces, and inviting nooks perfect for intimate conversations or larger gatherings. Its menu features a delightful array of traditional pub fare alongside creative culinary offerings, all crafted with locally sourced ingredients and expertly prepared. Whether you're craving a hearty Sunday roast, a refreshing pint of local ale, or simply a cozy spot to unwind after a day of exploring Brighton's vibrant streets, the Forrest Inn promises a memorable and satisfying experience for all who pass through its doors."
             } else if (thisVenue.name == "Southwestern Estate") {
                 $("#singleVenueImage").html("<img class='singleMainImage' src='imageSouthwestern.png' alt='Southwestern Estate'>")
                 phoneNumber = '09123 456789'
                 emailAddress = 'southwestern'
+                venueDescription = "Nestled in the heart of London's esteemed Marylebone district, the Southwestern Estate emerges as an idyllic haven for couples seeking the perfect setting for their dream wedding. Set amidst lush gardens and elegant architecture, this prestigious enclave offers a romantic backdrop that exudes timeless charm and sophistication. The Southwestern Estate transforms into a picturesque wedding venue, where love stories are celebrated amidst the grandeur of stately mansions and tree-lined avenues. From intimate ceremonies in charming garden alcoves to lavish receptions in opulent ballrooms, every corner of the estate is imbued with an air of romance and exclusivity."
             } else {
                 $("#singleVenueImage").html("<p>image error</p>")
             }
 
             $("#phoneNumber").html("Phone: " + phoneNumber);
             $("#emailAddress").html("Email: book@" + emailAddress + ".com")
+            $("#singleVenueDescription").html(venueDescription)
 
             // Put basic information on web page from JSON file
             $("#title-single").html(thisVenue.name);
