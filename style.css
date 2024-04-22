@@ -682,7 +682,9 @@ li {
     margin-right: 10px;
 }
 
-
+#singleVenueDescription {
+    line-height: 1.5;
+}
 
 #pricingBoxHeader {
     display: flex;
