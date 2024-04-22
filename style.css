@@ -647,6 +647,7 @@ li {
 
 #singleVenueDescriptionContainer {
     display: flex;
+    flex-direction: column;
     width: 100%;
 }
 
@@ -657,13 +658,31 @@ li {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
-#singleVenueDetailsDiv {
+/* #singleVenueDetailsDiv {
     background-color: #E3E1D9;
     border-radius: 15px;
     padding: 10px 20px;
     margin-left: 10px;
     min-width: 230px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+} */
+
+#singleVenueDetailsDiv {
+    display: flex;
+    flex-direction: row;
+}
+
+#singleVenueCapacity {
+    margin-right: 10px;
+}
+
+#pricingBoxHeader {
+    display: flex;
+    align-items: center;
+}
+
+#pricingBoxHeading {
+    margin-right: 20px;
 }
 
 #singleLocationDiv {
@@ -844,6 +863,7 @@ li {
 #venuePriceSubheading {
     font-size: 20px;
     font-weight: 500;
+    margin-top: 5px;
 }
 
 #cateringPriceSubheading {
@@ -1653,11 +1673,11 @@ li {
     }
 }
 
-@media screen and (max-width: 645px) {
+/* @media screen and (max-width: 645px) {
     #singleVenueDetailsDiv {
         min-width: 180px;
     }
-}
+} */
 
 /* COMPARISON MEDIA QUERIES */
 @media screen and (max-width: 965px) {

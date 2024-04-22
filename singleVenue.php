@@ -196,32 +196,38 @@ function cleanInput($data) {
       <div id="singleVenueDescriptionContainer">
         <div id="singleVenueDescriptionDiv">
           <h3 class="singleVenueH3Style" id="singleVenueDescriptionTitle">Description</h3>
-          <p class="singleVenueParaStyle" id="singleVenueDescription"></p>
-        </div>
 
-        <div id="singleVenueDetailsDiv">
-          <h3 id="singleVenueDetails">Details</h3>
-          <div id="availabilityButtons">
-            <button id="popularityButton" class="buttonStyler">View Price Per Head</button>
-            <div class="modal" id="popularityModal">
-              <div class="modal-header">
-                <div class='modal-title'>Price Per Head</div>
-                <button class="close-button" id="popularityCloseButton">&times;</button>
-              </div>
-              <div class="modal-body">
-                <canvas id="venuePopularityChart"></canvas>
-              </div>
-            </div>
-            <div class="overlay" id="popularityOverlay"></div>
-          </div>
+          <div id="singleVenueDetailsDiv">
+          <!-- <h3 id="singleVenueDetails">Details</h3> -->
+         
           <p class="singleVenueParaStyle" id="singleVenueCapacity">Capacity: </p>
           <p class="singleVenueParaStyle" id="singleVenueLicensed">Licensed: </p>
         </div>
+
+          <p class="singleVenueParaStyle" id="singleVenueDescription"></p>
+        </div>
+
+      
       </div>
 
       <div id="pricingInfo">
         <div id="pricingBox">
-          <h3 id="pricingBoxHeading">Pricing</h3>
+          <div id="pricingBoxHeader">
+            <h3 id="pricingBoxHeading">Pricing</h3>
+            <div id="availabilityButtons">
+              <button id="popularityButton" class="buttonStyler">View Price Per Head</button>
+              <div class="modal" id="popularityModal">
+                <div class="modal-header">
+                  <div class='modal-title'>Price Per Head</div>
+                  <button class="close-button" id="popularityCloseButton">&times;</button>
+                </div>
+                <div class="modal-body">
+                  <canvas id="venuePopularityChart"></canvas>
+                </div>
+              </div>
+              <div class="overlay" id="popularityOverlay"></div>
+            </div>
+          </div>
           <p class="singleVenueParaStyle" id="venuePriceSubheading">Venue Hire<span class="pricingSubheadingItalic"> - (Without Catering)</span></p>
           <p class="singleVenueParaStyle" id="weekdayPrice">Weekday Price: </p>
           <p class="singleVenueParaStyle" id="weekendPrice">Weekend Price: </p>
