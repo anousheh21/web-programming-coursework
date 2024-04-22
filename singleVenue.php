@@ -197,10 +197,11 @@ function cleanInput($data) {
         <div id="singleVenueDescriptionDiv">
           <h3 class="singleVenueH3Style" id="singleVenueDescriptionTitle">Description</h3>
 
-          <div id="singleVenueDetailsDiv">
+        <div id="singleVenueDetailsDiv">
           <!-- <h3 id="singleVenueDetails">Details</h3> -->
          
           <p class="singleVenueParaStyle" id="singleVenueCapacity">Capacity: </p>
+          <p class="singleVenueParaStyle" id="singleVenueInterpunct">•</p>
           <p class="singleVenueParaStyle" id="singleVenueLicensed">Licensed: </p>
         </div>
 

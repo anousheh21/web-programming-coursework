@@ -670,11 +670,19 @@ li {
 #singleVenueDetailsDiv {
     display: flex;
     flex-direction: row;
+    margin-top: -20px;
+    margin-bottom: -10px;
 }
 
 #singleVenueCapacity {
     margin-right: 10px;
 }
+
+#singleVenueInterpunct {
+    margin-right: 10px;
+}
+
+
 
 #pricingBoxHeader {
     display: flex;
