@@ -106,78 +106,95 @@ $(function() {
 
             initMap();
 
-            if (partySizeCost != "" && dateCost != "" && cateringGradeCost != "") {
-                let partySize = parseInt(partySizeCost)
-                let venueCapacity = parseInt(thisVenue.capacity)
-                // let weddingDate = Date.parse(dateCost)
-                let grade = parseInt(cateringGradeCost)
-                let errorMessage = $("#costInvalidResponse")
-                let errorMessage2 = $("#costInvalidResponse2")
+            $("#costSubmit").on('click', function () {
+                $("#costInvalidResponse").empty()
+                $("#costInvalidResponse2").empty()
+                $("#calculatedCost").empty()
+                
+
+                let partySizeCost = $("#partySizeCost").val()
+                let dateCost = $("#dateCost").val()
+                let cateringGradeCost = $("input[name='cateringCostRadio']:checked").val()
+
+                console.log(partySizeCost)
+                console.log(dateCost)
+                console.log(cateringGradeCost)
+
+                if (partySizeCost != "" && dateCost != "" && cateringGradeCost != "") {
+                    let partySize = parseInt(partySizeCost)
+                    let venueCapacity = parseInt(thisVenue.capacity)
+                    // let weddingDate = Date.parse(dateCost)
+                    let grade = parseInt(cateringGradeCost)
+                    let errorMessage = $("#costInvalidResponse")
+                    let errorMessage2 = $("#costInvalidResponse2")
 
 
-                fetch("weddingDates.php")
-                    .then(res => res.json())
-                    .then(resData => {
-                        const dates = resData.filter(item => item.name == venueName);
+                    fetch("weddingDates.php")
+                        .then(res => res.json())
+                        .then(resData => {
+                            const dates = resData.filter(item => item.name == venueName);
 
-                        let venueBooked = false;
-                        dates.forEach(date => {
-                            if (date.booking_date == dateCost) {
-                                venueBooked = true;
-                                return;
+                            let venueBooked = false;
+                            dates.forEach(date => {
+                                if (date.booking_date == dateCost) {
+                                    venueBooked = true;
+                                    return;
+                                }
+                            })
+
+                            if ((partySize > venueCapacity) && isEmpty(errorMessage)) {
+                                errorMessage.html("Party size exceeds the capacity of the venue.");
+                                errorMessage2.html("Consider a different venue.")
+                            } else if ((partySize < 0) && isEmpty(errorMessage)) {
+                                errorMessage.html("Invalid party size");
+                            }
+
+                            if ((venueBooked == true) && isEmpty(errorMessage)) {
+                                errorMessage.html("Venue already has a booking on your wedding date.")
+                                errorMessage2.html("Consider a different date or venue.")
+                            }
+
+                            // If there are no errors in the user input, calculate the cost of the wedding
+                            if (isEmpty(errorMessage)) {
+                                const d = new Date(dateCost);
+                                const day = d.getDay();
+                                let venueHirePrice;
+
+                                if (day == 6 || day == 0) {
+                                    venueHirePrice = parseInt(thisVenue.weekend_price)
+                                } else {
+                                    venueHirePrice = parseInt(thisVenue.weekday_price)
+                                }
+
+                                fetch("cateringGrades.php")
+                                    .then(res => res.json())
+                                    .then(resData => {
+                                        const cateringInfo = resData.filter(item => item.name == venueName)
+                                        
+                                        // get catering price for chosen grade
+                                        let cateringCostSingle;
+                                        cateringInfo.forEach(info => {
+                                            if (parseInt(info.grade) == grade) {
+                                                cateringCostSingle = parseInt(info.cost)
+                                            }
+                                        })
+                                        
+                                        let totalCateringCost = cateringCostSingle * partySize;
+                                        // console.log(venueHirePrice)
+                                        let totalCost = venueHirePrice + totalCateringCost;
+                                        // console.log(totalCost);
+                                        $("#calculatedCost").html("Total Wedding Cost: £" + totalCost);
+                                    })
                             }
                         })
 
-                        if ((partySize > venueCapacity) && isEmpty(errorMessage)) {
-                            errorMessage.html("Party size exceeds the capacity of the venue.");
-                            errorMessage2.html("Consider a different venue.")
-                        } else if ((partySize < 0) && isEmpty(errorMessage)) {
-                            errorMessage.html("Invalid party size");
-                        }
+                    
 
-                        if ((venueBooked == true) && isEmpty(errorMessage)) {
-                            errorMessage.html("Venue already has a booking on your wedding date.")
-                            errorMessage2.html("Consider a different date or venue.")
-                        }
-
-                        // If there are no errors in the user input, calculate the cost of the wedding
-                        if (isEmpty(errorMessage)) {
-                            const d = new Date(dateCost);
-                            const day = d.getDay();
-                            let venueHirePrice;
-
-                            if (day == 6 || day == 0) {
-                                venueHirePrice = parseInt(thisVenue.weekend_price)
-                            } else {
-                                venueHirePrice = parseInt(thisVenue.weekday_price)
-                            }
-
-                            fetch("cateringGrades.php")
-                                .then(res => res.json())
-                                .then(resData => {
-                                    const cateringInfo = resData.filter(item => item.name == venueName)
-                                    
-                                    // get catering price for chosen grade
-                                    let cateringCostSingle;
-                                    cateringInfo.forEach(info => {
-                                        if (parseInt(info.grade) == grade) {
-                                            cateringCostSingle = parseInt(info.cost)
-                                        }
-                                    })
-                                    
-                                    let totalCateringCost = cateringCostSingle * partySize;
-                                    // console.log(venueHirePrice)
-                                    let totalCost = venueHirePrice + totalCateringCost;
-                                    // console.log(totalCost);
-                                    $("#calculatedCost").html("Total Wedding Cost: £" + totalCost);
-                                })
-                        }
-                    })
-
-                
-
-                
-            }
+                    
+                } else {
+                    // add error messages to spans here
+                }
+            })
 
 
              // Get x axis tick values dynaamically
