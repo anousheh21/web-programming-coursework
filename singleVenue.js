@@ -416,7 +416,7 @@ $(function() {
                     $("#cateringPrices").append("<p id='cateringGradeInfo'>Grade " + cateringInfo[i].grade + ": £" + cateringInfo[i].cost + "</p>");
 
                     // Cost calculator radio buttons
-                    $("#cateringCostSelection").append(`<input type="radio" name="cateringCostRadio" value="${cateringInfo[i].grade}"><span> ${cateringInfo[i].grade} </span>`);
+                    $("#cateringCostSelection").append(`<input type="radio" id="cateringCostRadio"  name="cateringCostRadio" value="${cateringInfo[i].grade}"><span> ${cateringInfo[i].grade} </span>`);
                     document.getElementById('cateringGrade').value = cateringInfo[i].grade;
 
 
