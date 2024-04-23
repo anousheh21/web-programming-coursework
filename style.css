@@ -214,7 +214,8 @@ li {
     background-color: #E3E1D9;
     width: 100%;
     height: 550px;
-   
+    
+    
 }
 
 .mySlides {
@@ -236,6 +237,11 @@ li {
     width: 700px;
     margin-left: 70px;
     margin-top: 50px;
+    
+}
+
+#carouselDescription {
+    font-family: 'Georgia', 'Helvetica', 'Arial';
 }
 
 
@@ -1394,7 +1400,7 @@ li {
     }
 }
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 635px) {
     .navbar-item {
         font-size: 14px;
     }
@@ -1754,3 +1760,148 @@ li {
         max-width: 235px;
     }
 }
+
+/* CAROUSEL MEDIA QUERIES */
+@media screen and (max-width: 1500px) {
+    #venueCarousel {
+        height: 500px;
+    }
+
+    .carouselImage {
+        height: 500px;
+    }
+}
+
+@media screen and (max-width: 1550px) {
+    .carouselInformation .buttonStyler a {
+        margin-top: -50px;
+    }
+}
+
+@media screen and (max-width: 1450px) {
+    .carouselInformation .buttonStyler a {
+        margin-top: -50px;
+    }
+
+    #carouselTitle {
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 1390px) {
+    #venueCarousel {
+        height: 450px;
+    }
+
+    .carouselImage {
+        height: 450px;
+    }
+}
+
+@media screen and (max-width: 1305px) {
+    #carouselDescription {
+        margin-bottom: -20px;
+    }
+}
+
+@media screen and (max-width: 1260px) {
+    #venueCarousel {
+        height: 400px;
+    }
+
+    .carouselImage {
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 1205px) {
+    #carouselDescription {
+        margin-top: -20px;
+    }
+
+    #venueCarousel {
+        height: 350px;
+    }
+
+    .carouselImage {
+        height: 350px;
+    }
+}
+
+@media screen and (max-width: 1132px) {
+    #carouselTitle {
+        font-size: 28px;
+        font-weight: 550;
+    }
+
+    #carouselDescription {
+        font-size: 22px;
+    }
+
+    .carouselInformation .buttonStyler a {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1077px) {
+    #carouselDescription {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 995px) {
+    #venueCarousel {
+        height: 300px;
+    }
+
+    .carouselImage {
+        height: 300px;
+    }
+
+    #carouselTitle {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 925px) {
+    .slideContainer {
+        flex-direction: column;
+    }
+
+    #venueCarousel {
+        height: 500px;
+    }
+
+    .carouselInformation .buttonStyler a {
+        background-color: #e3e1d9;
+        color: grey;
+        font-size: 20px;
+    }
+
+    .carouselInformation .buttonStyler {
+        background-color: #E3E1D9;
+        margin-top: -20px;
+        margin-left: -22px;
+    }
+}
+
+@media screen and (max-width: 635px) {
+    .carouselImage {
+        height: 250px;
+    }
+
+    #venueCarousel {
+        height: 450px;
+    }
+}
+
+@media screen and (max-width: 535px) {
+    .carouselImage {
+        height: 200px;
+    }
+
+    #venueCarousel {
+        height: 400px;
+    }
+}
+

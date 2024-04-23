@@ -95,7 +95,7 @@
 
             <div class="carouselInformation">
                 <h3 id="carouselTitle">Ashby Castle</h3>
-                <p id="carouselDescription">Ashby Castle is a historic hotel situated in the heart of Manchester, steeped in centuries of rich history and architectural grandeur.</p>
+                <p id="carouselDescription">Ashby Castle is a historic hotel in the heart of Manchester, steeped in centuries of rich history and architectural grandeur.</p>
                <?php
                 echo "<button class='buttonStyler'><a href='singleVenue.php?venue=" . urlencode("Ashby Castle") . "'>See More</a></button>";
                 ?>
@@ -109,7 +109,7 @@
 
             <div class="carouselInformation">
                 <h3 id="carouselTitle">Fawlty Towers</h3>
-                <p id="carouselDescription">Fawlty Towers in York is a delightful homage to the iconic British institution. It offers guests a unique and whimsical experience inspired by the historical show.</p>
+                <p id="carouselDescription">Fawlty Towers in York is a delightful homage to the iconic institution. It offers whimsical experience inspired by the historical show.</p>
                <?php
                 echo "<button class='buttonStyler'><a href='singleVenue.php?venue=" . urlencode("Fawlty Towers") . "'>See More</a></button>";
                 ?>
@@ -123,7 +123,7 @@
 
             <div class="carouselInformation">
                 <h3 id="carouselTitle">Hilltop Mansion</h3>
-                <p id="carouselDescription">Hilltop Mansion in Liverpool stands as a beacon of opulence and refinement, overlooking the cityscape with timeless elegance. </p>
+                <p id="carouselDescription">Hilltop Mansion in Liverpool stands as a beacon of opulence, overlooking the cityscape with timeless elegance. </p>
                <?php
                 echo "<button class='buttonStyler'><a href='singleVenue.php?venue=" . urlencode("Hilltop Mansion") . "'>See More</a></button>";
                 ?>
@@ -137,7 +137,7 @@
 
             <div class="carouselInformation">
                 <h3 id="carouselTitle">Haslegrave Hotel</h3>
-                <p id="carouselDescription">Nestled in the heart of Bristol's enchanting cultural landscape, Haslegrave Hotel emerges as a quintessential destination for unforgettable wedding celebrations.</p>
+                <p id="carouselDescription">In the heart of Bristol, Haslegrave Hotel is a quintessential destination for unforgettable wedding celebrations.</p>
                <?php
                 echo "<button class='buttonStyler'><a href='singleVenue.php?venue=" . urlencode("Haslegrave Hotel") . "'>See More</a></button>";
                 ?>
@@ -151,7 +151,7 @@
 
             <div class="carouselInformation">
                 <h3 id="carouselTitle">Forest Inn</h3>
-                <p id="carouselDescription">The Forrest Inn in Brighton is a cozy and welcoming gastropub nestled within the picturesque seaside city. With its rustic charm and relaxed ambiance, it serves as a beloved gathering spot for locals and visitors alike. </p>
+                <p id="carouselDescription">The Forrest Inn in Brighton is a cozy and welcoming gastropub nestled within the picturesque seaside city.</p>
                <?php
                 echo "<button class='buttonStyler'><a href='singleVenue.php?venue=" . urlencode("Forest Inn") . "'>See More</a></button>";
                 ?>
