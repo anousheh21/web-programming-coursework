@@ -29,7 +29,7 @@
 <div id="homePageContainer">
 
     <div id="homeTitleDiv">
-        <h1 class="title" id="home-title">Welcome to Wed In Style</h1>
+        <h1 class="title" id="home-title">Browse our collection of stunning wedding venues and begin imagining the possibilities for your big day.</h1>
     </div>
     
     <div id="venueCarousel">

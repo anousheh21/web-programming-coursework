@@ -172,7 +172,9 @@ li {
 }
 
 #home-title {
-    margin-top: 120px;
+    margin-top: 110px;
+    font-size: 30px;
+    font-weight: 600;
 }
 
 .carouselInformation {
@@ -299,6 +301,8 @@ li {
     font-family: 'Georgia', 'Helvetica', 'Arial';
     font-size: 30px;
     margin-right: 20px;
+    margin-top: 15px;
+    margin-bottom: 0px;
 }
 
 #homeSearchTitleDiv {
