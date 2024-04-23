@@ -10,7 +10,7 @@
     <script src="jquery-3.5.1.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <title>Compare Venues</title>
+    <title>Contact Us</title>
 </head>
 <body>
 
@@ -92,7 +92,8 @@
 
 <div id="contactPageBody">
     <div id="contactFormHeadingDiv">
-        <h1 class="title" id="contactFormHeading">Contact Us</h1>
+        <h1 class="title" id="contactFormHeading">We're thrilled to hear from you!</h1>
+        <p id="contactFormSubheading">Whether you have questions about our services, want to schedule a tour of our venues, or are ready to start planning your dream wedding, we're here to help. Simply fill out the form below, and one of our dedicated team members will get back to you as soon as possible.</p>
     </div>
 
     <div id="contactForm">

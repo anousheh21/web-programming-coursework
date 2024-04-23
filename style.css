@@ -1276,10 +1276,25 @@ li {
 }
 
 /* CONTACT FORM STYLING */
+#contactFormHeadingDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+}
+
 #contactFormHeading {
     font-family: 'Georgia', 'Helvetica', 'Arial';
     margin-top: 120px;
-    margin-bottom: 40px;
+    margin-bottom: -5px;
+}
+
+#contactFormSubheading {
+    font-family: 'Nunito Sans', 'Helvetica', 'Arial';
+    font-size: 17px;
+    margin-bottom: 30px;
+    text-align: center;
+    text-justify: inter-word;
 }
 
 #contactPageBody {
@@ -1371,6 +1386,11 @@ li {
     color: red;
     font-family: 'Nunito Sans', 'Helvetica', 'Arial';
     font-size: 16px;
+}
+
+#contactFormSubmissionResponse {
+    font-size: 17px;
+    text-align: center;
 }
 
 
@@ -1954,5 +1974,24 @@ li {
 
     #dateInput {
         width: 100%;
+    }
+}
+
+/* CONTACT FORM MEDIA QUERIES */
+@media screen and (max-width: 970px) {
+    #contactFormSubmissionResponse {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    #contactFormHeadingDiv {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 555px) {
+    #contactFormHeading {
+        font-size: 28px;
     }
 }
