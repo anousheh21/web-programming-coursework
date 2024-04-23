@@ -11,7 +11,7 @@ startAutoSlide();
 function startAutoSlide() {
     slideInterval = setInterval(function() {
         plusSlides(1);
-    }, 50000000); // Change slide every 5 seconds (5000 milliseconds)
+    }, 5000); // Change slide every 7 seconds 
 }
 
 // Function to stop automatic sliding
