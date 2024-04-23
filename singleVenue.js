@@ -405,6 +405,7 @@ $(function() {
             })
         })
 
+    // let cateringGradeCost = ""
     // Fetch catering price information
     fetch("cateringGrades.php")
         .then(res => res.json())
@@ -421,14 +422,14 @@ $(function() {
 
 
                         //console.log(cateringGradeCost)
-                      if (cateringGradeCost !== "") {
+            //           if (cateringGradeCost !== "") {
                
-                $("input[name='cateringCostRadio']").each(function() {
-                    if ($(this).val() === cateringGradeCost) {
-                        $(this).prop("checked", true);
-                    }
-                });
-            }
+            //     $("input[name='cateringCostRadio']").each(function() {
+            //         if ($(this).val() === cateringGradeCost) {
+            //             $(this).prop("checked", true);
+            //         }
+            //     });
+            // }
                     
 
 

@@ -45,36 +45,36 @@ if(isset($_GET['venue'])) {
 
 <?php
 // Calculate cost form validation
-$partySizeCostError = $dateCostError = $cateringCostRadio = "";
-$partySizeCost = $dateCost = $cateringCostError = "";
+// $partySizeCostError = $dateCostError = $cateringCostRadio = "";
+// $partySizeCost = $dateCost = $cateringCostError = "";
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+// if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-  if (empty($_POST["partySizeCost"])) {
-    $partySizeCostError = "Party size is required";
-  } else {
-    $partySizeCost = cleanInput($_POST["partySizeCost"]);
-  }
+//   if (empty($_POST["partySizeCost"])) {
+//     $partySizeCostError = "Party size is required";
+//   } else {
+//     $partySizeCost = cleanInput($_POST["partySizeCost"]);
+//   }
 
-  if (empty($_POST["dateCost"])) {
-    $dateCostError = "Date is required";
-  } else {
-    $dateCost = cleanInput($_POST["dateCost"]);
-  }
+//   if (empty($_POST["dateCost"])) {
+//     $dateCostError = "Date is required";
+//   } else {
+//     $dateCost = cleanInput($_POST["dateCost"]);
+//   }
 
-  if (empty($_POST["cateringCostRadio"])) {
-    $cateringCostError = "Catering grade is required";
-  } else {
-    $cateringCostRadio = cleanInput($_POST["cateringCostRadio"]);
-  }
-}
+//   if (empty($_POST["cateringCostRadio"])) {
+//     $cateringCostError = "Catering grade is required";
+//   } else {
+//     $cateringCostRadio = cleanInput($_POST["cateringCostRadio"]);
+//   }
+// }
 
-function cleanInput($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
-}
+// function cleanInput($data) {
+//   $data = trim($data);
+//   $data = stripslashes($data);
+//   $data = htmlspecialchars($data);
+//   return $data;
+// }
 
 
 ?>
@@ -238,18 +238,18 @@ function cleanInput($data) {
 
         <div id="costCalculator">
           <h3 id="costBoxHeading">Cost Calculator</h3>
-          <form method="post" action='<?php htmlspecialchars($_SERVER["PHP_SELF"]);?>'>
+          <!-- <form method="post" action='<?php htmlspecialchars($_SERVER["PHP_SELF"]);?>'> -->
             <div id="costCalculatorInput">
               <div id="partyInputContainer">
                 <p class="singleVenueParaStyle" id="costPartySizeLabel">Party Size</p>
-                <input type="number" name="partySizeCost" id="partySizeCost" value="<?php echo $partySizeCost;?>" size="5" maxlength="5">
-                <span class="singleVenueParaStyle" class="costError"><?php echo $partySizeCostError;?></span>
+                <input type="number" name="partySizeCost" id="partySizeCost"  size="5" maxlength="5">
+                <span id="partySizeCostErrorMessage"  class="singleVenueParaStyle" class="costError"></span>
               </div>
 
               <div id="dateInputContainer">
                 <p class="singleVenueParaStyle" id="costDateLabel">Wedding Date</p>
-                <input type="date" name="dateCost" id="dateCost" value="<?php echo $dateCost;?>">
-                <span class="singleVenueParaStyle" class="costError"><?php echo $dateCostError;?></span>
+                <input type="date" name="dateCost" id="dateCost">
+                <span id="dateCostErrorMessage" class="singleVenueParaStyle" class="costError"></span>
               </div>
             </div>  
 
@@ -258,20 +258,20 @@ function cleanInput($data) {
                 <div class="singleVenueParaStyle" id="cateringCostSelection">
                   <input type="hidden" id="cateringGrade" name="cateringGrade" value="">
                 </div>
-                <span class="singleVenueParaStyle" class="costError"><?php echo $cateringCostError;?></span>
+                <span id="cateringCostErrorMessage" class="singleVenueParaStyle" class="costError"></span>
             </div>
 
             <div id="submitCostButtonContainer">
                   <input type="submit" name="submit" class="buttonStyler" id="costSubmit" value="Calculate">
             </div>
-          </form>
+          <!-- </form> -->
 
-          <script>
-            // Pass form outputs to JavaScript file
-            let partySizeCost = "<?php echo"$partySizeCost"?>";
-            let dateCost = "<?php echo"$dateCost"?>";
-            let cateringGradeCost = "<?php echo"$cateringCostRadio"?>";
-          </script>
+          <!-- <script> -->
+            <!-- // Pass form outputs to JavaScript file
+            // let partySizeCost = "<?php echo"$partySizeCost"?>";
+            // let dateCost = "<?php echo"$dateCost"?>";
+            let cateringGradeCost = "<?php echo"$cateringCostRadio"?>"; -->
+          <!-- </script> -->
 
           <!-- other error messages -->
           <p class="singleVenueParaStyle" id="costInvalidResponse"></p>
