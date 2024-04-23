@@ -110,17 +110,20 @@ $(function() {
                 $("#costInvalidResponse").empty()
                 $("#costInvalidResponse2").empty()
                 $("#calculatedCost").empty()
+                $("#partySizeCostErrorMessage").empty()
+                $("#dateCostErrorMessage").empty()
+                $("#cateringCostErrorMessage").empty()
                 
 
                 let partySizeCost = $("#partySizeCost").val()
                 let dateCost = $("#dateCost").val()
                 let cateringGradeCost = $("input[name='cateringCostRadio']:checked").val()
 
-                console.log(partySizeCost)
-                console.log(dateCost)
-                console.log(cateringGradeCost)
+                // console.log(partySizeCost)
+                // console.log(dateCost)
+                // console.log(cateringGradeCost)
 
-                if (partySizeCost != "" && dateCost != "" && cateringGradeCost != "") {
+                if (partySizeCost != "" && dateCost != "" && cateringGradeCost != undefined) {
                     let partySize = parseInt(partySizeCost)
                     let venueCapacity = parseInt(thisVenue.capacity)
                     // let weddingDate = Date.parse(dateCost)
@@ -192,7 +195,17 @@ $(function() {
 
                     
                 } else {
-                    // add error messages to spans here
+                    if (partySizeCost == "") {
+                        $("#partySizeCostErrorMessage").html("Party size required");
+                    }
+
+                    if (dateCost == "") {
+                        $("#dateCostErrorMessage").html("Wedding date required");
+                    }
+
+                    if (cateringGradeCost == undefined) {
+                        $("#cateringCostErrorMessage").html("Catering grade required");
+                    }
                 }
             })
 
