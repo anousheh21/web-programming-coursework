@@ -1905,3 +1905,54 @@ li {
     }
 }
 
+/* WEDDING.PHP SEARCH MEDIA QUERIES */
+@media screen and (max-width: 1250px) {
+    #homeSearchForm form {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .homeSearchInput {
+        margin-bottom: 20px;
+    }
+
+    #homeSearchSubmit {
+        align-self: start;
+    }
+
+    #homeSearchTitleDiv {
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (max-width: 805px) {
+    #homeSearchTitle {
+        font-size: 24px;
+    }
+
+    #homeSearchErrorMessage {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 663px) {
+    #homeSearchTitleDiv {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    #homeSearchForm form {
+        flex-direction: column;
+        margin-top: -5px;
+    }
+
+    #dateInput {
+        width: 100%;
+    }
+}
