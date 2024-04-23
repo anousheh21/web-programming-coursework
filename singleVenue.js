@@ -187,6 +187,7 @@ $(function() {
                                         let totalCost = venueHirePrice + totalCateringCost;
                                         // console.log(totalCost);
                                         $("#calculatedCost").html("Total Wedding Cost: £" + totalCost);
+                                        sessionStorage.setItem("dateWedding", dateCost)
                                     })
                             }
                         })
@@ -502,6 +503,13 @@ $(function() {
     function isEmpty( el ){
         return !$.trim(el.html())
     }
+
+    $(document).ready(function () {
+        let prefilledDate = sessionStorage.getItem("dateWedding");
+        if (prefilledDate != null && $("#dateCost").val() == "") {
+            $("#dateCost").val(prefilledDate)
+        }
+    })
         
 })
 
