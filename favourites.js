@@ -107,7 +107,7 @@ $(function() {
        if (count == 0) {
             $("#noFavouritesMessage").html("You have no favourite venues.  Click the heart next to a venue to add it to favourites.")
        } else {
-            $("#noFavouritesMessage").html("")
+            $("#noFavouritesMessage").empty();
        }
 
 

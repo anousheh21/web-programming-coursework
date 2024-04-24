@@ -519,6 +519,7 @@ li {
     font-weight: 500;
     font-size: 22px;
     color: #808080;
+    margin-top: 30px;
 }
 
 .venue-card {
@@ -1506,6 +1507,10 @@ li {
         width: 160%;
         margin-left: 20px;
     }
+
+    #favouritesTitleDiv {
+        justify-content: center;
+    }
 }
 
 @media screen and (max-width: 1010px) {
@@ -1515,6 +1520,24 @@ li {
         align-items: center;
         width: 495px;
         height: 600px;
+    }
+
+    /* .boxHeading {
+        align-items: flex-end;
+    } */
+
+    .heartsvg {
+        margin-top: 12px;
+        height: 24px;
+    }
+
+    #topBrowseSection {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #title-browse {
+        margin-bottom: -40px;
     }
 
     .venue-image {
@@ -1571,30 +1594,6 @@ li {
 @media screen and (max-width: 746px) {
     #noBrowseDiv {
         margin-left: 100px;
-    }
-}
-
-@media screen and (max-width: 715px) {
-    #title-browse {
-        font-size: 27px;
-    }
-}
-
-@media screen and (max-width: 670px) {
-    #title-browse {
-        font-size: 22px;
-    }
-}
-
-@media screen and (max-width: 630px) {
-    #title-browse {
-        font-size: 18px;
-    }
-}
-
-@media screen and (max-width: 540px) {
-    #title-browse {
-        font-size: 14px;
     }
 }
 
@@ -2041,6 +2040,7 @@ li {
         width: 100%;
     }
 }
+
 
 /* CONTACT FORM MEDIA QUERIES */
 @media screen and (max-width: 970px) {
