@@ -27,7 +27,8 @@
 </header>
 
 <div id="mainBodyCompareAll">
-    <h1 class="title" id="title-compare">Select Venues to Compare</h1>
+    <h1 class="title" id="title-compare">Compare Venues</h1>
+    <p id="compareSubheading">To compare two venues, simply use the dropdown menus below to select your venues. To compare all venues, use the buttons below to see capacity and pricing information.</p>
 
     <?php
     // Dropdown menu form validation
