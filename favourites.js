@@ -105,7 +105,7 @@ $(function() {
        //  console.log(count)
 
        if (count == 0) {
-            $("#noFavouritesMessage").html("You have no favourite venues.  Click the heart next to a venue to add it to favourites.")
+            $("#noFavouritesMessage").html("<a id='allVenuesFavouritesLink' href='allVenues.php'>You have no favourite venues.  Click the heart next to a venue to add it to favourites.</a>")
        } else {
             $("#noFavouritesMessage").empty();
        }

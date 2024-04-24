@@ -496,6 +496,11 @@ li {
     justify-content: center;
 }
 
+#allVenuesFavouritesLink {
+    text-decoration: none;
+    color: #808080;
+}
+
 
 
 /* VENUE CARD STYLING */
