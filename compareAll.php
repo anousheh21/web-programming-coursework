@@ -89,7 +89,7 @@
                 </select>
                 <div class="comparisonInformation">
                     <div id="compareImgPlaceholderLeft"></div>
-                    <div id="comparisonDetailsLeft">
+                    <div id="comparisonDetailsLeft" class="comparisonDetails">
 
                         <div id="comparisonOverviewLeft" class="comparisonOverview comparisonBox comparisonBoxLeft">
                             <div class="comparisonOverviewTitleDiv hideComparisonTitle comparisonTitleDivLeft">
@@ -135,7 +135,7 @@
                 </select>
                 <div class="comparisonInformation">
                     <div id="compareImgPlaceholderRight"></div>
-                    <div id="comparisonDetailsRight">
+                    <div id="comparisonDetailsRight" class="comparisonDetails">
 
                         <div id="comparisonOverviewRight" class="comparisonOverview comparisonBoxRight comparisonBox">
                             <div class="comparisonOverviewTitleDiv hideComparisonTitle comparisonTitleDivRight">

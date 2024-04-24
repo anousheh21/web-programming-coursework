@@ -1101,6 +1101,10 @@ li {
     margin-bottom: 15px;
 }
 
+.comparisonDetails {
+    width: 500px;
+}
+
 #compareForm {
     width: 60%;
 }
@@ -1125,7 +1129,8 @@ li {
     border-radius: 15px;
     padding: 10px 20px;
     padding-bottom: 20px;
-    margin-left: 10px;
+    /* margin-left: 10px; */
+    margin-right: 50px;
     width: 90%;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
@@ -1739,9 +1744,21 @@ li {
     .compareImg {
         max-width: 400px;
     }
+
+    .comparisonDetails {
+        width: 450px;
+    }
+
+    .dropdownCompare {
+        width: 400px;
+    }
+
+    #compareForm {
+        margin-left: 50px;
+    }
 }
 
-@media screen and (max-width: 865px) {
+@media screen and (max-width: 900px) {
     .compareImg {
         max-width: 350px;
     }
@@ -1749,9 +1766,17 @@ li {
     #leftCompareColumn {
         margin-right: 20px;
     }
+
+    .comparisonDetails {
+        width: 400px;
+    }
+
+    .dropdownCompare {
+        width: 350px;
+    }
 }
 
-@media screen and (max-width: 745px) {
+@media screen and (max-width: 780px) {
     .compareImg {
         max-width: 300px
     }
@@ -1759,9 +1784,17 @@ li {
     #leftCompareColumn {
         margin-right: 5px;
     }
+
+    .comparisonDetails {
+        width: 350px;
+    }
+
+    .dropdownCompare {
+        width: 300px;
+    }
 }
 
-@media screen and (max-width: 625px) {
+@media screen and (max-width: 700px) {
     .compareImg {
         max-width: 250px;
     }
@@ -1773,11 +1806,27 @@ li {
     #comparisonLocationRight {
         font-size: 14px;
     }
+
+    .comparisonDetails {
+        width: 275px;
+    }
+
+    .dropdownCompare {
+        width: 250px;
+    }
 }
 
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 600px) {
     .compareImg {
-        max-width: 235px;
+        max-width: 220px;
+    }
+
+    .comparisonDetails {
+        width: 260x;
+    }
+
+    .dropdownCompare {
+        width: 220px;
     }
 }
 
